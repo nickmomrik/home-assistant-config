@@ -1,0 +1,30 @@
+- alias: 'Remote external update Media Center'
+  trigger:
+    platform: state
+    entity_id: remote.media_center
+  action:
+    - service: input_select.select_option
+      data_template:
+        entity_id: input_select.remote
+        option: >
+          {{ states.remote.media_center.attributes.current_activity }}
+
+- alias: 'Remote start activity from input select media center'
+  trigger:
+    platform: state
+    entity_id: input_select.remote
+  action:
+    - service: script.turn_on
+      entity_id: script.input_select_harmony
+
+- alias: 'Notify garage temp monitor turned off'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.garage_temp_monitor
+    from: 'on'
+    to: 'off'
+  action:
+    service: notify.pushbullet
+    data_template:
+      title: "Garage Monitor OFF @ {{ states.sensor.garage_temperature.state }}°F"
+      message: "Temperature in the garage is currently {{ states.sensor.garage_temperature.state }}°F"

@@ -1,0 +1,10 @@
+.HA_VERSION
+.uuid
+deps/
+harmony_media_center.conf
+home-assistant.log
+home-assistant_v2.db
+known_devices.yaml
+nest.conf
+secrets.yaml
+.remote-sync.json

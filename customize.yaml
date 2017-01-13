@@ -1,0 +1,333 @@
+  cover.garage_door:
+    icon: mdi:garage
+  lock.front_door:
+    friendly_name: Front Door Lock
+  device_tracker.ford_fusion:
+    icon: mdi:car
+  switch.bedroom_lamp:
+    icon: mdi:lamp
+  switch.front_lamp:
+    icon: mdi:lamp
+  switch.front_porch:
+    icon: mdi:lightbulb
+    friendly_name: Porch Light
+  switch.kitchen_light:
+    icon: mdi:lightbulb
+  light.living_light:
+    friendly_name: Living Room Light
+  light.dining_light:
+    friendly_name: Dining Room Light
+  switch.living_room_lamp:
+    icon: mdi:lamp
+  sensor.speedtest_ping:
+    icon: mdi:speedometer
+  sensor.speedtest_download:
+    icon: mdi:download
+  sensor.speedtest_upload:
+    icon: mdi:upload
+  sensor.cpu_use:
+    icon: mdi:raspberrypi
+  sensor.ram_use:
+    icon: mdi:raspberrypi
+  sensor.pihole:
+    icon: mdi:counter
+  sensor.downstairs_nest_protect_battery_health:
+    icon: mdi:battery-80
+    friendly_name: Downstairs Protect Battery
+  sensor.upstairs_nest_protect_battery_health:
+    icon: mdi:battery-80
+    friendly_name: Upstairs Protect Battery
+  sensor.basement_nest_protect_battery_health:
+    icon: mdi:battery-80
+    friendly_name: Basement Protect Battery
+  sensor.upstairs_nest_protect_smoke_status:
+    icon: mdi:fire
+    friendly_name: Upstairs Smoke
+  sensor.basement_nest_protect_smoke_status:
+    icon: mdi:fire
+    friendly_name: Basement Smoke
+  sensor.downstairs_nest_protect_smoke_status:
+    icon: mdi:fire
+    friendly_name: Downstairs Smoke
+  sensor.upstairs_nest_protect_co_status:
+    icon: mdi:gas-cylinder
+    friendly_name: Upstairs CO
+  sensor.basement_nest_protect_co_status:
+    icon: mdi:gas-cylinder
+    friendly_name: Basement CO
+  sensor.downstairs_nest_protect_co_status:
+    icon: mdi:gas-cylinder
+    friendly_name: Downstairs CO
+  climate.living_room_nest:
+    friendly_name: Living Room Nest
+  climate.office_nest:
+    friendly_name: Office Nest
+  climate.upstairs_nest:
+    friendly_name: Upstairs Nest
+  climate.basement_nest:
+    friendly_name: Basement Nest
+  sensor.garage_temperature:
+    icon: mdi:thermometer
+  sensor.garage_humidity:
+    icon: mdi:water-percent
+  binary_sensor.garage_temp_monitor:
+    icon: mdi:eye
+  sensor.apple_cpu_temperature:
+    icon: mdi:thermometer
+    friendly_name: CPU Temp
+  sensor.apple_cpu_use:
+    icon: mdi:raspberrypi
+    friendly_name: CPU Use
+  sensor.apple_ram_use:
+    icon: mdi:raspberrypi
+    friendly_name: RAM Use
+  sensor.elderberry_cpu_temperature:
+    icon: mdi:thermometer
+    friendly_name: CPU Temp
+  sensor.elderberry_cpu_use:
+    icon: mdi:raspberrypi
+    friendly_name: CPU Use
+  sensor.elderberry_ram_use:
+    icon: mdi:raspberrypi
+    friendly_name: RAM Use
+  sensor.boston_cream_cpu_temperature:
+    icon: mdi:thermometer
+    friendly_name: CPU Temp
+  sensor.boston_cream_cpu_use:
+    icon: mdi:raspberrypi
+    friendly_name: CPU Use
+  sensor.boston_cream_ram_use:
+    icon: mdi:raspberrypi
+    friendly_name: RAM Use
+  sensor.cherry_cpu_temperature:
+    icon: mdi:thermometer
+    friendly_name: CPU Temp
+  sensor.cherry_cpu_use:
+    icon: mdi:raspberrypi
+    friendly_name: CPU Use
+  sensor.cherry_ram_use:
+    icon: mdi:raspberrypi
+    friendly_name: RAM Use
+  sensor.derby_cpu_temperature:
+    icon: mdi:thermometer
+    friendly_name: CPU Temp
+  sensor.derby_cpu_use:
+    icon: mdi:raspberrypi
+    friendly_name: CPU Use
+  sensor.derby_ram_use:
+    icon: mdi:raspberrypi
+    friendly_name: RAM Use
+  sensor.cpu_temperature:
+    icon: mdi:thermometer
+    friendly_name: CPU Temp
+  sensor.living_room_thermostat_nest_humidity:
+    icon: mdi:water-percent
+    friendly_name: Living Room Humidity
+  sensor.office_thermostat_nest_humidity:
+    icon: mdi:water-percent
+    friendly_name: Office Humidity
+  sensor.upstairs_thermostat_nest_humidity:
+    icon: mdi:water-percent
+    friendly_name: Upstairs Humidity
+  sensor.basement_thermostat_nest_humidity:
+    icon: mdi:water-percent
+    friendly_name: Basement Humidity
+  sensor.basement_thermostat_nest_target:
+    icon: mdi:target
+    friendly_name: Basement Target
+  sensor.living_room_thermostat_nest_target:
+    icon: mdi:target
+    friendly_name: Living Room Target
+  sensor.office_thermostat_nest_target:
+    icon: mdi:target
+    friendly_name: Office Target
+  sensor.upstairs_thermostat_nest_target:
+    icon: mdi:target
+    friendly_name: Upstairs Target
+  sensor.basement_thermostat_nest_temperature:
+    icon: mdi:thermometer
+    friendly_name: Basement Temp
+  sensor.living_room_thermostat_nest_temperature:
+    icon: mdi:thermometer
+    friendly_name: Living Room Temp
+  sensor.office_thermostat_nest_temperature:
+    icon: mdi:thermometer
+    friendly_name: Office Temp
+  sensor.upstairs_thermostat_nest_temperature:
+    icon: mdi:thermometer
+    friendly_name: Upstairs Temp
+  binary_sensor.basement_thermostat_nest_has_leaf:
+    icon: mdi:leaf
+    friendly_name: Basement Leaf
+  binary_sensor.living_room_thermostat_nest_has_leaf:
+    icon: mdi:leaf
+    friendly_name: Living Room Leaf
+  binary_sensor.upstairs_thermostat_nest_has_leaf:
+    icon: mdi:leaf
+    friendly_name: Upstairs Leaf
+  binary_sensor.office_thermostat_nest_has_leaf:
+    icon: mdi:leaf
+    friendly_name: Office Leaf
+  binary_sensor.basement_thermostat_nest_is_locked:
+    icon: mdi:lock
+    friendly_name: Basement Nest Locked
+  binary_sensor.living_room_thermostat_nest_is_locked:
+    icon: mdi:lock
+    friendly_name: Living Room Nest Locked
+  binary_sensor.office_thermostat_nest_is_locked:
+    icon: mdi:lock
+    friendly_name: Office Nest Locked
+  binary_sensor.upstairs_thermostat_nest_is_locked:
+    icon: mdi:lock
+    friendly_name: Upstairs Nest Locked
+  sensor.basement_thermostat_nest_hvac_state:
+    friendly_name: Basement Nest State
+  sensor.living_room_thermostat_nest_hvac_state:
+    friendly_name: Living Room Nest State
+  sensor.office_thermostat_nest_hvac_state:
+    friendly_name: Office Nest State
+  sensor.upstairs_thermostat_nest_hvac_state:
+    friendly_name: Upstairs Nest State
+  sensor.basement_thermostat_nest_operation_mode:
+    icon: mdi:settings-box
+    friendly_name: Basement Nest Mode
+  sensor.living_room_thermostat_nest_operation_mode:
+    icon: mdi:settings-box
+    friendly_name: Living Room Nest Mode
+  sensor.office_thermostat_nest_operation_mode:
+    icon: mdi:settings-box
+    friendly_name: Office Nest Mode
+  sensor.upstairs_thermostat_nest_operation_mode:
+    icon: mdi:settings-box
+    friendly_name: Upstairs Nest Mode
+  binary_sensor.entryway_camera_online:
+    icon: mdi:camera
+    friendly_name: Entryway Camera
+  binary_sensor.garage_camera_online:
+    icon: mdi:camera
+    friendly_name: Garage Camera
+  binary_sensor.basement_nest_protect_online:
+    icon: mdi:nest-protect
+    friendly_name: Basement Protect
+  binary_sensor.downstairs_nest_protect_online:
+    icon: mdi:nest-protect
+    friendly_name: Downstairs Protect
+  binary_sensor.upstairs_nest_protect_online:
+    icon: mdi:nest-protect
+    friendly_name: Upstairs Protect
+  binary_sensor.basement_thermostat_nest_online:
+    icon: mdi:nest-thermostat
+    friendly_name: Basement Nest
+  binary_sensor.living_room_thermostat_nest_online:
+    icon: mdi:nest-thermostat
+    friendly_name: Living Room Nest
+  binary_sensor.office_thermostat_nest_online:
+    icon: mdi:nest-thermostat
+    friendly_name: Office Nest
+  binary_sensor.upstairs_thermostat_nest_online:
+    icon: mdi:nest-thermostat
+    friendly_name: Upstairs Nest
+  binary_sensor.wink_hub_2_hub:
+    icon: mdi:router-wireless
+    friendly_name: Wink Hub
+  binary_sensor.entryway_camera_motion_detected:
+    icon: mdi:blur
+    friendly_name: Entryway Motion
+  binary_sensor.garage_camera_motion_detected:
+    icon: mdi:blur
+    friendly_name: Garage Motion
+  binary_sensor.entryway_camera_person_detected:
+    icon: mdi:account
+    friendly_name: Entryway Person
+  binary_sensor.garage_camera_person_detected:
+    icon: mdi:account
+    friendly_name: Garage Person
+  binary_sensor.entryway_camera_sound_detected:
+    icon: mdi:volume-high
+    friendly_name: Entryway Sound
+  binary_sensor.garage_camera_sound_detected:
+    icon: mdi:volume-high
+    friendly_name: Garage Sound
+  sensor.dark_sky_summary:
+    icon: mdi:note-text
+    friendly_name: Weather Summary
+  sensor.dark_sky_temperature:
+    friendly_name: Temperature
+  sensor.dark_sky_apparent_temperature:
+    friendly_name: Feels Like
+  sensor.dark_sky_humidity:
+    friendly_name: Humidity
+  sensor.dark_sky_wind_speed:
+    friendly_name: Wind Speed
+  sensor.dark_sky_precip:
+    friendly_name: Precipitation
+  sensor.dark_sky_precip_intensity:
+    friendly_name: Precipitation Intensity
+  sensor.dark_sky_precip_probability:
+    friendly_name: Precipitation Chance
+  sensor.dark_sky_daily_high_temperature:
+    friendly_name: High Temperature
+  sensor.dark_sky_daily_low_temperature:
+    friendly_name: Low Temperature
+  sensor.since_last_boot:
+    friendly_name: Uptime
+  sensor.apple_uptime:
+    icon: mdi:clock
+    friendly_name: Uptime
+  sensor.apple_last_seen:
+    icon: mdi:clock
+    friendly_name: Last Seen
+  sensor.elderberry_uptime:
+    icon: mdi:clock
+    friendly_name: Uptime
+  sensor.elderberry_last_seen:
+    icon: mdi:clock
+    friendly_name: Last Seen
+  sensor.boston_cream_uptime:
+    icon: mdi:clock
+    friendly_name: Uptime
+  sensor.boston_cream_last_seen:
+    icon: mdi:clock
+    friendly_name: Last Seen
+  sensor.cherry_uptime:
+    icon: mdi:clock
+    friendly_name: Uptime
+  sensor.cherry_last_seen:
+    icon: mdi:clock
+    friendly_name: Last Seen
+  sensor.derby_uptime:
+    icon: mdi:clock
+    friendly_name: Uptime
+  sensor.derby_last_seen:
+    icon: mdi:clock
+    friendly_name: Last Seen
+  switch.elderberry_reboot:
+    icon: mdi:refresh
+    friendly_name: Reboot
+  switch.elderberry_shutdown:
+    icon: mdi:close-network
+    friendly_name: Shutdown
+  switch.apple_reboot:
+    icon: mdi:refresh
+    friendly_name: Reboot
+  switch.apple_shutdown:
+    icon: mdi:close-network
+    friendly_name: Shutdown
+  switch.cherry_reboot:
+    icon: mdi:refresh
+    friendly_name: Reboot
+  switch.cherry_shutdown:
+    icon: mdi:close-network
+    friendly_name: Shutdown
+  switch.derby_reboot:
+    icon: mdi:refresh
+    friendly_name: Reboot
+  switch.derby_shutdown:
+    icon: mdi:close-network
+    friendly_name: Shutdown
+  switch.boston_cream_reboot:
+    icon: mdi:refresh
+    friendly_name: Reboot
+  switch.boston_cream_shutdown:
+    icon: mdi:close-network
+    friendly_name: Shutdown

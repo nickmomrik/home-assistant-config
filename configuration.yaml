@@ -1,0 +1,84 @@
+homeassistant:
+  name: Home
+  latitude: !secret latitude
+  longitude: !secret longitude
+  elevation: !secret elevation
+  unit_system: imperial
+  time_zone: !secret time_zone
+  customize: !include customize.yaml
+
+frontend:
+
+http:
+  api_password: !secret http_password
+
+updater:
+
+conversation:
+
+history:
+
+logbook:
+
+sun:
+
+wemo:
+  static:
+    - 192.168.2.107
+    - 192.168.2.209
+    - 192.168.2.202
+    - 192.168.2.131
+    - 192.168.2.204
+
+alexa:
+
+emulated_hue:
+  type: alexa
+  host_ip: 192.168.2.149
+
+nest:
+  client_id: !secret nest_client_id
+  client_secret: !secret nest_client_secret
+
+device_tracker:
+  - platform: automatic
+    client_id: !secret automatic_client_id
+    secret: !secret automatic_secret
+    username: !secret automatic_username
+    password: !secret automatic_password
+
+sensor: !include sensors.yaml
+
+ifttt:
+  key: !secret ifttt_key
+
+remote:
+  - platform: harmony
+    name: Media Center
+    host: 192.168.2.207
+
+wink:
+  access_token: !secret wink_access_token
+
+notify:
+  - name: pushbullet
+    platform: pushbullet
+    api_key: !secret pushbullet_api_key
+
+mqtt:
+
+binary_sensor:
+  platform: mqtt
+  state_topic: "garage/pi/temp-monitor"
+  name: "Garage Temp Monitor"
+  sensor_class: cold
+
+input_select: !include input_select.yaml
+
+script: !include scripts.yaml
+
+automation: !include automation.yaml
+
+group: !include groups.yaml
+
+switch: !include switches.yaml

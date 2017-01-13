@@ -1,0 +1,171 @@
+  - platform: darksky
+    api_key: !secret darksky_api_key
+    monitored_conditions:
+      - summary
+      - precip_type
+      - precip_intensity
+      - precip_probability
+      - temperature
+      - apparent_temperature
+      - wind_speed
+      - humidity
+      - temperature_max
+      - temperature_min
+
+  - platform: pi_hole
+    host: 192.168.2.149
+
+  - platform: speedtest
+    monitored_conditions:
+      - ping
+      - download
+      - upload
+    server_id: 3648
+    minute: 31
+    hour:
+      - 3
+      - 9
+      - 15
+      - 21
+
+  - platform: systemmonitor
+    resources:
+      - type: processor_use
+      - type: memory_use_percent
+      - type: since_last_boot
+
+  - platform: command_line
+    name: CPU Temperature
+    command: "cat /sys/class/thermal/thermal_zone0/temp"
+    unit_of_measurement: "°C"
+    value_template: '{{ value | multiply(0.001) | round | int }}'
+
+  - platform: mqtt
+    state_topic: 'garage/pi/temperature'
+    name: 'Garage Temperature'
+    unit_of_measurement: '°F'
+
+  - platform: mqtt
+    state_topic: 'garage/pi/humidity'
+    name: 'Garage Humidity'
+    unit_of_measurement: '%'
+
+  - platform: mqtt
+    state_topic: 'pis/apple/cpu-temp'
+    name: 'apple CPU Temperature'
+    unit_of_measurement: '°F'
+
+  - platform: mqtt
+    state_topic: 'pis/apple/cpu-use'
+    name: 'apple CPU Use'
+    unit_of_measurement: '%'
+
+  - platform: mqtt
+    state_topic: 'pis/apple/ram-use'
+    name: 'apple RAM Use'
+    unit_of_measurement: '%'
+
+  - platform: mqtt
+    state_topic: 'pis/apple/uptime'
+    name: 'apple Uptime'
+
+  - platform: mqtt
+    state_topic: 'pis/apple/last-seen'
+    name: 'apple Last Seen'
+
+  - platform: mqtt
+    state_topic: 'pis/elderberry/cpu-temp'
+    name: 'elderberry CPU Temperature'
+    unit_of_measurement: '°F'
+
+  - platform: mqtt
+    state_topic: 'pis/elderberry/cpu-use'
+    name: 'elderberry CPU Use'
+    unit_of_measurement: '%'
+
+  - platform: mqtt
+    state_topic: 'pis/elderberry/ram-use'
+    name: 'elderberry RAM Use'
+    unit_of_measurement: '%'
+
+  - platform: mqtt
+    state_topic: 'pis/elderberry/uptime'
+    name: 'elderberry Uptime'
+
+  - platform: mqtt
+    state_topic: 'pis/elderberry/last-seen'
+    name: 'elderberry Last Seen'
+
+  - platform: mqtt
+    state_topic: 'pis/boston-cream/cpu-temp'
+    name: 'boston cream CPU Temperature'
+    unit_of_measurement: '°F'
+
+  - platform: mqtt
+    state_topic: 'pis/boston-cream/cpu-use'
+    name: 'boston cream CPU Use'
+    unit_of_measurement: '%'
+
+  - platform: mqtt
+    state_topic: 'pis/boston-cream/ram-use'
+    name: 'boston cream RAM Use'
+    unit_of_measurement: '%'
+
+  - platform: mqtt
+    state_topic: 'pis/boston-cream/uptime'
+    name: 'boston cream Uptime'
+
+  - platform: mqtt
+    state_topic: 'pis/boston-cream/last-seen'
+    name: 'boston cream Last Seen'
+
+  - platform: mqtt
+    state_topic: 'pis/cherry/cpu-temp'
+    name: 'cherry CPU Temperature'
+    unit_of_measurement: '°F'
+
+  - platform: mqtt
+    state_topic: 'pis/cherry/cpu-use'
+    name: 'cherry CPU Use'
+    unit_of_measurement: '%'
+
+  - platform: mqtt
+    state_topic: 'pis/cherry/ram-use'
+    name: 'cherry RAM Use'
+    unit_of_measurement: '%'
+
+  - platform: mqtt
+    state_topic: 'pis/cherry/uptime'
+    name: 'cherry Uptime'
+
+  - platform: mqtt
+    state_topic: 'pis/cherry/last-seen'
+    name: 'cherry Last Seen'
+
+  - platform: mqtt
+    state_topic: 'pis/derby/cpu-temp'
+    name: 'derby CPU Temperature'
+    unit_of_measurement: '°F'
+
+  - platform: mqtt
+    state_topic: 'pis/derby/cpu-use'
+    name: 'derby CPU Use'
+    unit_of_measurement: '%'
+
+  - platform: mqtt
+    state_topic: 'pis/derby/ram-use'
+    name: 'derby RAM Use'
+    unit_of_measurement: '%'
+
+  - platform: mqtt
+    state_topic: 'pis/derby/uptime'
+    name: 'derby Uptime'
+
+  - platform: mqtt
+    state_topic: 'pis/derby/last-seen'
+    name: 'derby Last Seen'
+
+  - platform: time_date
+    display_options:
+      - 'date'
+      - 'time'

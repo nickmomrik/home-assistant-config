@@ -1,0 +1,319 @@
+  default_view:
+    view: yes
+    icon: mdi:home
+    entities:
+      - group.media_center
+      - group.status
+      - group.doors
+      - group.cameras
+      - group.temps
+      - group.lights
+  status:
+    name: Status
+    entities:
+      - sensor.date
+      - sensor.time
+      - sun.sun
+      - sensor.dark_sky_temperature
+      - sensor.dark_sky_summary
+      - device_tracker.ford_fusion
+  media_center:
+    name: Media Center
+    entities:
+      - input_select.remote
+  lights:
+    name: Lights
+    control: hidden
+    entities:
+      - light.living_light
+      - switch.living_room_lamp
+      - switch.front_porch
+      - switch.front_lamp
+      - light.entry_light
+      - light.dining_light
+      - switch.kitchen_light
+      - light.garage_light
+      - light.hall_light
+      - light.office_light
+      - light.upstairs_light
+      - light.bedroom_light
+      - switch.bedroom_lamp
+  doors:
+    name: Doors
+    control: hidden
+    entities:
+      - cover.garage_door
+      - lock.front_door
+  dark_sky:
+    name: Dark Sky
+    entities:
+      - sensor.dark_sky_temperature
+      - sensor.dark_sky_apparent_temperature
+      - sensor.dark_sky_summary
+      - sensor.dark_sky_humidity
+      - sensor.dark_sky_wind_speed
+      - sensor.dark_sky_precip
+      - sensor.dark_sky_precip_intensity
+      - sensor.dark_sky_precip_probability
+      - sensor.dark_sky_daily_high_temperature
+      - sensor.dark_sky_daily_low_temperature
+  climate:
+    name: Climate
+    view: yes
+    icon: mdi:thermometer-lines
+    entities:
+      - group.dark_sky
+      - group.temps
+      - group.humidity
+  temps:
+    name: Temperatures
+    entities:
+      - climate.living_room_nest
+      - climate.office_nest
+      - climate.upstairs_nest
+      - climate.basement_nest
+      - sensor.garage_temperature
+  humidity:
+    name: Humidity
+    entities:
+      - sensor.living_room_thermostat_nest_humidity
+      - sensor.office_thermostat_nest_humidity
+      - sensor.upstairs_thermostat_nest_humidity
+      - sensor.basement_thermostat_nest_humidity
+      - sensor.garage_humidity
+  pis:
+    name: Pis
+    view: yes
+    icon: mdi:raspberrypi
+    entities:
+      - group.pi_apple
+      - group.pi_flapper
+      - group.pi_elderberry
+      - group.pi_boston_cream
+      - group.pi_cherry
+      - group.pi_derby
+  pi_flapper:
+    name: flapper
+    control: hidden
+    entities:
+      - sensor.since_last_boot
+#      - switch.flapper_reboot
+#      - switch.flapper_shutdown
+      - sensor.cpu_temperature
+      - sensor.cpu_use
+      - sensor.ram_use
+      - sensor.pihole
+  pi_apple:
+    name: apple
+    control: hidden
+    entities:
+      - sensor.apple_uptime
+      - sensor.apple_last_seen
+      - switch.apple_reboot
+      - switch.apple_shutdown
+      - sensor.apple_cpu_temperature
+      - sensor.apple_cpu_use
+      - sensor.apple_ram_use
+  pi_elderberry:
+      name: elderberry
+      control: hidden
+      entities:
+      - sensor.elderberry_uptime
+      - sensor.elderberry_last_seen
+      - switch.elderberry_reboot
+      - switch.elderberry_shutdown
+      - sensor.elderberry_cpu_temperature
+      - sensor.elderberry_cpu_use
+      - sensor.elderberry_ram_use
+  pi_boston_cream:
+      name: boston cream
+      control: hidden
+      entities:
+      - sensor.boston_cream_uptime
+      - sensor.boston_cream_last_seen
+      - switch.boston_cream_reboot
+      - switch.boston_cream_shutdown
+      - sensor.boston_cream_cpu_temperature
+      - sensor.boston_cream_cpu_use
+      - sensor.boston_cream_ram_use
+  pi_cherry:
+      name: cherry
+      control: hidden
+      entities:
+      - sensor.cherry_uptime
+      - sensor.cherry_last_seen
+      - switch.cherry_reboot
+      - switch.cherry_shutdown
+      - sensor.cherry_cpu_temperature
+      - sensor.cherry_cpu_use
+      - sensor.cherry_ram_use
+  pi_derby:
+      name: derby
+      control: hidden
+      entities:
+      - sensor.derby_uptime
+      - sensor.derby_last_seen
+      - switch.derby_reboot
+      - switch.derby_shutdown
+      - sensor.derby_cpu_temperature
+      - sensor.derby_cpu_use
+      - sensor.derby_ram_use
+  cameras:
+    name: Cameras
+    entities:
+      - camera.entryway
+      - camera.garage
+  upstairs:
+    name: Upstairs
+    control: hidden
+    entities:
+      - light.upstairs_light
+      - light.bedroom_light
+      - switch.bedroom_lamp
+      - climate.upstairs_nest
+      - sensor.upstairs_thermostat_nest_humidity
+  office:
+    name: Office
+    control: hidden
+    entities:
+      - light.office_light
+      - climate.office_nest
+      - sensor.office_thermostat_nest_humidity
+  living:
+    name: Living Room
+    control: hidden
+    entities:
+      - light.living_light
+      - switch.living_room_lamp
+      - climate.living_room_nest
+      - sensor.living_room_thermostat_nest_humidity
+      - input_select.remote
+  basement:
+    name: Basement
+    control: hidden
+    entities:
+      - climate.basement_nest
+      - sensor.basement_thermostat_nest_humidity
+  garage:
+    name: Garage
+    control: hidden
+    entities:
+      - cover.garage_door
+      - device_tracker.ford_fusion
+      - light.garage_light
+      - sensor.garage_temperature
+      - binary_sensor.garage_temp_monitor
+      - sensor.garage_humidity
+      - camera.garage
+  downstairs:
+    name: Downstairs
+    control: hidden
+    entities:
+      - lock.front_door
+      - switch.front_porch
+      - light.entry_light
+      - light.hall_light
+      - switch.kitchen_light
+      - light.dining_light
+      - switch.front_lamp
+      - camera.entryway
+  rooms:
+    name: Rooms
+    view: yes
+    icon: mdi:office
+    entities:
+      - group.downstairs
+      - group.living
+      - group.office
+      - group.garage
+      - group.upstairs
+      - group.basement
+  speedtest:
+    name: Speedtest
+    entities:
+      - sensor.speedtest_ping
+      - sensor.speedtest_download
+      - sensor.speedtest_upload
+  co:
+    name: CO
+    entities:
+      - sensor.downstairs_nest_protect_co_status
+      - sensor.upstairs_nest_protect_co_status
+      - sensor.basement_nest_protect_co_status
+  smoke:
+    name: Smoke
+    entities:
+      - sensor.downstairs_nest_protect_smoke_status
+      - sensor.upstairs_nest_protect_smoke_status
+      - sensor.basement_nest_protect_smoke_status
+  battery:
+    name: Battery
+    entities:
+      - sensor.downstairs_nest_protect_battery_health
+      - sensor.upstairs_nest_protect_battery_health
+      - sensor.basement_nest_protect_battery_health
+  online:
+    name: Online
+    entities:
+      - binary_sensor.entryway_camera_online
+      - binary_sensor.garage_camera_online
+      - binary_sensor.downstairs_nest_protect_online
+      - binary_sensor.upstairs_nest_protect_online
+      - binary_sensor.basement_nest_protect_online
+      - binary_sensor.living_room_thermostat_nest_online
+      - binary_sensor.office_thermostat_nest_online
+      - binary_sensor.upstairs_thermostat_nest_online
+      - binary_sensor.basement_thermostat_nest_online
+      - binary_sensor.wink_hub_2_hub
+  camera_detect:
+    name: Camera Detect
+    entities:
+      - binary_sensor.entryway_camera_motion_detected
+      - binary_sensor.garage_camera_motion_detected
+      - binary_sensor.entryway_camera_person_detected
+      - binary_sensor.garage_camera_person_detected
+      - binary_sensor.entryway_camera_sound_detected
+      - binary_sensor.garage_camera_sound_detected
+  nest_status:
+    name: Nest Status
+    entities:
+      - binary_sensor.living_room_thermostat_nest_has_leaf
+      - binary_sensor.office_thermostat_nest_has_leaf
+      - binary_sensor.upstairs_thermostat_nest_has_leaf
+      - binary_sensor.basement_thermostat_nest_has_leaf
+      - binary_sensor.living_room_thermostat_nest_is_locked
+      - binary_sensor.office_thermostat_nest_is_locked
+      - binary_sensor.upstairs_thermostat_nest_is_locked
+      - binary_sensor.basement_thermostat_nest_is_locked
+      - sensor.living_room_thermostat_nest_hvac_state
+      - sensor.office_thermostat_nest_hvac_state
+      - sensor.upstairs_thermostat_nest_hvac_state
+      - sensor.basement_thermostat_nest_hvac_state
+      - sensor.living_room_thermostat_nest_operation_mode
+      - sensor.office_thermostat_nest_operation_mode
+      - sensor.upstairs_thermostat_nest_operation_mode
+      - sensor.basement_thermostat_nest_operation_mode
+  nest_temps:
+    name: Nest Temps
+    entities:
+      - sensor.living_room_thermostat_nest_target
+      - sensor.office_thermostat_nest_target
+      - sensor.upstairs_thermostat_nest_target
+      - sensor.basement_thermostat_nest_target
+      - sensor.living_room_thermostat_nest_temperature
+      - sensor.office_thermostat_nest_temperature
+      - sensor.upstairs_thermostat_nest_temperature
+      - sensor.basement_thermostat_nest_temperature
+  sensors:
+    name: Sensors
+    view: yes
+    icon: mdi:ruler
+    entities:
+      - group.speedtest
+      - group.co
+      - group.smoke
+      - group.battery
+      - group.online
+      - group.camera_detect
+      - group.nest_status
+      - group.nest_temps

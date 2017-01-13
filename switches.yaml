@@ -1,0 +1,22 @@
+  platform: command_line
+  switches:
+    elderberry_reboot:
+      command_on: "echo 'Reboot elderberry'"
+    elderberry_shutdown:
+      command_on: "echo 'Shutdown elderberry'"
+    boston_cream_reboot:
+      command_on: "echo 'Reboot boston_cream'"
+    boston_cream_shutdown:
+      command_on: "echo 'Shutdown boston_cream'"
+    cherry_reboot:
+      command_on: "echo 'Reboot cherry'"
+    cherry_shutdown:
+      command_on: "echo 'Shutdown cherry'"
+    derby_reboot:
+      command_on: "echo 'Reboot derby'"
+    derby_shutdown:
+      command_on: "echo 'Shutdown derby'"
+    apple_reboot:
+      command_on: "echo 'Reboot apple'"
+    apple_shutdown:
+      command_on: "echo 'Shutdown apple'"
