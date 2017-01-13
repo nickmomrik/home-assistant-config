@@ -28,7 +28,7 @@
   sensor.cpu_use:
     icon: mdi:raspberrypi
   sensor.ram_use:
-    icon: mdi:raspberrypi
+    icon: mdi:chip
   sensor.pihole:
     icon: mdi:counter
   sensor.downstairs_nest_protect_battery_health:
@@ -79,7 +79,7 @@
     icon: mdi:raspberrypi
     friendly_name: CPU Use
   sensor.apple_ram_use:
-    icon: mdi:raspberrypi
+    icon: mdi:chip
     friendly_name: RAM Use
   sensor.elderberry_cpu_temperature:
     icon: mdi:thermometer
@@ -88,7 +88,7 @@
     icon: mdi:raspberrypi
     friendly_name: CPU Use
   sensor.elderberry_ram_use:
-    icon: mdi:raspberrypi
+    icon: mdi:chip
     friendly_name: RAM Use
   sensor.boston_cream_cpu_temperature:
     icon: mdi:thermometer
@@ -97,7 +97,7 @@
     icon: mdi:raspberrypi
     friendly_name: CPU Use
   sensor.boston_cream_ram_use:
-    icon: mdi:raspberrypi
+    icon: mdi:chip
     friendly_name: RAM Use
   sensor.cherry_cpu_temperature:
     icon: mdi:thermometer
@@ -106,7 +106,7 @@
     icon: mdi:raspberrypi
     friendly_name: CPU Use
   sensor.cherry_ram_use:
-    icon: mdi:raspberrypi
+    icon: mdi:chip
     friendly_name: RAM Use
   sensor.derby_cpu_temperature:
     icon: mdi:thermometer
@@ -115,7 +115,7 @@
     icon: mdi:raspberrypi
     friendly_name: CPU Use
   sensor.derby_ram_use:
-    icon: mdi:raspberrypi
+    icon: mdi:chip
     friendly_name: RAM Use
   sensor.cpu_temperature:
     icon: mdi:thermometer
@@ -270,37 +270,37 @@
   sensor.dark_sky_daily_low_temperature:
     friendly_name: Low Temperature
   sensor.since_last_boot_templated:
-    icon: mdi:clock
+    icon: mdi:timer
     friendly_name: Uptime
   sensor.apple_uptime:
-    icon: mdi:clock
+    icon: mdi:timer
     friendly_name: Uptime
   sensor.apple_last_seen:
-    icon: mdi:clock
+    icon: mdi:calendar-clock
     friendly_name: Last Seen
   sensor.elderberry_uptime:
-    icon: mdi:clock
+    icon: mdi:timer
     friendly_name: Uptime
   sensor.elderberry_last_seen:
-    icon: mdi:clock
+    icon: mdi:calendar-clock
     friendly_name: Last Seen
   sensor.boston_cream_uptime:
-    icon: mdi:clock
+    icon: mdi:timer
     friendly_name: Uptime
   sensor.boston_cream_last_seen:
-    icon: mdi:clock
+    icon: mdi:calendar-clock
     friendly_name: Last Seen
   sensor.cherry_uptime:
-    icon: mdi:clock
+    icon: mdi:timer
     friendly_name: Uptime
   sensor.cherry_last_seen:
-    icon: mdi:clock
+    icon: mdi:calendar-clock
     friendly_name: Last Seen
   sensor.derby_uptime:
-    icon: mdi:clock
+    icon: mdi:timer
     friendly_name: Uptime
   sensor.derby_last_seen:
-    icon: mdi:clock
+    icon: mdi:calendar-clock
     friendly_name: Last Seen
   switch.flapper_reboot:
     icon: mdi:refresh
