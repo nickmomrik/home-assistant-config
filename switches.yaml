@@ -1,5 +1,9 @@
   platform: command_line
   switches:
+    flapper_reboot:
+      command_on: "sudo shutdown -r now"
+    flapper_shutdown:
+      command_on: "sudo shutdown -h now"
     elderberry_reboot:
       command_on: "echo 'Reboot elderberry'"
     elderberry_shutdown:

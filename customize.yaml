@@ -269,7 +269,8 @@
     friendly_name: High Temperature
   sensor.dark_sky_daily_low_temperature:
     friendly_name: Low Temperature
-  sensor.since_last_boot:
+  sensor.since_last_boot_templated:
+    icon: mdi:clock
     friendly_name: Uptime
   sensor.apple_uptime:
     icon: mdi:clock
@@ -301,6 +302,12 @@
   sensor.derby_last_seen:
     icon: mdi:clock
     friendly_name: Last Seen
+  switch.flapper_reboot:
+    icon: mdi:refresh
+    friendly_name: Reboot
+  switch.flapper_shutdown:
+    icon: mdi:close-network
+    friendly_name: Shutdown
   switch.elderberry_reboot:
     icon: mdi:refresh
     friendly_name: Reboot
