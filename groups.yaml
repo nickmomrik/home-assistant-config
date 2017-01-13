@@ -13,7 +13,7 @@
     entities:
       - sensor.date
       - sensor.time
-      - sun.sun
+      - sensor.sun_state
       - sensor.dark_sky_temperature
       - sensor.dark_sky_summary
       - device_tracker.ford_fusion

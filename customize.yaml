@@ -338,3 +338,6 @@
   switch.boston_cream_shutdown:
     icon: mdi:close-network
     friendly_name: Shutdown
+  sensor.sun_state:
+    icon: mdi:weather-sunny
+    friendly_name: 'Sun'

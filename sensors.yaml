@@ -33,10 +33,13 @@
       - type: processor_use
       - type: memory_use_percent
       - type: since_last_boot
+
   - platform: template
     sensors:
       since_last_boot_templated:
         value_template: '{{ states.sensor.since_last_boot.state.split(".")[0] }}'
+      sun_state:
+        value_template: '{% if is_state("sun.sun", "above_horizon") %}up{% else %}down{% endif %}'        
 
   - platform: command_line
     name: CPU Temperature
