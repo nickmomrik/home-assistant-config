@@ -20,7 +20,7 @@
       - ping
       - download
       - upload
-    server_id: 3648
+    server_id: 8460
     minute: 31
     hour:
       - 3
