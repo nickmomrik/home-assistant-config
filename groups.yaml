@@ -199,11 +199,11 @@
     control: hidden
     entities:
       - cover.garage_door
-      - device_tracker.ford_fusion
       - light.garage_light
-      - sensor.garage_temperature
       - binary_sensor.garage_temp_monitor
+      - sensor.garage_temperature
       - sensor.garage_humidity
+      - device_tracker.ford_fusion
       - camera.garage
   downstairs:
     name: Downstairs
