@@ -28,14 +28,14 @@
       - precip_intensity_max
 
   - platform: pi_hole
-    host: 192.168.2.149:8081
+    host: !secret pi_hole_host
 
   - platform: speedtest
     monitored_conditions:
       - ping
       - download
       - upload
-    server_id: 8460
+    server_id: !secret speedtest_server_id
     minute: 31
     hour:
       - 3
