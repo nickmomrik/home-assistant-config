@@ -269,6 +269,36 @@
     friendly_name: High Temperature
   sensor.dark_sky_daily_low_temperature:
     friendly_name: Low Temperature
+  sensor.dark_sky_icon:
+    friendly_name: Icon
+  sensor.dark_sky_nearest_storm_distance:
+    friendly_name: Nearest Storm Distance
+  sensor.dark_sky_nearest_storm_bearing:
+    friendly_name: Nearest Storm Bearing
+  sensor.dark_sky_dew_point:
+    friendly_name: Dew Point
+  sensor.dark_sky_wind_bearing:
+    friendly_name: Wind Bearing
+  sensor.dark_sky_cloud_cover:
+    friendly_name: Cloud Cover
+  sensor.dark_sky_pressure:
+    friendly_name: Pressure
+  sensor.dark_sky_visibility:
+    friendly_name: Visibility
+  sensor.dark_sky_ozone:
+    friendly_name: Ozone
+  sensor.dark_sky_minutely_summary:
+    friendly_name: Minute Summary
+  sensor.dark_sky_hourly_summary:
+    friendly_name: Hour Summary
+  sensor.dark_sky_daily_summary:
+    friendly_name: Day Summary
+  sensor.dark_sky_apparent_temperature_max:
+    friendly_name: Feels Like Max
+  sensor.dark_sky_apparent_temperature_min:
+    friendly_name: Feels Like Min
+  sensor.dark_sky_precip_intensity_max:
+    friendly_name: Precipitation Intensity Max
   sensor.since_last_boot_templated:
     icon: mdi:timer
     friendly_name: Uptime
@@ -338,6 +368,3 @@
   switch.boston_cream_shutdown:
     icon: mdi:close-network
     friendly_name: Shutdown
-  sensor.sun_state:
-    icon: mdi:weather-sunny
-    friendly_name: 'Sun'

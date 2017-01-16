@@ -11,6 +11,21 @@
       - humidity
       - temperature_max
       - temperature_min
+      - icon
+      - nearest_storm_distance
+      - nearest_storm_bearing
+      - dew_point
+      - wind_bearing
+      - cloud_cover
+      - pressure
+      - visibility
+      - ozone
+      - minutely_summary
+      - hourly_summary
+      - daily_summary
+      - apparent_temperature_max
+      - apparent_temperature_min
+      - precip_intensity_max
 
   - platform: pi_hole
     host: 192.168.2.149:8081
@@ -38,8 +53,6 @@
     sensors:
       since_last_boot_templated:
         value_template: '{{ states.sensor.since_last_boot.state.split(".")[0] }}'
-      sun_state:
-        value_template: '{% if is_state("sun.sun", "above_horizon") %}up{% else %}down{% endif %}'
 
   - platform: command_line
     name: CPU Temperature
