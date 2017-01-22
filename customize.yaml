@@ -66,8 +66,9 @@
     icon: mdi:thermometer
   sensor.garage_humidity:
     icon: mdi:water-percent
-  binary_sensor.garage_temp_monitor:
+  switch.garage_temp_monitor:
     icon: mdi:eye
+    friendly_name: Temp Monitor
   sensor.apple_cpu_temperature:
     icon: mdi:thermometer
     friendly_name: CPU Temp

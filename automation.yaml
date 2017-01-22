@@ -17,10 +17,26 @@
     - service: script.turn_on
       entity_id: script.input_select_harmony
 
+- alias: 'Garage temp reached desired temp'
+  trigger:
+    platform: mqtt
+    topic: 'garage/pi/temperature'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: switch.garage_temp_monitor
+        state: 'on'
+      - condition: template
+        value_template: '{{ states.sensor.garage_temperature.state >= states.input_slider.garage_temp_desired.state }}'
+  action:
+    - service: switch.turn_off
+      entity_id: switch.garage_temp_monitor
+
 - alias: 'Notify garage temp monitor turned off'
   trigger:
     platform: state
-    entity_id: binary_sensor.garage_temp_monitor
+    entity_id: switch.garage_temp_monitor
     from: 'on'
     to: 'off'
   action:

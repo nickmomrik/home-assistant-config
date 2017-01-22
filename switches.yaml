@@ -1,13 +1,9 @@
   platform: command_line
   switches:
-    flapper_reboot:
-      command_on: "sudo shutdown -r now"
-    flapper_shutdown:
-      command_on: "sudo shutdown -h now"
-    elderberry_reboot:
-      command_on: "echo 'Reboot elderberry'"
-    elderberry_shutdown:
-      command_on: "echo 'Shutdown elderberry'"
+    apple_reboot:
+      command_on: "echo 'Reboot apple'"
+    apple_shutdown:
+      command_on: "echo 'Shutdown apple'"
     boston_cream_reboot:
       command_on: "echo 'Reboot boston_cream'"
     boston_cream_shutdown:
@@ -20,7 +16,13 @@
       command_on: "echo 'Reboot derby'"
     derby_shutdown:
       command_on: "echo 'Shutdown derby'"
-    apple_reboot:
-      command_on: "echo 'Reboot apple'"
-    apple_shutdown:
-      command_on: "echo 'Shutdown apple'"
+    elderberry_reboot:
+      command_on: "echo 'Reboot elderberry'"
+    elderberry_shutdown:
+      command_on: "echo 'Shutdown elderberry'"
+    flapper_reboot:
+      command_on: "sudo shutdown -r now"
+    flapper_shutdown:
+      command_on: "sudo shutdown -h now"
+    garage_temp_monitor:
+      command_on: "echo 'Garage temp monitor'"

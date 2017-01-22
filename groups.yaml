@@ -235,8 +235,9 @@
     entities:
       - cover.garage_door
       - light.garage_light
-      - binary_sensor.garage_temp_monitor
+      - switch.garage_temp_monitor
       - sensor.garage_temperature
+      - input_slider.garage_temp_desired
       - sensor.garage_humidity
       - device_tracker.ford_fusion
       - camera.garage

@@ -69,12 +69,6 @@ notify:
 
 mqtt:
 
-binary_sensor:
-  platform: mqtt
-  state_topic: "garage/pi/temp-monitor"
-  name: "Garage Temp Monitor"
-  sensor_class: cold
-
 input_select: !include input_select.yaml
 
 script: !include scripts.yaml
@@ -84,3 +78,12 @@ automation: !include automation.yaml
 group: !include groups.yaml
 
 switch: !include switches.yaml
+
+input_slider:
+  garage_temp_desired:
+    name: Desired Temperature
+    initial: 50
+    min: 40
+    max: 60
+    step: 1
+    icon: mdi:target
