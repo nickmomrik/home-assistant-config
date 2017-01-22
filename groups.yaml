@@ -49,29 +49,29 @@
     entities:
       - sensor.dark_sky_temperature
       - sensor.dark_sky_apparent_temperature
-      - sensor.dark_sky_summary
       - sensor.dark_sky_humidity
-      - sensor.dark_sky_wind_speed
-      - sensor.dark_sky_wind_bearing
+      - sensor.dark_sky_summary
+      - sensor.dark_sky_minutely_summary
+      - sensor.dark_sky_hourly_summary
+      - sensor.dark_sky_daily_summary
       - sensor.dark_sky_precip
       - sensor.dark_sky_precip_intensity
       - sensor.dark_sky_precip_probability
-      - sensor.dark_sky_daily_high_temperature
-      - sensor.dark_sky_daily_low_temperature
+      - sensor.dark_sky_wind_speed
+      - sensor.dark_sky_wind_bearing
       - sensor.dark_sky_icon
       - sensor.dark_sky_nearest_storm_distance
       - sensor.dark_sky_nearest_storm_bearing
+      - sensor.dark_sky_daily_high_temperature
+      - sensor.dark_sky_daily_low_temperature
+      - sensor.dark_sky_apparent_temperature_max
+      - sensor.dark_sky_apparent_temperature_min
+      - sensor.dark_sky_precip_intensity_max
       - sensor.dark_sky_cloud_cover
       - sensor.dark_sky_dew_point
       - sensor.dark_sky_pressure
       - sensor.dark_sky_visibility
       - sensor.dark_sky_ozone
-      - sensor.dark_sky_minutely_summary
-      - sensor.dark_sky_hourly_summary
-      - sensor.dark_sky_daily_summary
-      - sensor.dark_sky_apparent_temperature_max
-      - sensor.dark_sky_apparent_temperature_min
-      - sensor.dark_sky_precip_intensity_max
   climate:
     name: Climate
     view: yes
@@ -101,12 +101,17 @@
     view: yes
     icon: mdi:raspberrypi
     entities:
-      - group.pi_apple
+      - group.pi_apple_on
+      - group.pi_apple_off
+      - group.pi_boston_cream_on
+      - group.pi_boston_cream_off
+      - group.pi_cherry_on
+      - group.pi_cherry_off
+      - group.pi_derby_on
+      - group.pi_derby_off
+      - group.pi_elderberry_on
+      - group.pi_elderberry_off
       - group.pi_flapper
-      - group.pi_elderberry
-      - group.pi_boston_cream
-      - group.pi_cherry
-      - group.pi_derby
   pi_flapper:
     name: flapper
     control: hidden
@@ -118,61 +123,81 @@
       - sensor.cpu_temperature
       - sensor.cpu_use
       - sensor.ram_use
-  pi_apple:
-    name: apple
+  pi_apple_on:
+    name: apple ON
     control: hidden
     entities:
       - sensor.apple_uptime
-      - sensor.apple_last_seen
       - switch.apple_reboot
       - switch.apple_shutdown
       - sensor.apple_cpu_temperature
       - sensor.apple_cpu_use
       - sensor.apple_ram_use
-  pi_elderberry:
-      name: elderberry
-      control: hidden
-      entities:
-      - sensor.elderberry_uptime
-      - sensor.elderberry_last_seen
-      - switch.elderberry_reboot
-      - switch.elderberry_shutdown
-      - sensor.elderberry_cpu_temperature
-      - sensor.elderberry_cpu_use
-      - sensor.elderberry_ram_use
-  pi_boston_cream:
-      name: boston cream
-      control: hidden
-      entities:
+  pi_apple_off:
+    name: apple OFF
+    control: hidden
+    entities:
+      - sensor.apple_last_seen
+  pi_boston_cream_on:
+    name: boston cream ON
+    control: hidden
+    entities:
       - sensor.boston_cream_uptime
-      - sensor.boston_cream_last_seen
       - switch.boston_cream_reboot
       - switch.boston_cream_shutdown
       - sensor.boston_cream_cpu_temperature
       - sensor.boston_cream_cpu_use
       - sensor.boston_cream_ram_use
-  pi_cherry:
-      name: cherry
-      control: hidden
-      entities:
+  pi_boston_cream_off:
+    name: boston cream OFF
+    control: hidden
+    entities:
+      - sensor.boston_cream_last_seen
+  pi_cherry_on:
+    name: cherry ON
+    control: hidden
+    entities:
       - sensor.cherry_uptime
-      - sensor.cherry_last_seen
       - switch.cherry_reboot
       - switch.cherry_shutdown
       - sensor.cherry_cpu_temperature
       - sensor.cherry_cpu_use
       - sensor.cherry_ram_use
-  pi_derby:
-      name: derby
-      control: hidden
-      entities:
+  pi_cherry_off:
+    name: cherry OFF
+    control: hidden
+    entities:
+      - sensor.cherry_last_seen
+  pi_derby_on:
+    name: derby ON
+    control: hidden
+    entities:
       - sensor.derby_uptime
-      - sensor.derby_last_seen
       - switch.derby_reboot
       - switch.derby_shutdown
       - sensor.derby_cpu_temperature
       - sensor.derby_cpu_use
       - sensor.derby_ram_use
+  pi_derby_off:
+    name: derby OFF
+    control: hidden
+    entities:
+      - sensor.derby_last_seen
+  pi_elderberry_on:
+    name: elderberry ON
+    control: hidden
+    entities:
+      - sensor.elderberry_uptime
+      - switch.elderberry_reboot
+      - switch.elderberry_shutdown
+      - sensor.elderberry_cpu_temperature
+      - sensor.elderberry_cpu_use
+      - sensor.elderberry_ram_use
+  pi_elderberry_off:
+    name: elderberry OFF
+    control: hidden
+    entities:
+      - sensor.elderberry_last_seen
   cameras:
     name: Cameras
     entities:

@@ -28,3 +28,114 @@
     data_template:
       title: "Garage Monitor OFF @ {{ states.sensor.garage_temperature.state }}°F"
       message: "Temperature in the garage is currently {{ states.sensor.garage_temperature.state }}°F"
+
+- alias: 'Home Assistant Start'
+  trigger:
+    platform: event
+    event_type: homeassistant_start
+  action:
+    - service: group.set_visibility
+      entity_id: group.pi_apple_on
+      data:
+        visible: False
+    - service: group.set_visibility
+      entity_id: group.pi_boston_cream_on
+      data:
+        visible: False
+    - service: group.set_visibility
+      entity_id: group.pi_cherry_on
+      data:
+        visible: False
+    - service: group.set_visibility
+      entity_id: group.pi_derby_on
+      data:
+        visible: False
+    - service: group.set_visibility
+      entity_id: group.pi_elderberry_on
+      data:
+        visible: False
+
+- alias: 'apple is on'
+  trigger:
+    platform: mqtt
+    topic: 'pis/apple/last-seen'
+  condition:
+    - condition: template
+      value_template: '{{ states.group.pi_apple_on.attributes.hidden }}'
+  action:
+    - service: group.set_visibility
+      entity_id: group.pi_apple_on
+      data:
+        visible: True
+    - service: group.set_visibility
+      entity_id: group.pi_apple_off
+      data:
+        visible: False
+
+- alias: 'boston cream is on'
+  trigger:
+    platform: mqtt
+    topic: 'pis/boston_cream/last-seen'
+  condition:
+    - condition: template
+      value_template: '{{ states.group.pi_boston_cream_on.attributes.hidden }}'
+  action:
+    - service: group.set_visibility
+      entity_id: group.pi_boston_cream_on
+      data:
+        visible: True
+    - service: group.set_visibility
+      entity_id: group.pi_boston_cream_off
+      data:
+        visible: False
+
+- alias: 'cherry is on'
+  trigger:
+    platform: mqtt
+    topic: 'pis/cherry/last-seen'
+  condition:
+    - condition: template
+      value_template: '{{ states.group.pi_cherry_on.attributes.hidden }}'
+  action:
+    - service: group.set_visibility
+      entity_id: group.pi_cherry_on
+      data:
+        visible: True
+    - service: group.set_visibility
+      entity_id: group.pi_cherry_off
+      data:
+        visible: False
+
+- alias: 'derby is on'
+  trigger:
+    platform: mqtt
+    topic: 'pis/derby/last-seen'
+  condition:
+    - condition: template
+      value_template: '{{ states.group.pi_derby_on.attributes.hidden }}'
+  action:
+    - service: group.set_visibility
+      entity_id: group.pi_derby_on
+      data:
+        visible: True
+    - service: group.set_visibility
+      entity_id: group.pi_derby_off
+      data:
+        visible: False
+
+- alias: 'elderberry is on'
+  trigger:
+    platform: mqtt
+    topic: 'pis/elderberry/last-seen'
+  condition:
+    - condition: template
+      value_template: '{{ states.group.pi_elderberry_on.attributes.hidden }}'
+  action:
+    - service: group.set_visibility
+      entity_id: group.pi_elderberry_on
+      data:
+        visible: True
+    - service: group.set_visibility
+      entity_id: group.pi_elderberry_off
+      data:
+        visible: False
