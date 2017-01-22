@@ -124,7 +124,7 @@
       - sensor.cpu_use
       - sensor.ram_use
   pi_apple_on:
-    name: apple ON
+    name: apple
     control: hidden
     entities:
       - sensor.apple_uptime
@@ -134,12 +134,11 @@
       - sensor.apple_cpu_use
       - sensor.apple_ram_use
   pi_apple_off:
-    name: apple OFF
-    control: hidden
+    name: apple
     entities:
       - sensor.apple_last_seen
   pi_boston_cream_on:
-    name: boston cream ON
+    name: boston cream
     control: hidden
     entities:
       - sensor.boston_cream_uptime
@@ -149,12 +148,11 @@
       - sensor.boston_cream_cpu_use
       - sensor.boston_cream_ram_use
   pi_boston_cream_off:
-    name: boston cream OFF
-    control: hidden
+    name: boston cream
     entities:
       - sensor.boston_cream_last_seen
   pi_cherry_on:
-    name: cherry ON
+    name: cherry
     control: hidden
     entities:
       - sensor.cherry_uptime
@@ -164,12 +162,11 @@
       - sensor.cherry_cpu_use
       - sensor.cherry_ram_use
   pi_cherry_off:
-    name: cherry OFF
-    control: hidden
+    name: cherry
     entities:
       - sensor.cherry_last_seen
   pi_derby_on:
-    name: derby ON
+    name: derby
     control: hidden
     entities:
       - sensor.derby_uptime
@@ -179,12 +176,11 @@
       - sensor.derby_cpu_use
       - sensor.derby_ram_use
   pi_derby_off:
-    name: derby OFF
-    control: hidden
+    name: derby
     entities:
       - sensor.derby_last_seen
   pi_elderberry_on:
-    name: elderberry ON
+    name: elderberry
     control: hidden
     entities:
       - sensor.elderberry_uptime
@@ -194,8 +190,7 @@
       - sensor.elderberry_cpu_use
       - sensor.elderberry_ram_use
   pi_elderberry_off:
-    name: elderberry OFF
-    control: hidden
+    name: elderberry
     entities:
       - sensor.elderberry_last_seen
   cameras:
