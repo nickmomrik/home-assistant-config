@@ -75,7 +75,7 @@
 - alias: 'boston cream is on'
   trigger:
     platform: mqtt
-    topic: 'pis/boston_cream/last-seen'
+    topic: 'pis/boston-cream/last-seen'
   condition:
     - condition: template
       value_template: '{{ states.group.pi_boston_cream_on.attributes.hidden }}'
@@ -139,3 +139,133 @@
       entity_id: group.pi_elderberry_off
       data:
         visible: False
+
+- alias: 'apple not seen'
+  trigger:
+    platform: time
+    minutes: '/2'
+    seconds: 00
+  condition:
+    condition: and
+    conditions:
+      - condition: template
+        value_template: '{{ states.group.pi_apple_off.attributes.hidden }}'
+      - condition: or
+        conditions:
+        - condition: template
+          value_template: '{{ "unknown" == states.sensor.apple_last_seen.state }}'
+        - condition: template
+          value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.apple_last_seen.state ) ) > 120 }}'
+  action:
+    - service: group.set_visibility
+      entity_id: group.pi_apple_on
+      data:
+        visible: False
+    - service: group.set_visibility
+      entity_id: group.pi_apple_off
+      data:
+        visible: True
+
+- alias: 'boston cream not seen'
+  trigger:
+    platform: time
+    minutes: '/2'
+    seconds: 00
+  condition:
+    condition: and
+    conditions:
+      - condition: template
+        value_template: '{{ states.group.pi_boston_cream_off.attributes.hidden }}'
+      - condition: or
+        conditions:
+        - condition: template
+          value_template: '{{ "unknown" == states.sensor.boston_cream_last_seen.state }}'
+        - condition: template
+          value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.boston_cream_last_seen.state ) ) > 120 }}'
+  action:
+    - service: group.set_visibility
+      entity_id: group.pi_boston_cream_on
+      data:
+        visible: False
+    - service: group.set_visibility
+      entity_id: group.pi_boston_cream_off
+      data:
+        visible: True
+
+- alias: 'cherry not seen'
+  trigger:
+    platform: time
+    minutes: '/2'
+    seconds: 00
+  condition:
+    condition: and
+    conditions:
+      - condition: template
+        value_template: '{{ states.group.pi_cherry_off.attributes.hidden }}'
+      - condition: or
+        conditions:
+        - condition: template
+          value_template: '{{ "unknown" == states.sensor.cherry_last_seen.state }}'
+        - condition: template
+          value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.cherry_last_seen.state ) ) > 120 }}'
+  action:
+    - service: group.set_visibility
+      entity_id: group.pi_cherry_on
+      data:
+        visible: False
+    - service: group.set_visibility
+      entity_id: group.pi_cherry_off
+      data:
+        visible: True
+
+- alias: 'derby not seen'
+  trigger:
+    platform: time
+    minutes: '/2'
+    seconds: 00
+  condition:
+    condition: and
+    conditions:
+      - condition: template
+        value_template: '{{ states.group.pi_derby_off.attributes.hidden }}'
+      - condition: or
+        conditions:
+        - condition: template
+          value_template: '{{ "unknown" == states.sensor.derby_last_seen.state }}'
+        - condition: template
+          value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.derby_last_seen.state ) ) > 120 }}'
+  action:
+    - service: group.set_visibility
+      entity_id: group.pi_derby_on
+      data:
+        visible: False
+    - service: group.set_visibility
+      entity_id: group.pi_derby_off
+      data:
+        visible: True
+
+- alias: 'elderberry not seen'
+  trigger:
+    platform: time
+    minutes: '/2'
+    seconds: 00
+  condition:
+    condition: and
+    conditions:
+      - condition: template
+        value_template: '{{ states.group.pi_elderberry_off.attributes.hidden }}'
+      - condition: or
+        conditions:
+        - condition: template
+          value_template: '{{ "unknown" == states.sensor.elderberry_last_seen.state }}'
+        - condition: template
+          value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.elderberry_last_seen.state ) ) > 120 }}'
+  action:
+    - service: group.set_visibility
+      entity_id: group.pi_elderberry_on
+      data:
+        visible: False
+    - service: group.set_visibility
+      entity_id: group.pi_elderberry_off
+      data:
+        visible: True
