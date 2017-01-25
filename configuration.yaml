@@ -61,6 +61,7 @@ remote:
 
 wink:
   access_token: !secret wink_access_token
+  refresh_token: !secret wink_refresh_token
 
 notify:
   - name: pushbullet
