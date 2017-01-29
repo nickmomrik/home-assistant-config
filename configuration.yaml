@@ -60,7 +60,8 @@ remote:
     host: 192.168.2.207
 
 wink:
-  access_token: !secret wink_access_token
+  email:  !secret wink_email
+  password:  !secret wink_password
 
 notify:
   - name: pushbullet
