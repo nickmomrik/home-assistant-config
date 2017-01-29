@@ -85,7 +85,7 @@
     icon: mdi:close-network
     friendly_name: Shutdown
     assumed_state: false
-  - entity_id: sensor.l*_thermostat_nest_humidity
+  - entity_id: sensor.*_thermostat_nest_humidity
     icon: mdi:water-percent
   - entity_id: sensor.living_room_thermostat_nest_humidity
     friendly_name: Living Room Humidity
