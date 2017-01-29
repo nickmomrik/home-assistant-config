@@ -17,6 +17,16 @@
     - service: script.turn_on
       entity_id: script.input_select_harmony
 
+- alias: 'Update Available Notifications'
+  trigger:
+    platform: state
+    entity_id: updater.updater
+  action:
+    service: notify.pushbullet
+    data:
+      title: 'Home Assistant update available'
+      message: 'Update for Home Assistant is available.'
+
 - alias: 'Garage temp reached desired temp'
   trigger:
     platform: mqtt
