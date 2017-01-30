@@ -62,6 +62,7 @@
   - entity_id: switch.garage_temp_monitor
     icon: mdi:eye
     friendly_name: Temp Monitor
+    assumed_state: false
   - entity_id: sensor.*cpu_temperature
     icon: mdi:thermometer
     friendly_name: CPU Temp
