@@ -117,12 +117,12 @@
     control: hidden
     entities:
       - sensor.since_last_boot_templated
-      - sensor.pihole
       - switch.flapper_reboot
       - switch.flapper_shutdown
       - sensor.cpu_temperature
       - sensor.cpu_use
       - sensor.ram_use
+      - sensor.pihole
   pi_apple_on:
     name: apple
     control: hidden
