@@ -13,6 +13,11 @@ http:
   ssl_certificate: !secret ssl_certificate
   ssl_key: !secret ssl_key
 
+recorder:
+  db_url: !secret recorder_db_url
+history:
+logbook:
+
 wemo:
   static:
     - 192.168.2.107
@@ -70,9 +75,6 @@ cover:
 frontend:
 updater:
 conversation:
-recorder:
-history:
-logbook:
 config:
 sun:
 alexa:
