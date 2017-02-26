@@ -1,252 +1,252 @@
-  - entity_id: cover.garage_door
+  cover.garage_door:
     icon: mdi:garage
-  - entity_id: lock.front_door
+  lock.front_door:
     friendly_name: Front Door Lock
-  - entity_id: device_tracker.ford_fusion
+  device_tracker.ford_fusion:
     icon: mdi:car
-  - entity_id: switch.*_lamp
+  switch.front_lamp:
     icon: mdi:lamp
-  - entity_id: switch.front_porch
+  switch.bedroom_lamp:
+    icon: mdi:lamp
+  switch.front_porch:
     icon: mdi:lightbulb
     friendly_name: Porch Light
-  - entity_id: switch.kitchen_light
+  switch.kitchen_light:
     icon: mdi:lightbulb
-  - entity_id: light.living_light
+  light.living_light:
     friendly_name: Living Room Light
-  - entity_id: light.dining_light
+  light.dining_light:
     friendly_name: Dining Room Light
-  - entity_id: sensor.speedtest_ping
+  sensor.speedtest_ping:
     icon: mdi:speedometer
-  - entity_id: sensor.speedtest_download
+  sensor.speedtest_download:
     icon: mdi:download
-  - entity_id: sensor.speedtest_upload
+  sensor.speedtest_upload:
     icon: mdi:upload
-  - entity_id: sensor.pihole
+  sensor.pihole:
     icon: mdi:counter
-  - entity_id: sensor.*_nest_protect_battery_health
+  sensor.downstairs_nest_protect_battery_health:
     icon: mdi:battery-80
-  - entity_id: sensor.downstairs_nest_protect_battery_health
     friendly_name: Downstairs Protect Battery
-  - entity_id: sensor.upstairs_nest_protect_battery_health
+  sensor.upstairs_nest_protect_battery_health:
+    icon: mdi:battery-80
     friendly_name: Upstairs Protect Battery
-  - entity_id: sensor.basement_nest_protect_battery_health
+  sensor.basement_nest_protect_battery_health:
+    icon: mdi:battery-80
     friendly_name: Basement Protect Battery
-  - entity_id: sensor.*_nest_protect_smoke_status
+  sensor.upstairs_nest_protect_smoke_status:
     icon: mdi:fire
-  - entity_id: sensor.upstairs_nest_protect_smoke_status
     friendly_name: Upstairs Smoke
-  - entity_id: sensor.basement_nest_protect_smoke_status
+  sensor.basement_nest_protect_smoke_status:
+    icon: mdi:fire
     friendly_name: Basement Smoke
-  - entity_id: sensor.downstairs_nest_protect_smoke_status
+  sensor.downstairs_nest_protect_smoke_status:
+    icon: mdi:fire
     friendly_name: Downstairs Smoke
-  - entity_id: sensor.*_nest_protect_co_status
+  sensor.upstairs_nest_protect_co_status:
     icon: mdi:gas-cylinder
-  - entity_id: sensor.upstairs_nest_protect_co_status
     friendly_name: Upstairs CO
-  - entity_id: sensor.basement_nest_protect_co_status
+  sensor.basement_nest_protect_co_status:
+    icon: mdi:gas-cylinder
     friendly_name: Basement CO
-  - entity_id: sensor.downstairs_nest_protect_co_status
+  sensor.downstairs_nest_protect_co_status:
+    icon: mdi:gas-cylinder
     friendly_name: Downstairs CO
-  - entity_id: climate.living_room_nest
+  climate.living_room_nest:
     friendly_name: Living Room Nest
-  - entity_id: climate.office_nest
+  climate.office_nest:
     friendly_name: Office Nest
-  - entity_id: climate.upstairs_nest
+  climate.upstairs_nest:
     friendly_name: Upstairs Nest
-  - entity_id: climate.basement_nest
+  climate.basement_nest:
     friendly_name: Basement Nest
-  - entity_id: sensor.garage_temperature
+  sensor.garage_temperature:
     icon: mdi:thermometer
-  - entity_id: sensor.garage_humidity
+  sensor.garage_humidity:
     icon: mdi:water-percent
-  - entity_id: switch.garage_temp_monitor
+  switch.garage_temp_monitor:
     icon: mdi:eye
     friendly_name: Temp Monitor
     assumed_state: false
-  - entity_id: sensor.*cpu_temperature
-    icon: mdi:thermometer
-    friendly_name: CPU Temp
-  - entity_id: sensor.*cpu_use
-    icon: mdi:raspberrypi
-    friendly_name: CPU Use
-  - entity_id: sensor.*ram_use
-    icon: mdi:chip
-    friendly_name: RAM Use
-  - entity_id: sensor.*_uptime, sensor.since_last_boot_templated
+  sensor.since_last_boot_templated:
     icon: mdi:timer
     friendly_name: Uptime
-  - entity_id: sensor.*_last_seen
-    icon: mdi:calendar-clock
-    friendly_name: Last Seen
-  - entity_id: switch.*_reboot
-    icon: mdi:refresh
-    friendly_name: Reboot
-    assumed_state: false
-  - entity_id: switch.*_shutdown
-    icon: mdi:close-network
-    friendly_name: Shutdown
-    assumed_state: false
-  - entity_id: sensor.*_thermostat_nest_humidity
+  sensor.living_room_thermostat_nest_humidity:
     icon: mdi:water-percent
-  - entity_id: sensor.living_room_thermostat_nest_humidity
     friendly_name: Living Room Humidity
-  - entity_id: sensor.office_thermostat_nest_humidity
+  sensor.office_thermostat_nest_humidity:
+    icon: mdi:water-percent
     friendly_name: Office Humidity
-  - entity_id: sensor.upstairs_thermostat_nest_humidity
+  sensor.upstairs_thermostat_nest_humidity:
+    icon: mdi:water-percent
     friendly_name: Upstairs Humidity
-  - entity_id: sensor.basement_thermostat_nest_humidity
+  sensor.basement_thermostat_nest_humidity:
+    icon: mdi:water-percent
     friendly_name: Basement Humidity
-  - entity_id: sensor.*_thermostat_nest_target
+  sensor.basement_thermostat_nest_target:
     icon: mdi:target
-  - entity_id: sensor.basement_thermostat_nest_target
     friendly_name: Basement Target
-  - entity_id: sensor.living_room_thermostat_nest_target
+  sensor.living_room_thermostat_nest_target:
+    icon: mdi:target
     friendly_name: Living Room Target
-  - entity_id: sensor.office_thermostat_nest_target
+  sensor.office_thermostat_nest_target:
+    icon: mdi:target
     friendly_name: Office Target
-  - entity_id: sensor.upstairs_thermostat_nest_target
+  sensor.upstairs_thermostat_nest_target:
+    icon: mdi:target
     friendly_name: Upstairs Target
-  - entity_id: sensor.*_thermostat_nest_temperature
+  sensor.basement_thermostat_nest_temperature:
     icon: mdi:thermometer
-  - entity_id: sensor.basement_thermostat_nest_temperature
     friendly_name: Basement Temp
-  - entity_id: sensor.living_room_thermostat_nest_temperature
+  sensor.living_room_thermostat_nest_temperature:
+    icon: mdi:thermometer
     friendly_name: Living Room Temp
-  - entity_id: sensor.office_thermostat_nest_temperature
+  sensor.office_thermostat_nest_temperature:
+    icon: mdi:thermometer
     friendly_name: Office Temp
-  - entity_id: sensor.upstairs_thermostat_nest_temperature
+  sensor.upstairs_thermostat_nest_temperature:
+    icon: mdi:thermometer
     friendly_name: Upstairs Temp
-  - entity_id: binary_sensor.*_thermostat_nest_has_leaf
+  binary_sensor.basement_thermostat_nest_has_leaf:
     icon: mdi:leaf
-  - entity_id: binary_sensor.basement_thermostat_nest_has_leaf
     friendly_name: Basement Leaf
-  - entity_id: binary_sensor.living_room_thermostat_nest_has_leaf
+  binary_sensor.living_room_thermostat_nest_has_leaf:
+    icon: mdi:leaf
     friendly_name: Living Room Leaf
-  - entity_id: binary_sensor.upstairs_thermostat_nest_has_leaf
+  binary_sensor.upstairs_thermostat_nest_has_leaf:
+    icon: mdi:leaf
     friendly_name: Upstairs Leaf
-  - entity_id: binary_sensor.office_thermostat_nest_has_leaf
+  binary_sensor.office_thermostat_nest_has_leaf:
+    icon: mdi:leaf
     friendly_name: Office Leaf
-  - entity_id: binary_sensor.*_thermostat_nest_is_locked
+  binary_sensor.basement_thermostat_nest_is_locked:
     icon: mdi:lock
-  - entity_id: binary_sensor.basement_thermostat_nest_is_locked
     friendly_name: Basement Nest Locked
-  - entity_id: binary_sensor.living_room_thermostat_nest_is_locked
+  binary_sensor.living_room_thermostat_nest_is_locked:
+    icon: mdi:lock
     friendly_name: Living Room Nest Locked
-  - entity_id: binary_sensor.office_thermostat_nest_is_locked
+  binary_sensor.office_thermostat_nest_is_locked:
+    icon: mdi:lock
     friendly_name: Office Nest Locked
-  - entity_id: binary_sensor.upstairs_thermostat_nest_is_locked
+  binary_sensor.upstairs_thermostat_nest_is_locked:
+    icon: mdi:lock
     friendly_name: Upstairs Nest Locked
-  - entity_id: sensor.basement_thermostat_nest_hvac_state
+  sensor.basement_thermostat_nest_hvac_state:
     friendly_name: Basement Nest State
-  - entity_id: sensor.living_room_thermostat_nest_hvac_state
+  sensor.living_room_thermostat_nest_hvac_state:
     friendly_name: Living Room Nest State
-  - entity_id: sensor.office_thermostat_nest_hvac_state
+  sensor.office_thermostat_nest_hvac_state:
     friendly_name: Office Nest State
-  - entity_id: sensor.upstairs_thermostat_nest_hvac_state
+  sensor.upstairs_thermostat_nest_hvac_state:
     friendly_name: Upstairs Nest State
-  - entity_id: sensor.*_thermostat_nest_operation_mode
+  sensor.basement_thermostat_nest_operation_mode:
     icon: mdi:settings-box
-  - entity_id: sensor.basement_thermostat_nest_operation_mode
     friendly_name: Basement Nest Mode
-  - entity_id: sensor.living_room_thermostat_nest_operation_mode
+  sensor.living_room_thermostat_nest_operation_mode:
+    icon: mdi:settings-box
     friendly_name: Living Room Nest Mode
-  - entity_id: sensor.office_thermostat_nest_operation_mode
+  sensor.office_thermostat_nest_operation_mode:
+    icon: mdi:settings-box
     friendly_name: Office Nest Mode
-  - entity_id: sensor.upstairs_thermostat_nest_operation_mode
+  sensor.upstairs_thermostat_nest_operation_mode:
+    icon: mdi:settings-box
     friendly_name: Upstairs Nest Mode
-  - entity_id: binary_sensor.entryway_camera_online
+  binary_sensor.entryway_camera_online:
     icon: mdi:camera
     friendly_name: Entryway Camera
-  - entity_id: binary_sensor.garage_camera_online
+  binary_sensor.garage_camera_online:
     icon: mdi:camera
     friendly_name: Garage Camera
-  - entity_id: binary_sensor.*_nest_protect_online
+  binary_sensor.basement_nest_protect_online:
     icon: mdi:nest-protect
-  - entity_id: binary_sensor.basement_nest_protect_online
     friendly_name: Basement Protect
-  - entity_id: binary_sensor.downstairs_nest_protect_online
+  binary_sensor.downstairs_nest_protect_online:
+    icon: mdi:nest-protect
     friendly_name: Downstairs Protect
-  - entity_id: binary_sensor.upstairs_nest_protect_online
+  binary_sensor.upstairs_nest_protect_online:
+    icon: mdi:nest-protect
     friendly_name: Upstairs Protect
-  - entity_id: binary_sensor.*_thermostat_nest_online
+  binary_sensor.basement_thermostat_nest_online:
     icon: mdi:nest-thermostat
-  - entity_id: binary_sensor.basement_thermostat_nest_online
     friendly_name: Basement Nest
-  - entity_id: binary_sensor.living_room_thermostat_nest_online
+  binary_sensor.living_room_thermostat_nest_online:
+    icon: mdi:nest-thermostat
     friendly_name: Living Room Nest
-  - entity_id: binary_sensor.office_thermostat_nest_online
+  binary_sensor.office_thermostat_nest_online:
+    icon: mdi:nest-thermostat
     friendly_name: Office Nest
-  - entity_id: binary_sensor.upstairs_thermostat_nest_online
+  binary_sensor.upstairs_thermostat_nest_online:
+    icon: mdi:nest-thermostat
     friendly_name: Upstairs Nest
-  - entity_id: binary_sensor.wink_hub_2_hub
+  binary_sensor.wink_hub_2_hub:
     icon: mdi:router-wireless
     friendly_name: Wink Hub
-  - entity_id: binary_sensor.entryway_camera_motion_detected
+  binary_sensor.entryway_camera_motion_detected:
     icon: mdi:blur
     friendly_name: Entryway Motion
-  - entity_id: binary_sensor.garage_camera_motion_detected
+  binary_sensor.garage_camera_motion_detected:
     icon: mdi:blur
     friendly_name: Garage Motion
-  - entity_id: binary_sensor.entryway_camera_person_detected
+  binary_sensor.entryway_camera_person_detected:
     icon: mdi:account
     friendly_name: Entryway Person
-  - entity_id: binary_sensor.garage_camera_person_detected
+  binary_sensor.garage_camera_person_detected:
     icon: mdi:account
     friendly_name: Garage Person
-  - entity_id: binary_sensor.entryway_camera_sound_detected
+  binary_sensor.entryway_camera_sound_detected:
     icon: mdi:volume-high
     friendly_name: Entryway Sound
-  - entity_id: binary_sensor.garage_camera_sound_detected
+  binary_sensor.garage_camera_sound_detected:
     icon: mdi:volume-high
     friendly_name: Garage Sound
-  - entity_id: sensor.dark_sky_summary
+  sensor.dark_sky_summary:
     icon: mdi:note-text
     friendly_name: Weather Summary
-  - entity_id: sensor.dark_sky_temperature
+  sensor.dark_sky_temperature:
     friendly_name: Temperature
-  - entity_id: sensor.dark_sky_apparent_temperature
+  sensor.dark_sky_apparent_temperature:
     friendly_name: Feels Like
-  - entity_id: sensor.dark_sky_humidity
+  sensor.dark_sky_humidity:
     friendly_name: Humidity
-  - entity_id: sensor.dark_sky_wind_speed
+  sensor.dark_sky_wind_speed:
     friendly_name: Wind Speed
-  - entity_id: sensor.dark_sky_precip
+  sensor.dark_sky_precip:
     friendly_name: Precipitation
-  - entity_id: sensor.dark_sky_precip_intensity
+  sensor.dark_sky_precip_intensity:
     friendly_name: Precipitation Intensity
-  - entity_id: sensor.dark_sky_precip_probability
+  sensor.dark_sky_precip_probability:
     friendly_name: Precipitation Chance
-  - entity_id: sensor.dark_sky_daily_high_temperature
+  sensor.dark_sky_daily_high_temperature:
     friendly_name: High Temperature
-  - entity_id: sensor.dark_sky_daily_low_temperature
+  sensor.dark_sky_daily_low_temperature:
     friendly_name: Low Temperature
-  - entity_id: sensor.dark_sky_icon
+  sensor.dark_sky_icon:
     friendly_name: Icon
-  - entity_id: sensor.dark_sky_nearest_storm_distance
+  sensor.dark_sky_nearest_storm_distance:
     friendly_name: Nearest Storm Distance
-  - entity_id: sensor.dark_sky_nearest_storm_bearing
+  sensor.dark_sky_nearest_storm_bearing:
     friendly_name: Nearest Storm Bearing
-  - entity_id: sensor.dark_sky_dew_point
+  sensor.dark_sky_dew_point:
     friendly_name: Dew Point
-  - entity_id: sensor.dark_sky_wind_bearing
+  sensor.dark_sky_wind_bearing:
     friendly_name: Wind Bearing
-  - entity_id: sensor.dark_sky_cloud_cover
+  sensor.dark_sky_cloud_cover:
     friendly_name: Cloud Cover
-  - entity_id: sensor.dark_sky_pressure
+  sensor.dark_sky_pressure:
     friendly_name: Pressure
-  - entity_id: sensor.dark_sky_visibility
+  sensor.dark_sky_visibility:
     friendly_name: Visibility
-  - entity_id: sensor.dark_sky_ozone
+  sensor.dark_sky_ozone:
     friendly_name: Ozone
-  - entity_id: sensor.dark_sky_minutely_summary
+  sensor.dark_sky_minutely_summary:
     friendly_name: Minute Summary
-  - entity_id: sensor.dark_sky_hourly_summary
+  sensor.dark_sky_hourly_summary:
     friendly_name: Hour Summary
-  - entity_id: sensor.dark_sky_daily_summary
+  sensor.dark_sky_daily_summary:
     friendly_name: Day Summary
-  - entity_id: sensor.dark_sky_apparent_temperature_max
+  sensor.dark_sky_apparent_temperature_max:
     friendly_name: Feels Like Max
-  - entity_id: sensor.dark_sky_apparent_temperature_min
+  sensor.dark_sky_apparent_temperature_min:
     friendly_name: Feels Like Min
-  - entity_id: sensor.dark_sky_precip_intensity_max
+  sensor.dark_sky_precip_intensity_max:
     friendly_name: Precipitation Intensity Max

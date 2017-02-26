@@ -1,0 +1,23 @@
+  "sensor.*cpu_temperature":
+    icon: mdi:thermometer
+    friendly_name: CPU Temp
+  "sensor.*cpu_use":
+    icon: mdi:raspberrypi
+    friendly_name: CPU Use
+  "sensor.*ram_use":
+    icon: mdi:chip
+    friendly_name: RAM Use
+  "sensor.*_uptime":
+    icon: mdi:timer
+    friendly_name: Uptime
+  "sensor.*_last_seen":
+    icon: mdi:calendar-clock
+    friendly_name: Last Seen
+  "switch.*_reboot":
+    icon: mdi:refresh
+    friendly_name: Reboot
+    assumed_state: false
+  "switch.*_shutdown":
+    icon: mdi:close-network
+    friendly_name: Shutdown
+    assumed_state: false
