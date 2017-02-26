@@ -27,7 +27,9 @@ wemo:
     - 192.168.2.204
 
 emulated_hue:
+  type: alexa
   host_ip: 192.168.2.149
+  listen_port: 8300
 
 nest:
   client_id: !secret nest_client_id
