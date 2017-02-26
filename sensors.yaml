@@ -61,7 +61,12 @@
   - platform: template
     sensors:
       since_last_boot_templated:
-        value_template: '{{ states.sensor.since_last_boot.state.split(".")[0] }}'
+        value_template: >
+          {% if states.sensor.since_last_boot %}
+            {{ states.sensor.since_last_boot.state.split(".")[0] }}
+          {% else %}
+            unknown
+          {% endif %}
 
   - platform: command_line
     name: CPU Temperature
