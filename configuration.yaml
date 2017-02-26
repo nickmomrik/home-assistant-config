@@ -93,3 +93,9 @@ input_slider:
     max: 60
     step: 1
     icon: mdi:target
+
+cover:
+  - platform: myq
+    username: !secret myq_email
+    password: !secret myq_password
+    type: chamberlain

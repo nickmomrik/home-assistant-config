@@ -42,7 +42,7 @@
     name: Doors
     control: hidden
     entities:
-      - cover.garage_door
+      - cover.myq
       - lock.front_door
   dark_sky:
     name: Dark Sky
@@ -233,7 +233,7 @@
     name: Garage
     control: hidden
     entities:
-      - cover.garage_door
+      - cover.myq
       - light.garage_light
       - switch.garage_temp_monitor
       - sensor.garage_temperature

@@ -1,4 +1,5 @@
-  cover.garage_door:
+  cover.myq:
+    friendly_name: Garage Door
     icon: mdi:garage
   lock.front_door:
     friendly_name: Front Door Lock
