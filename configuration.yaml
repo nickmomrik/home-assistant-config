@@ -8,26 +8,10 @@ homeassistant:
   customize: !include customize.yaml
   customize_glob: !include customize-glob.yaml
 
-frontend:
-
 http:
   api_password: !secret http_password
   ssl_certificate: !secret ssl_certificate
   ssl_key: !secret ssl_key
-
-updater:
-
-conversation:
-
-recorder:
-
-history:
-
-logbook:
-
-config:
-
-sun:
 
 wemo:
   static:
@@ -36,8 +20,6 @@ wemo:
     - 192.168.2.202
     - 192.168.2.131
     - 192.168.2.204
-
-alexa:
 
 emulated_hue:
   host_ip: 192.168.2.149
@@ -53,11 +35,6 @@ device_tracker:
     username: !secret automatic_username
     password: !secret automatic_password
 
-sensor: !include sensors.yaml
-
-ifttt:
-  key: !secret ifttt_key
-
 remote:
   - platform: harmony
     name: Media Center
@@ -72,17 +49,8 @@ notify:
     platform: pushbullet
     api_key: !secret pushbullet_api_key
 
-mqtt:
-
-input_select: !include input_select.yaml
-
-script: !include scripts.yaml
-
-automation: !include automation.yaml
-
-group: !include groups.yaml
-
-switch: !include switches.yaml
+ifttt:
+  key: !secret ifttt_key
 
 input_slider:
   garage_temp_desired:
@@ -98,3 +66,21 @@ cover:
     username: !secret myq_email
     password: !secret myq_password
     type: chamberlain
+
+frontend:
+updater:
+conversation:
+recorder:
+history:
+logbook:
+config:
+sun:
+alexa:
+mqtt:
+
+sensor: !include sensors.yaml
+input_select: !include input_select.yaml
+script: !include scripts.yaml
+automation: !include automation.yaml
+group: !include groups.yaml
+switch: !include switches.yaml
