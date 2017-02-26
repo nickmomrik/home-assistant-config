@@ -21,3 +21,5 @@
     icon: mdi:close-network
     friendly_name: Shutdown
     assumed_state: false
+  "switch.*_lamp":
+    icon: mdi:lamp
