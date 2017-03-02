@@ -7,7 +7,8 @@
 * August Door Lock
 * Lutron Caseta switches and remotes
 * Wemo plugs and switches
-* Nest thermostats and protects
+* Nest Thermostats and Protects
+* Nest Cam and Dropcam
 * Amazon Alexa Echo
 * Automatic Pro
 * Harmony Hub & Remote
