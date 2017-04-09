@@ -20,6 +20,7 @@
   media_center:
     name: Media Center
     entities:
+      - media_player.apple_tv
       - input_select.remote
   lights:
     name: Lights
@@ -222,6 +223,7 @@
       - switch.living_room_lamp
       - climate.living_room_nest
       - sensor.living_room_thermostat_nest_humidity
+      - media_player.apple_tv
       - input_select.remote
   basement:
     name: Basement

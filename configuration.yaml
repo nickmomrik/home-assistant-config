@@ -74,6 +74,11 @@ cover:
     password: !secret myq_password
     type: chamberlain
 
+media_player:
+  - platform: apple_tv
+    host: !secret apple_tv_host
+    login_id: !secret apple_tv_login
+
 frontend:
 updater:
 conversation:
