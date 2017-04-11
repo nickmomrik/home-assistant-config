@@ -24,5 +24,13 @@
       command_on: "sudo shutdown -r now"
     flapper_shutdown:
       command_on: "sudo shutdown -h now"
+    grasshopper_reboot:
+      command_on: "echo 'Reboot grasshopper'"
+    grasshopper_shutdown:
+      command_on: "echo 'Shutdown grasshopper'"
+    pi_reboot:
+      command_on: "echo 'Reboot pi'"
+    pi_shutdown:
+      command_on: "echo 'Shutdown pi'"
     garage_temp_monitor:
       command_on: "echo 'Garage temp monitor'"

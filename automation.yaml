@@ -80,6 +80,18 @@
       entity_id: group.pi_elderberry_on
       data:
         visible: False
+    - service: group.set_visibility
+      entity_id: group.pi_grasshopper_on
+      data:
+        visible: False
+    - service: group.set_visibility
+      entity_id: group.pi_pi_on
+      data:
+        visible: False
+    - service: group.set_visibility
+      entity_id: group.pi_pi_off
+      data:
+        visible: False
 
 - alias: 'apple is on'
   trigger:
@@ -163,6 +175,40 @@
         visible: True
     - service: group.set_visibility
       entity_id: group.pi_elderberry_off
+      data:
+        visible: False
+
+- alias: 'grasshopper is on'
+  trigger:
+    platform: mqtt
+    topic: 'pis/grasshopper/last-seen'
+  condition:
+    - condition: template
+      value_template: '{{ states.group.pi_grasshopper_on.attributes.hidden }}'
+  action:
+    - service: group.set_visibility
+      entity_id: group.pi_grasshopper_on
+      data:
+        visible: True
+    - service: group.set_visibility
+      entity_id: group.pi_grasshopper_off
+      data:
+        visible: False
+
+- alias: 'pi is on'
+  trigger:
+    platform: mqtt
+    topic: 'pis/pi/last-seen'
+  condition:
+    - condition: template
+      value_template: '{{ states.group.pi_pi_on.attributes.hidden }}'
+  action:
+    - service: group.set_visibility
+      entity_id: group.pi_pi_on
+      data:
+        visible: True
+    - service: group.set_visibility
+      entity_id: group.pi_pi_off
       data:
         visible: False
 
@@ -293,5 +339,57 @@
         visible: False
     - service: group.set_visibility
       entity_id: group.pi_elderberry_off
+      data:
+        visible: True
+
+- alias: 'grasshopper not seen'
+  trigger:
+    platform: time
+    minutes: '/2'
+    seconds: 00
+  condition:
+    condition: and
+    conditions:
+      - condition: template
+        value_template: '{{ states.group.pi_grasshopper_off.attributes.hidden }}'
+      - condition: or
+        conditions:
+        - condition: template
+          value_template: '{{ "unknown" == states.sensor.grasshopper_last_seen.state }}'
+        - condition: template
+          value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.grasshopper_last_seen.state ) ) > 120 }}'
+  action:
+    - service: group.set_visibility
+      entity_id: group.pi_grasshopper_on
+      data:
+        visible: False
+    - service: group.set_visibility
+      entity_id: group.pi_grasshopper_off
+      data:
+        visible: True
+
+- alias: 'pi not seen'
+  trigger:
+    platform: time
+    minutes: '/2'
+    seconds: 00
+  condition:
+    condition: and
+    conditions:
+      - condition: template
+        value_template: '{{ states.group.pi_pi_off.attributes.hidden }}'
+      - condition: or
+        conditions:
+        - condition: template
+          value_template: '{{ "unknown" == states.sensor.pi_last_seen.state }}'
+        - condition: template
+          value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.pi_last_seen.state ) ) > 120 }}'
+  action:
+    - service: group.set_visibility
+      entity_id: group.pi_pi_on
+      data:
+        visible: False
+    - service: group.set_visibility
+      entity_id: group.pi_pi_off
       data:
         visible: True

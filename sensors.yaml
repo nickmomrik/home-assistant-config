@@ -108,29 +108,6 @@
     name: 'apple Last Seen'
 
   - platform: mqtt
-    state_topic: 'pis/elderberry/cpu-temp'
-    name: 'elderberry CPU Temperature'
-    unit_of_measurement: '°F'
-
-  - platform: mqtt
-    state_topic: 'pis/elderberry/cpu-use'
-    name: 'elderberry CPU Use'
-    unit_of_measurement: '%'
-
-  - platform: mqtt
-    state_topic: 'pis/elderberry/ram-use'
-    name: 'elderberry RAM Use'
-    unit_of_measurement: '%'
-
-  - platform: mqtt
-    state_topic: 'pis/elderberry/uptime'
-    name: 'elderberry Uptime'
-
-  - platform: mqtt
-    state_topic: 'pis/elderberry/last-seen'
-    name: 'elderberry Last Seen'
-
-  - platform: mqtt
     state_topic: 'pis/boston-cream/cpu-temp'
     name: 'boston cream CPU Temperature'
     unit_of_measurement: '°F'
@@ -198,6 +175,75 @@
   - platform: mqtt
     state_topic: 'pis/derby/last-seen'
     name: 'derby Last Seen'
+
+  - platform: mqtt
+    state_topic: 'pis/elderberry/cpu-temp'
+    name: 'elderberry CPU Temperature'
+    unit_of_measurement: '°F'
+
+  - platform: mqtt
+    state_topic: 'pis/elderberry/cpu-use'
+    name: 'elderberry CPU Use'
+    unit_of_measurement: '%'
+
+  - platform: mqtt
+    state_topic: 'pis/elderberry/ram-use'
+    name: 'elderberry RAM Use'
+    unit_of_measurement: '%'
+
+  - platform: mqtt
+    state_topic: 'pis/elderberry/uptime'
+    name: 'elderberry Uptime'
+
+  - platform: mqtt
+    state_topic: 'pis/elderberry/last-seen'
+    name: 'elderberry Last Seen'
+
+  - platform: mqtt
+    state_topic: 'pis/grasshopper/cpu-temp'
+    name: 'grasshopper CPU Temperature'
+    unit_of_measurement: '°F'
+
+  - platform: mqtt
+    state_topic: 'pis/grasshopper/cpu-use'
+    name: 'grasshopper CPU Use'
+    unit_of_measurement: '%'
+
+  - platform: mqtt
+    state_topic: 'pis/grasshopper/ram-use'
+    name: 'grasshopper RAM Use'
+    unit_of_measurement: '%'
+
+  - platform: mqtt
+    state_topic: 'pis/grasshopper/uptime'
+    name: 'grasshopper Uptime'
+
+  - platform: mqtt
+    state_topic: 'pis/grasshopper/last-seen'
+    name: 'grasshopper Last Seen'
+
+  - platform: mqtt
+    state_topic: 'pis/pi/cpu-temp'
+    name: 'pi CPU Temperature'
+    unit_of_measurement: '°F'
+
+  - platform: mqtt
+    state_topic: 'pis/pi/cpu-use'
+    name: 'pi CPU Use'
+    unit_of_measurement: '%'
+
+  - platform: mqtt
+    state_topic: 'pis/pi/ram-use'
+    name: 'pi RAM Use'
+    unit_of_measurement: '%'
+
+  - platform: mqtt
+    state_topic: 'pis/pi/uptime'
+    name: 'pi Uptime'
+
+  - platform: mqtt
+    state_topic: 'pis/pi/last-seen'
+    name: 'pi Last Seen'
 
   - platform: time_date
     display_options:

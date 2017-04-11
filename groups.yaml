@@ -113,6 +113,10 @@
       - group.pi_elderberry_on
       - group.pi_elderberry_off
       - group.pi_flapper
+      - group.pi_grasshopper_on
+      - group.pi_grasshopper_off
+      - group.pi_pi_on
+      - group.pi_pi_off
   pi_flapper:
     name: flapper
     control: hidden
@@ -194,6 +198,34 @@
     name: elderberry
     entities:
       - sensor.elderberry_last_seen
+  pi_grasshopper_on:
+    name: grasshopper
+    control: hidden
+    entities:
+      - sensor.grasshopper_uptime
+      - switch.grasshopper_reboot
+      - switch.grasshopper_shutdown
+      - sensor.grasshopper_cpu_temperature
+      - sensor.grasshopper_cpu_use
+      - sensor.grasshopper_ram_use
+  pi_grasshopper_off:
+    name: grasshopper
+    entities:
+      - sensor.grasshopper_last_seen
+  pi_pi_on:
+    name: pi
+    control: hidden
+    entities:
+      - sensor.pi_uptime
+      - switch.pi_reboot
+      - switch.pi_shutdown
+      - sensor.pi_cpu_temperature
+      - sensor.pi_cpu_use
+      - sensor.pi_ram_use
+  pi_pi_off:
+    name: pi
+    entities:
+      - sensor.pi_last_seen
   cameras:
     name: Cameras
     entities:
