@@ -57,8 +57,8 @@
 
 - alias: 'Home Assistant Start'
   trigger:
-    platform: event
-    event_type: homeassistant_start
+    platform: homeassistant
+    event: start
   action:
     - service: group.set_visibility
       entity_id: group.pi_apple_on
