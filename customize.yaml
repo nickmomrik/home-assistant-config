@@ -5,6 +5,12 @@
     friendly_name: Front Door Lock
   device_tracker.ford_fusion:
     icon: mdi:car
+  device_tracker.nickphone7plus:
+    icon: mdi:cellphone-iphone
+  device_tracker.nickprowp1:
+    icon: mdi:laptop-mac
+  device_tracker.nickmagicpro:
+    icon: mdi:laptop-mac
   switch.front_porch:
     icon: mdi:lightbulb
     friendly_name: Porch Light

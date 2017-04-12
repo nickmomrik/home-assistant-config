@@ -41,6 +41,14 @@ device_tracker:
     secret: !secret automatic_secret
     username: !secret automatic_username
     password: !secret automatic_password
+    track_new_devices: no
+  - platform: asuswrt
+    host: !secret router_ip
+    username: !secret router_username
+    password: !secret router_password
+    protocol: telnet
+    consider_home: 300
+    interval_seconds: 30
 
 remote:
   - platform: harmony
@@ -76,8 +84,13 @@ cover:
 
 media_player:
   - platform: apple_tv
-    host: !secret apple_tv_host
-    login_id: !secret apple_tv_login
+    name: Living Room Apple TV
+    host: !secret living_apple_tv_host
+    login_id: !secret living_apple_tv_login
+  - platform: apple_tv
+    name: Office Apple TV
+    host: !secret office_apple_tv_host
+    login_id: !secret office_apple_tv_login
 
 frontend:
 updater:

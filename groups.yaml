@@ -17,10 +17,14 @@
       - sensor.dark_sky_temperature
       - sensor.dark_sky_summary
       - device_tracker.ford_fusion
+      - device_tracker.nickphone7plus
+      - device_tracker.nickprowp1
+      - device_tracker.nickmagicpro
   media_center:
     name: Media Center
     entities:
-      - media_player.apple_tv
+      - media_player.living_room_apple_tv
+      - media_player.office_apple_tv
       - input_select.remote
   lights:
     name: Lights
@@ -213,7 +217,7 @@
     entities:
       - sensor.grasshopper_last_seen
   pi_pi_on:
-    name: pi
+    name: Pi Setup Image
     control: hidden
     entities:
       - sensor.pi_uptime
@@ -223,7 +227,7 @@
       - sensor.pi_cpu_use
       - sensor.pi_ram_use
   pi_pi_off:
-    name: pi
+    name: Pi Setup Image
     entities:
       - sensor.pi_last_seen
   cameras:
@@ -247,6 +251,10 @@
       - light.office_light
       - climate.office_nest
       - sensor.office_thermostat_nest_humidity
+      - device_tracker.nickphone7plus
+      - device_tracker.nickprowp1
+      - device_tracker.nickmagicpro
+      - media_player.office_apple_tv
   living:
     name: Living Room
     control: hidden
@@ -255,7 +263,7 @@
       - switch.living_room_lamp
       - climate.living_room_nest
       - sensor.living_room_thermostat_nest_humidity
-      - media_player.apple_tv
+      - media_player.living_room_apple_tv
       - input_select.remote
   basement:
     name: Basement
