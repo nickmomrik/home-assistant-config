@@ -97,9 +97,6 @@
   trigger:
     platform: mqtt
     topic: 'pis/apple/last-seen'
-  condition:
-    - condition: template
-      value_template: '{{ states.group.pi_apple_on.attributes.hidden }}'
   action:
     - service: group.set_visibility
       entity_id: group.pi_apple_on
@@ -114,9 +111,6 @@
   trigger:
     platform: mqtt
     topic: 'pis/boston-cream/last-seen'
-  condition:
-    - condition: template
-      value_template: '{{ states.group.pi_boston_cream_on.attributes.hidden }}'
   action:
     - service: group.set_visibility
       entity_id: group.pi_boston_cream_on
@@ -131,9 +125,6 @@
   trigger:
     platform: mqtt
     topic: 'pis/cherry/last-seen'
-  condition:
-    - condition: template
-      value_template: '{{ states.group.pi_cherry_on.attributes.hidden }}'
   action:
     - service: group.set_visibility
       entity_id: group.pi_cherry_on
@@ -148,9 +139,6 @@
   trigger:
     platform: mqtt
     topic: 'pis/derby/last-seen'
-  condition:
-    - condition: template
-      value_template: '{{ states.group.pi_derby_on.attributes.hidden }}'
   action:
     - service: group.set_visibility
       entity_id: group.pi_derby_on
@@ -165,9 +153,6 @@
   trigger:
     platform: mqtt
     topic: 'pis/elderberry/last-seen'
-  condition:
-    - condition: template
-      value_template: '{{ states.group.pi_elderberry_on.attributes.hidden }}'
   action:
     - service: group.set_visibility
       entity_id: group.pi_elderberry_on
@@ -182,9 +167,6 @@
   trigger:
     platform: mqtt
     topic: 'pis/grasshopper/last-seen'
-  condition:
-    - condition: template
-      value_template: '{{ states.group.pi_grasshopper_on.attributes.hidden }}'
   action:
     - service: group.set_visibility
       entity_id: group.pi_grasshopper_on
@@ -199,9 +181,6 @@
   trigger:
     platform: mqtt
     topic: 'pis/pi/last-seen'
-  condition:
-    - condition: template
-      value_template: '{{ states.group.pi_pi_on.attributes.hidden }}'
   action:
     - service: group.set_visibility
       entity_id: group.pi_pi_on
@@ -218,16 +197,12 @@
     minutes: '/2'
     seconds: 00
   condition:
-    condition: and
+    condition: or
     conditions:
       - condition: template
-        value_template: '{{ states.group.pi_apple_off.attributes.hidden }}'
-      - condition: or
-        conditions:
-        - condition: template
-          value_template: '{{ "unknown" == states.sensor.apple_last_seen.state }}'
-        - condition: template
-          value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.apple_last_seen.state ) ) > 120 }}'
+        value_template: '{{ "unknown" == states.sensor.apple_last_seen.state }}'
+      - condition: template
+        value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.apple_last_seen.state ) ) > 120 }}'
   action:
     - service: group.set_visibility
       entity_id: group.pi_apple_on
@@ -244,16 +219,12 @@
     minutes: '/2'
     seconds: 00
   condition:
-    condition: and
+    condition: or
     conditions:
       - condition: template
-        value_template: '{{ states.group.pi_boston_cream_off.attributes.hidden }}'
-      - condition: or
-        conditions:
-        - condition: template
-          value_template: '{{ "unknown" == states.sensor.boston_cream_last_seen.state }}'
-        - condition: template
-          value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.boston_cream_last_seen.state ) ) > 120 }}'
+        value_template: '{{ "unknown" == states.sensor.boston_cream_last_seen.state }}'
+      - condition: template
+        value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.boston_cream_last_seen.state ) ) > 120 }}'
   action:
     - service: group.set_visibility
       entity_id: group.pi_boston_cream_on
@@ -270,16 +241,13 @@
     minutes: '/2'
     seconds: 00
   condition:
-    condition: and
+  condition:
+    condition: or
     conditions:
       - condition: template
-        value_template: '{{ states.group.pi_cherry_off.attributes.hidden }}'
-      - condition: or
-        conditions:
-        - condition: template
-          value_template: '{{ "unknown" == states.sensor.cherry_last_seen.state }}'
-        - condition: template
-          value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.cherry_last_seen.state ) ) > 120 }}'
+        value_template: '{{ "unknown" == states.sensor.cherry_last_seen.state }}'
+      - condition: template
+        value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.cherry_last_seen.state ) ) > 120 }}'
   action:
     - service: group.set_visibility
       entity_id: group.pi_cherry_on
@@ -296,16 +264,12 @@
     minutes: '/2'
     seconds: 00
   condition:
-    condition: and
+    condition: or
     conditions:
       - condition: template
-        value_template: '{{ states.group.pi_derby_off.attributes.hidden }}'
-      - condition: or
-        conditions:
-        - condition: template
-          value_template: '{{ "unknown" == states.sensor.derby_last_seen.state }}'
-        - condition: template
-          value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.derby_last_seen.state ) ) > 120 }}'
+        value_template: '{{ "unknown" == states.sensor.derby_last_seen.state }}'
+      - condition: template
+        value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.derby_last_seen.state ) ) > 120 }}'
   action:
     - service: group.set_visibility
       entity_id: group.pi_derby_on
@@ -322,16 +286,12 @@
     minutes: '/2'
     seconds: 00
   condition:
-    condition: and
+    condition: or
     conditions:
       - condition: template
-        value_template: '{{ states.group.pi_elderberry_off.attributes.hidden }}'
-      - condition: or
-        conditions:
-        - condition: template
-          value_template: '{{ "unknown" == states.sensor.elderberry_last_seen.state }}'
-        - condition: template
-          value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.elderberry_last_seen.state ) ) > 120 }}'
+        value_template: '{{ "unknown" == states.sensor.elderberry_last_seen.state }}'
+      - condition: template
+        value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.elderberry_last_seen.state ) ) > 120 }}'
   action:
     - service: group.set_visibility
       entity_id: group.pi_elderberry_on
@@ -348,16 +308,12 @@
     minutes: '/2'
     seconds: 00
   condition:
-    condition: and
+    condition: or
     conditions:
       - condition: template
-        value_template: '{{ states.group.pi_grasshopper_off.attributes.hidden }}'
-      - condition: or
-        conditions:
-        - condition: template
-          value_template: '{{ "unknown" == states.sensor.grasshopper_last_seen.state }}'
-        - condition: template
-          value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.grasshopper_last_seen.state ) ) > 120 }}'
+        value_template: '{{ "unknown" == states.sensor.grasshopper_last_seen.state }}'
+      - condition: template
+        value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.grasshopper_last_seen.state ) ) > 120 }}'
   action:
     - service: group.set_visibility
       entity_id: group.pi_grasshopper_on
@@ -374,16 +330,12 @@
     minutes: '/2'
     seconds: 00
   condition:
-    condition: and
+    condition: or
     conditions:
       - condition: template
-        value_template: '{{ states.group.pi_pi_off.attributes.hidden }}'
-      - condition: or
-        conditions:
-        - condition: template
-          value_template: '{{ "unknown" == states.sensor.pi_last_seen.state }}'
-        - condition: template
-          value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.pi_last_seen.state ) ) > 120 }}'
+        value_template: '{{ "unknown" == states.sensor.pi_last_seen.state }}'
+      - condition: template
+        value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.pi_last_seen.state ) ) > 120 }}'
   action:
     - service: group.set_visibility
       entity_id: group.pi_pi_on
