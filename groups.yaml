@@ -5,7 +5,6 @@
       - group.media_center
       - group.status
       - group.doors
-      - group.cameras
       - group.temps
       - group.lights
   status:
@@ -20,12 +19,6 @@
       - device_tracker.nickphone7plus
       - device_tracker.nickprowp1
       - device_tracker.nickmagicpro
-  media_center:
-    name: Media Center
-    entities:
-      - media_player.living_room_apple_tv
-      - media_player.office_apple_tv
-      - input_select.remote
   lights:
     name: Lights
     control: hidden
@@ -50,23 +43,28 @@
       - cover.myq
       - lock.front_door
   dark_sky:
-    name: Dark Sky
+    name: Current Weather
     entities:
       - sensor.dark_sky_temperature
       - sensor.dark_sky_apparent_temperature
       - sensor.dark_sky_humidity
       - sensor.dark_sky_summary
-      - sensor.dark_sky_minutely_summary
-      - sensor.dark_sky_hourly_summary
-      - sensor.dark_sky_daily_summary
       - sensor.dark_sky_precip
-      - sensor.dark_sky_precip_intensity
-      - sensor.dark_sky_precip_probability
       - sensor.dark_sky_wind_speed
       - sensor.dark_sky_wind_bearing
-      - sensor.dark_sky_icon
+  weather_forecast:
+    name: Weather Forecast
+    entities:
+      - sensor.dark_sky_minutely_summary
       - sensor.dark_sky_nearest_storm_distance
       - sensor.dark_sky_nearest_storm_bearing
+      - sensor.dark_sky_hourly_summary
+      - sensor.dark_sky_daily_summary
+      - sensor.dark_sky_precip_intensity
+      - sensor.dark_sky_precip_probability
+  other_weather:
+    name: Other Weather
+    entities:
       - sensor.dark_sky_daily_high_temperature
       - sensor.dark_sky_daily_low_temperature
       - sensor.dark_sky_apparent_temperature_max
@@ -82,11 +80,13 @@
     view: yes
     icon: mdi:thermometer-lines
     entities:
-      - group.dark_sky
       - group.temps
       - group.humidity
+      - group.dark_sky
+      - group.weather_forecast
+      - group.other_weather
   temps:
-    name: Temperatures
+    name: Indoor Temperatures
     entities:
       - climate.living_room_nest
       - climate.office_nest
@@ -94,7 +94,7 @@
       - climate.basement_nest
       - sensor.garage_temperature
   humidity:
-    name: Humidity
+    name: Indoor Humidity
     entities:
       - sensor.living_room_thermostat_nest_humidity
       - sensor.office_thermostat_nest_humidity
@@ -230,11 +230,6 @@
     name: Pi Setup Image
     entities:
       - sensor.pi_last_seen
-  cameras:
-    name: Cameras
-    entities:
-      - camera.entryway
-      - camera.garage
   upstairs:
     name: Upstairs
     control: hidden
@@ -254,7 +249,6 @@
       - device_tracker.nickphone7plus
       - device_tracker.nickprowp1
       - device_tracker.nickmagicpro
-      - media_player.office_apple_tv
   living:
     name: Living Room
     control: hidden
@@ -263,8 +257,6 @@
       - switch.living_room_lamp
       - climate.living_room_nest
       - sensor.living_room_thermostat_nest_humidity
-      - media_player.living_room_apple_tv
-      - input_select.remote
   basement:
     name: Basement
     control: hidden
@@ -282,7 +274,6 @@
       - input_slider.garage_temp_desired
       - sensor.garage_humidity
       - device_tracker.ford_fusion
-      - camera.garage
   downstairs:
     name: Downstairs
     control: hidden
@@ -294,7 +285,6 @@
       - switch.kitchen_light
       - light.dining_light
       - switch.front_lamp
-      - camera.entryway
   rooms:
     name: Rooms
     view: yes
@@ -382,6 +372,21 @@
       - sensor.office_thermostat_nest_temperature
       - sensor.upstairs_thermostat_nest_temperature
       - sensor.basement_thermostat_nest_temperature
+  cameras:
+    view: yes
+    name: cameras
+    icon: mdi:webcam
+    entities:
+      - camera.entryway
+      - camera.garage
+  media_center:
+    view: yes
+    name: Media Center
+    icon: mdi:television-guide
+    entities:
+      - input_select.remote
+      - media_player.living_room_apple_tv
+      - media_player.office_apple_tv
   sensors:
     name: Sensors
     view: yes
