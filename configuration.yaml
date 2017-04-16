@@ -99,6 +99,7 @@ config:
 sun:
 alexa:
 mqtt:
+ios:
 
 sensor: !include sensors.yaml
 input_select: !include input_select.yaml
