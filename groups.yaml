@@ -374,7 +374,7 @@
       - sensor.basement_thermostat_nest_temperature
   cameras:
     view: yes
-    name: cameras
+    name: Cameras
     icon: mdi:webcam
     entities:
       - camera.entryway
