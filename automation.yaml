@@ -194,7 +194,7 @@
 - alias: 'apple not seen'
   trigger:
     platform: time
-    minutes: '/2'
+    minutes: '/1'
     seconds: 00
   condition:
     condition: or
@@ -202,7 +202,7 @@
       - condition: template
         value_template: '{{ "unknown" == states.sensor.apple_last_seen.state }}'
       - condition: template
-        value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.apple_last_seen.state ) ) > 120 }}'
+        value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.apple_last_seen.state ) ) > 180 }}'
   action:
     - service: group.set_visibility
       entity_id: group.pi_apple_on
@@ -216,7 +216,7 @@
 - alias: 'boston cream not seen'
   trigger:
     platform: time
-    minutes: '/2'
+    minutes: '/1'
     seconds: 00
   condition:
     condition: or
@@ -224,7 +224,7 @@
       - condition: template
         value_template: '{{ "unknown" == states.sensor.boston_cream_last_seen.state }}'
       - condition: template
-        value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.boston_cream_last_seen.state ) ) > 120 }}'
+        value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.boston_cream_last_seen.state ) ) > 180 }}'
   action:
     - service: group.set_visibility
       entity_id: group.pi_boston_cream_on
@@ -238,7 +238,7 @@
 - alias: 'cherry not seen'
   trigger:
     platform: time
-    minutes: '/2'
+    minutes: '/1'
     seconds: 00
   condition:
     condition: or
@@ -246,7 +246,7 @@
       - condition: template
         value_template: '{{ "unknown" == states.sensor.cherry_last_seen.state }}'
       - condition: template
-        value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.cherry_last_seen.state ) ) > 120 }}'
+        value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.cherry_last_seen.state ) ) > 180 }}'
   action:
     - service: group.set_visibility
       entity_id: group.pi_cherry_on
@@ -260,7 +260,7 @@
 - alias: 'derby not seen'
   trigger:
     platform: time
-    minutes: '/2'
+    minutes: '/1'
     seconds: 00
   condition:
     condition: or
@@ -268,7 +268,7 @@
       - condition: template
         value_template: '{{ "unknown" == states.sensor.derby_last_seen.state }}'
       - condition: template
-        value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.derby_last_seen.state ) ) > 120 }}'
+        value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.derby_last_seen.state ) ) > 180 }}'
   action:
     - service: group.set_visibility
       entity_id: group.pi_derby_on
@@ -282,7 +282,7 @@
 - alias: 'elderberry not seen'
   trigger:
     platform: time
-    minutes: '/2'
+    minutes: '/1'
     seconds: 00
   condition:
     condition: or
@@ -290,7 +290,7 @@
       - condition: template
         value_template: '{{ "unknown" == states.sensor.elderberry_last_seen.state }}'
       - condition: template
-        value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.elderberry_last_seen.state ) ) > 120 }}'
+        value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.elderberry_last_seen.state ) ) > 180 }}'
   action:
     - service: group.set_visibility
       entity_id: group.pi_elderberry_on
@@ -304,7 +304,7 @@
 - alias: 'grasshopper not seen'
   trigger:
     platform: time
-    minutes: '/2'
+    minutes: '/1'
     seconds: 00
   condition:
     condition: or
@@ -312,7 +312,7 @@
       - condition: template
         value_template: '{{ "unknown" == states.sensor.grasshopper_last_seen.state }}'
       - condition: template
-        value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.grasshopper_last_seen.state ) ) > 120 }}'
+        value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.grasshopper_last_seen.state ) ) > 180 }}'
   action:
     - service: group.set_visibility
       entity_id: group.pi_grasshopper_on
@@ -326,7 +326,7 @@
 - alias: 'pi not seen'
   trigger:
     platform: time
-    minutes: '/2'
+    minutes: '/1'
     seconds: 00
   condition:
     condition: or
@@ -334,7 +334,7 @@
       - condition: template
         value_template: '{{ "unknown" == states.sensor.pi_last_seen.state }}'
       - condition: template
-        value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.pi_last_seen.state ) ) > 120 }}'
+        value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.pi_last_seen.state ) ) > 180 }}'
   action:
     - service: group.set_visibility
       entity_id: group.pi_pi_on
@@ -344,3 +344,122 @@
       entity_id: group.pi_pi_off
       data:
         visible: True
+
+- alias: 'apple went away'
+  trigger:
+    platform: template
+    value_template: "{% if is_state_attr('group.pi_apple_on', 'hidden', true) %}true{% endif %}"
+  condition:
+    condition: or
+    conditions:
+      - condition: template
+        value_template: '{{ "unknown" == states.sensor.apple_last_seen.state }}'
+      - condition: template
+        value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.apple_last_seen.state ) ) > 180 }}'
+  action:
+    service: notify.ios_nickphone7plus
+    data:
+      title: 'Pi Offline: apple'
+      message: 'Last seen: {{ states.sensor.apple_last_seen.state }}'
+
+- alias: 'boston cream went away'
+  trigger:
+    platform: template
+    value_template: "{% if is_state_attr('group.pi_boston_cream_on', 'hidden', true) %}true{% endif %}"
+  condition:
+    condition: or
+    conditions:
+      - condition: template
+        value_template: '{{ "unknown" == states.sensor.boston_cream_last_seen.state }}'
+      - condition: template
+        value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.boston_cream_last_seen.state ) ) > 180 }}'
+  action:
+    service: notify.ios_nickphone7plus
+    data:
+      title: 'Pi Offline: boston-cream'
+      message: 'Last seen {{ states.sensor.boston_cream_last_seen.state }}'
+
+- alias: 'cherry went away'
+  trigger:
+    platform: template
+    value_template: "{% if is_state_attr('group.pi_cherry_on', 'hidden', true) %}true{% endif %}"
+  condition:
+    condition: or
+    conditions:
+      - condition: template
+        value_template: '{{ "unknown" == states.sensor.cherry_last_seen.state }}'
+      - condition: template
+        value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.cherry_last_seen.state ) ) > 180 }}'
+  action:
+    service: notify.ios_nickphone7plus
+    data:
+      title: 'Pi Offline: cherry'
+      message: 'Last seen: {{ states.sensor.cherry_last_seen.state }}'
+
+- alias: 'derby went away'
+  trigger:
+    platform: template
+    value_template: "{% if is_state_attr('group.pi_derby_on', 'hidden', true) %}true{% endif %}"
+  condition:
+    condition: or
+    conditions:
+      - condition: template
+        value_template: '{{ "unknown" == states.sensor.derby_last_seen.state }}'
+      - condition: template
+        value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.derby_last_seen.state ) ) > 180 }}'
+  action:
+    service: notify.ios_nickphone7plus
+    data:
+      title: 'Pi Offline: derby'
+      message: 'Last seen: {{ states.sensor.derby_last_seen.state }}'
+
+- alias: 'elderberry went away'
+  trigger:
+    platform: template
+    value_template: "{% if is_state_attr('group.pi_elderberry_on', 'hidden', true) %}true{% endif %}"
+  condition:
+    condition: or
+    conditions:
+      - condition: template
+        value_template: '{{ "unknown" == states.sensor.elderberry_last_seen.state }}'
+      - condition: template
+        value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.elderberry_last_seen.state ) ) > 180 }}'
+  action:
+    service: notify.ios_nickphone7plus
+    data:
+      title: 'Pi Offline: elderberry'
+      message: 'Last seen: {{ states.sensor.elderberry_last_seen.state }}'
+
+- alias: 'grasshopper went away'
+  trigger:
+    platform: template
+    value_template: "{% if is_state_attr('group.pi_grasshopper_on', 'hidden', true) %}true{% endif %}"
+  condition:
+    condition: or
+    conditions:
+      - condition: template
+        value_template: '{{ "unknown" == states.sensor.grasshopper_last_seen.state }}'
+      - condition: template
+        value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.grasshopper_last_seen.state ) ) > 180 }}'
+  action:
+    service: notify.ios_nickphone7plus
+    data:
+      title: 'Pi Offline: grasshopper'
+      message: 'Last seen: {{ states.sensor.grasshopper_last_seen.state }}'
+
+- alias: 'pi went away'
+  trigger:
+    platform: template
+    value_template: "{% if is_state_attr('group.pi_pi_on', 'hidden', true) %}true{% endif %}"
+  condition:
+    condition: or
+    conditions:
+      - condition: template
+        value_template: '{{ "unknown" == states.sensor.pi_last_seen.state }}'
+      - condition: template
+        value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.pi_last_seen.state ) ) > 180 }}'
+  action:
+    service: notify.ios_nickphone7plus
+    data:
+      title: 'Pi Offline: - setup'
+      message: 'Last seen: {{ states.sensor.pi_last_seen.state }}'
