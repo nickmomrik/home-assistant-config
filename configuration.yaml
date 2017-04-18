@@ -59,11 +59,6 @@ wink:
   email:  !secret wink_email
   password:  !secret wink_password
 
-notify:
-  - name: pushbullet
-    platform: pushbullet
-    api_key: !secret pushbullet_api_key
-
 ifttt:
   key: !secret ifttt_key
 

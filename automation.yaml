@@ -22,7 +22,7 @@
     platform: state
     entity_id: updater.updater
   action:
-    service: notify.pushbullet
+    service: notify.ios_nickphone7plus
     data:
       title: 'Home Assistant update available'
       message: 'Update for Home Assistant is available.'
@@ -50,10 +50,10 @@
     from: 'on'
     to: 'off'
   action:
-    service: notify.pushbullet
+    service: notify.ios_nickphone7plus
     data_template:
-      title: "Garage Monitor OFF @ {{ states.sensor.garage_temperature.state }}°F"
-      message: "Temperature in the garage is currently {{ states.sensor.garage_temperature.state }}°F"
+      title: "Garage Monitor Turned OFF"
+      message: "Temperature in the garage is {{ states.sensor.garage_temperature.state }}°F"
 
 - alias: 'Home Assistant Start'
   trigger:
