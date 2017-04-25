@@ -15,6 +15,7 @@ http:
 
 recorder:
   db_url: !secret recorder_db_url
+  purge_days: 30
 history:
 logbook:
 
