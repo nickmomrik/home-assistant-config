@@ -12,6 +12,7 @@ http:
   api_password: !secret http_password
   ssl_certificate: !secret ssl_certificate
   ssl_key: !secret ssl_key
+  base_url: !secret base_url
 
 recorder:
   db_url: !secret recorder_db_url
@@ -57,8 +58,8 @@ remote:
     host: 192.168.2.207
 
 wink:
-  email:  !secret wink_email
-  password:  !secret wink_password
+  email: !secret wink_email
+  password: !secret wink_password
 
 ifttt:
   key: !secret ifttt_key
@@ -103,3 +104,6 @@ script: !include scripts.yaml
 automation: !include automation.yaml
 group: !include groups.yaml
 switch: !include switches.yaml
+
+shell_command:
+  renew_ssl: ~/certbot/certbot-auto renew --quiet --no-self-upgrade --standalone --preferred-challenges http-01

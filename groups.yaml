@@ -19,6 +19,7 @@
       - device_tracker.nickphone7plus
       - device_tracker.nickprowp1
       - device_tracker.nickmagicpro
+      - sensor.ssl_cert_expiry
   lights:
     name: Lights
     control: hidden

@@ -435,3 +435,21 @@
     data:
       title: 'Pi Offline: - setup'
       message: 'Last seen: {{ states.sensor.pi_last_seen.state }}'
+
+- alias: 'Auto Renew SSL Cert'
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.ssl_cert_expiry
+    below: 29
+  action:
+    service: shell_command.renew_ssl
+
+- alias: 'SSL expiry notification'
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.ssl_cert_expiry
+    below: 21
+  action:
+    service: notify.ios_nickphone7plus
+    data:
+      message: 'Warning - SSL certificate expires in 21 days and has not been automatically renewed'
