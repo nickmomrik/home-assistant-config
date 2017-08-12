@@ -144,6 +144,7 @@
       - sensor.apple_cpu_temperature
       - sensor.apple_cpu_use
       - sensor.apple_ram_use
+      - sensor.apple_disk_use
   pi_apple_off:
     name: apple
     entities:
@@ -158,6 +159,7 @@
       - sensor.boston_cream_cpu_temperature
       - sensor.boston_cream_cpu_use
       - sensor.boston_cream_ram_use
+      - sensor.boston_cream_disk_use
   pi_boston_cream_off:
     name: boston cream
     entities:
@@ -172,6 +174,7 @@
       - sensor.cherry_cpu_temperature
       - sensor.cherry_cpu_use
       - sensor.cherry_ram_use
+      - sensor.cherry_disk_use
   pi_cherry_off:
     name: cherry
     entities:
@@ -186,6 +189,7 @@
       - sensor.derby_cpu_temperature
       - sensor.derby_cpu_use
       - sensor.derby_ram_use
+      - sensor.derby_disk_use
   pi_derby_off:
     name: derby
     entities:
@@ -200,6 +204,7 @@
       - sensor.elderberry_cpu_temperature
       - sensor.elderberry_cpu_use
       - sensor.elderberry_ram_use
+      - sensor.elderberry_disk_use
   pi_elderberry_off:
     name: elderberry
     entities:
@@ -214,6 +219,7 @@
       - sensor.grasshopper_cpu_temperature
       - sensor.grasshopper_cpu_use
       - sensor.grasshopper_ram_use
+      - sensor.grasshopper_disk_use
   pi_grasshopper_off:
     name: grasshopper
     entities:
@@ -228,6 +234,7 @@
       - sensor.pi_cpu_temperature
       - sensor.pi_cpu_use
       - sensor.pi_ram_use
+      - sensor.pi_disk_use
   pi_pi_off:
     name: Pi Setup Image
     entities:
