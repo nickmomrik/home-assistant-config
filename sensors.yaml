@@ -57,6 +57,8 @@
       - type: processor_use
       - type: memory_use_percent
       - type: since_last_boot
+      - type: disk_use_percent
+        arg: /
 
   - platform: template
     sensors:

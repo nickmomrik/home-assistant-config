@@ -7,6 +7,9 @@
   "sensor.*ram_use":
     icon: mdi:chip
     friendly_name: RAM Use
+  "sensor.*disk_use*":
+    icon: mdi:harddisk
+    friendly_name: DISK Use
   "sensor.*_uptime":
     icon: mdi:timer
     friendly_name: Uptime
