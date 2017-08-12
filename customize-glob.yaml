@@ -9,7 +9,7 @@
     friendly_name: RAM Use
   "sensor.*disk_use*":
     icon: mdi:harddisk
-    friendly_name: DISK Use
+    friendly_name: Disk Use
   "sensor.*_uptime":
     icon: mdi:timer
     friendly_name: Uptime
