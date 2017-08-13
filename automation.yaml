@@ -88,10 +88,6 @@
       entity_id: group.pi_pi_on
       data:
         visible: False
-    - service: group.set_visibility
-      entity_id: group.pi_pi_off
-      data:
-        visible: False
 
 - alias: 'apple is on'
   trigger:
