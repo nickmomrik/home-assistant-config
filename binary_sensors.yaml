@@ -1,0 +1,59 @@
+  - platform: template
+    sensors:
+      pi_apple_on:
+        value_template: >-
+          {%- if states( 'sensor.apple_last_seen' ) != 'unknown'
+            and ( as_timestamp( now() ) - as_timestamp( states( 'sensor.apple_last_seen' ) ) ) <= 180 -%}
+          True
+          {%- else -%}
+          False
+          {%- endif %}
+      pi_boston_cream_on:
+        value_template:  >-
+          {%- if states( 'sensor.boston_cream_last_seen' ) != 'unknown'
+            and ( as_timestamp( now() ) - as_timestamp( states( 'sensor.boston_cream_last_seen' ) ) ) <= 180 -%}
+          True
+          {%- else -%}
+          False
+          {%- endif %}
+      pi_cherry_on:
+        value_template:  >-
+          {%- if states( 'sensor.cherry_last_seen' ) != 'unknown'
+            and ( as_timestamp( now() ) - as_timestamp( states( 'sensor.cherry_last_seen' ) ) ) <= 180 -%}
+          True
+          {%- else -%}
+          False
+          {%- endif %}
+        entity_id: sensor.cherry_last_seen
+      pi_derby_on:
+        value_template:  >-
+          {%- if states( 'sensor.derby_last_seen' ) != 'unknown'
+            and ( as_timestamp( now() ) - as_timestamp( states( 'sensor.derby_last_seen' ) ) ) <= 180 -%}
+          True
+          {%- else -%}
+          False
+          {%- endif %}
+      pi_elderberry_on:
+        value_template:  >-
+          {%- if states( 'sensor.elderberry_last_seen' ) != 'unknown'
+            and ( as_timestamp( now() ) - as_timestamp( states( 'sensor.elderberry_last_seen.state' ) ) ) <= 180 -%}
+          True
+          {%- else -%}
+          False
+          {%- endif %}
+      pi_grasshopper_on:
+        value_template:  >-
+          {%- if states( 'sensor.grasshopper_last_seen' ) != 'unknown'
+            and ( as_timestamp( now() ) - as_timestamp( states( 'sensor.grasshopper_last_seen' ) ) ) <= 180 -%}
+          True
+          {%- else -%}
+          False
+          {%- endif %}
+      pi_pi_on:
+        value_template:  >-
+          {%- if states( 'sensor.pi_last_seen' ) != 'unknown'
+            and ( as_timestamp( now() ) - as_timestamp( states( 'sensor.pi_last_seen' ) ) ) <= 180 -%}
+          True
+          {%- else -%}
+          False
+          {%- endif %}

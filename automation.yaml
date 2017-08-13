@@ -79,31 +79,14 @@
     event: start
   action:
     - service: group.set_visibility
-      entity_id: group.pi_apple_on
-      data:
-        visible: False
-    - service: group.set_visibility
-      entity_id: group.pi_boston_cream_on
-      data:
-        visible: False
-    - service: group.set_visibility
-      entity_id: group.pi_cherry_on
-      data:
-        visible: False
-    - service: group.set_visibility
-      entity_id: group.pi_derby_on
-      data:
-        visible: False
-    - service: group.set_visibility
-      entity_id: group.pi_elderberry_on
-      data:
-        visible: False
-    - service: group.set_visibility
-      entity_id: group.pi_grasshopper_on
-      data:
-        visible: False
-    - service: group.set_visibility
-      entity_id: group.pi_pi_on
+      entity_id:
+        - group.pi_apple_on
+        - group.pi_boston_cream_on
+        - group.pi_cherry_on
+        - group.pi_derby_on
+        - group.pi_elderberry_on
+        - group.pi_grasshopper_on
+        - group.pi_pi_on
       data:
         visible: False
 
@@ -120,3 +103,30 @@
       data_template:
         entity_id: "group.pi_{{ trigger.topic.split('/')[1] }}_off"
         visible: False
+
+- alias: 'pi not seen'
+  trigger:
+    platform: state
+    entity_id:
+      - binary_sensor.pi_apple_on
+      - binary_sensor.pi_boston_cream_on
+      - binary_sensor.pi_cherry_on
+      - binary_sensor.pi_derby_on
+      - binary_sensor.pi_elderberry_on
+      - binary_sensor.pi_grasshopper_on
+      - binary_sensor.pi_pi_on
+    from: 'on'
+    to: 'off'
+  action:
+    - service: group.set_visibility
+      data_template:
+        entity_id: "group.pi_{{ trigger.entity_id.split('_')[2] }}_on"
+        visible: False
+    - service: group.set_visibility
+      data_template:
+        entity_id: "group.pi_{{ trigger.entity_id.split('_')[2] }}_off"
+        visible: True
+    - service: notify.ios_nickphone7plus
+      data_template:
+        title: "Pi Offline"
+        message: "{{ trigger.entity_id.split('_')[2] }}"
