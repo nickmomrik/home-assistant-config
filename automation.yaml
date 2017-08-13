@@ -130,3 +130,22 @@
       data_template:
         title: "Pi Offline"
         message: "{{ trigger.entity_id.split('_')[2] }}"
+
+- alias: 'pi disk use'
+  trigger:
+    platform: numeric_state
+    entity_id:
+      - sensor.apple_disk_use
+      - sensor.boston_cream_disk_use
+      - sensor.cherry_disk_use
+      - sensor.derby_disk_use
+      - sensor.elderberry_disk_use
+      - sensor.flapper_disk_use_
+      - sensor.grasshopper_disk_use
+      - sensor.pi_disk_use
+    above: 90
+  action:
+    - service: notify.ios_nickphone7plus
+      data_template:
+        title: "Pi Disk Use > 90%"
+        message: "{{ trigger.entity_id.split('_')[0] | replace('sensor.', '') }}"
