@@ -106,3 +106,17 @@
       entity_id: group.pi_pi_on
       data:
         visible: False
+
+- alias: 'pi is on'
+  trigger:
+    platform: mqtt
+    topic: pis/+/last-seen
+  action:
+    - service: group.set_visibility
+      data_template:
+        entity_id: "group.pi_{{ trigger.topic.split('/')[1] }}_on"
+        visible: True
+    - service: group.set_visibility
+      data_template:
+        entity_id: "group.pi_{{ trigger.topic.split('/')[1] }}_off"
+        visible: False
