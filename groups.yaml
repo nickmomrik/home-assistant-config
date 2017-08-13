@@ -133,7 +133,6 @@
       - sensor.cpu_use
       - sensor.ram_use
       - sensor.disk_use_
-      - sensor.pihole_ads_blocked_today
   pi_apple_on:
     name: apple
     control: hidden
@@ -409,3 +408,15 @@
       - group.camera_detect
       - group.nest_status
       - group.nest_temps
+      - group.pi_hole
+  pi_hole:
+    name: Pi-Hole
+    entities:
+      - sensor.pihole_ads_blocked_today
+      - sensor.pihole_ads_percentage_blocked_today
+      - sensor.pihole_dns_queries_cached
+      - sensor.pihole_dns_queries_forwarded
+      - sensor.pihole_dns_queries_today
+      - sensor.pihole_dns_unique_clients
+      - sensor.pihole_dns_unique_domains
+      - sensor.pihole_domains_blocked
