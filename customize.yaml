@@ -26,7 +26,7 @@
     icon: mdi:download
   sensor.speedtest_upload:
     icon: mdi:upload
-  sensor.pihole:
+  sensor.pihole_ads_blocked_today:
     icon: mdi:counter
   sensor.downstairs_nest_protect_battery_health:
     icon: mdi:battery-80

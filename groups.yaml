@@ -133,7 +133,7 @@
       - sensor.cpu_use
       - sensor.ram_use
       - sensor.disk_use_
-      - sensor.pihole
+      - sensor.pihole_ads_blocked_today
   pi_apple_on:
     name: apple
     control: hidden
