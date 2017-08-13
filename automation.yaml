@@ -24,7 +24,7 @@
   action:
     service: notify.ios_nickphone7plus
     data_template:
-      title: 'Home Assistant update available'
+      title: 'Update Available'
       message: 'Home Assistant {{ states.updater.updater.state }}'
 
 - alias: 'Garage temp reached desired temp'
