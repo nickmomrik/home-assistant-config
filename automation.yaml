@@ -354,7 +354,7 @@
     value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.apple_last_seen.state ) ) > 180 }}'
   action:
     service: notify.ios_nickphone7plus
-    data:
+    data_template:
       title: 'Pi Offline: apple'
       message: 'Last seen: {{ states.sensor.apple_last_seen.state }}'
 
@@ -367,7 +367,7 @@
     value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.boston_cream_last_seen.state ) ) > 180 }}'
   action:
     service: notify.ios_nickphone7plus
-    data:
+    data_template:
       title: 'Pi Offline: boston-cream'
       message: 'Last seen: {{ states.sensor.boston_cream_last_seen.state }}'
 
@@ -380,7 +380,7 @@
     value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.cherry_last_seen.state ) ) > 180 }}'
   action:
     service: notify.ios_nickphone7plus
-    data:
+    data_template:
       title: 'Pi Offline: cherry'
       message: 'Last seen: {{ states.sensor.cherry_last_seen.state }}'
 
@@ -393,7 +393,7 @@
     value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.derby_last_seen.state ) ) > 180 }}'
   action:
     service: notify.ios_nickphone7plus
-    data:
+    data_template:
       title: 'Pi Offline: derby'
       message: 'Last seen: {{ states.sensor.derby_last_seen.state }}'
 
@@ -406,7 +406,7 @@
     value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.elderberry_last_seen.state ) ) > 180 }}'
   action:
     service: notify.ios_nickphone7plus
-    data:
+    data_template:
       title: 'Pi Offline: elderberry'
       message: 'Last seen: {{ states.sensor.elderberry_last_seen.state }}'
 
@@ -419,7 +419,7 @@
     value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.grasshopper_last_seen.state ) ) > 180 }}'
   action:
     service: notify.ios_nickphone7plus
-    data:
+    data_template:
       title: 'Pi Offline: grasshopper'
       message: 'Last seen: {{ states.sensor.grasshopper_last_seen.state }}'
 
@@ -432,7 +432,7 @@
     value_template: '{{ ( as_timestamp( now() ) - as_timestamp( states.sensor.pi_last_seen.state ) ) > 180 }}'
   action:
     service: notify.ios_nickphone7plus
-    data:
+    data_template:
       title: 'Pi Offline: - setup'
       message: 'Last seen: {{ states.sensor.pi_last_seen.state }}'
 
