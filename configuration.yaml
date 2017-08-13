@@ -28,8 +28,6 @@ wemo:
     - 192.168.2.131
     - 192.168.2.204
 
-emulated_hue:
-
 nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_client_secret
@@ -92,8 +90,11 @@ conversation:
 config:
 sun:
 alexa:
-mqtt:
 ios:
+emulated_hue:
+
+mqtt:
+  broker: !secret mqtt_broker
 
 sensor: !include sensors.yaml
 input_select: !include input_select.yaml
