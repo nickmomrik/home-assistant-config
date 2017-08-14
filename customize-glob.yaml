@@ -3,13 +3,13 @@
     friendly_name: CPU Temp
   "sensor.*cpu_use":
     icon: mdi:raspberrypi
-    friendly_name: CPU Use
+    friendly_name: CPU
   "sensor.*ram_use":
     icon: mdi:chip
-    friendly_name: RAM Use
+    friendly_name: RAM
   "sensor.*disk_use*":
     icon: mdi:harddisk
-    friendly_name: Disk Use
+    friendly_name: Disk
   "sensor.*_uptime":
     icon: mdi:timer
     friendly_name: Uptime
