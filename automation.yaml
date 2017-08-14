@@ -97,11 +97,11 @@
   action:
     - service: group.set_visibility
       data_template:
-        entity_id: "group.pi_{{ trigger.topic.split('/')[1] }}_on"
+        entity_id: "group.pi_{{ trigger.topic.split('/')[1] | replace( '-', '_' ) }}_on"
         visible: True
     - service: group.set_visibility
       data_template:
-        entity_id: "group.pi_{{ trigger.topic.split('/')[1] }}_off"
+        entity_id: "group.pi_{{ trigger.topic.split('/')[1] | replace( '-', '_' ) }}_off"
         visible: False
 
 - alias: 'pi not seen'
