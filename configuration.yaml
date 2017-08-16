@@ -53,8 +53,6 @@ remote:
     host: 192.168.2.207
 
 wink:
-  email: !secret wink_email
-  password: !secret wink_password
 
 ifttt:
   key: !secret ifttt_key
