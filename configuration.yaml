@@ -72,13 +72,13 @@ cover:
     password: !secret myq_password
     type: chamberlain
 
-apple_tv:
-  - host: !secret living_apple_tv_host
-    name: Living Room Apple TV
-    login_id: !secret living_apple_tv_login
-  - host: !secret office_apple_tv_host
-    name: Office Apple TV
-    login_id: !secret office_apple_tv_login
+#apple_tv:
+# - host: !secret living_apple_tv_host
+#    name: Living Room Apple TV
+#    login_id: !secret living_apple_tv_login
+#  - host: !secret office_apple_tv_host
+#    name: Office Apple TV
+#    login_id: !secret office_apple_tv_login
 
 frontend:
 updater:

@@ -393,8 +393,8 @@
     icon: mdi:television-guide
     entities:
       - input_select.remote
-      - media_player.living_room_apple_tv
-      - media_player.office_apple_tv
+#      - media_player.living_room_apple_tv
+#      - media_player.office_apple_tv
   sensors:
     name: Sensors
     view: yes
