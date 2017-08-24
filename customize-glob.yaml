@@ -26,3 +26,5 @@
     assumed_state: false
   "switch.*_lamp":
     icon: mdi:lamp
+  "switch.*_ac":
+    icon: mdi:air-conditioner

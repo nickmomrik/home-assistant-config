@@ -36,7 +36,6 @@
       - light.office_light
       - light.upstairs_light
       - light.bedroom_light
-      - switch.bedroom_lamp
   doors:
     name: Doors
     control: hidden
@@ -93,6 +92,7 @@
       - climate.office_nest
       - climate.upstairs_nest
       - climate.basement_nest
+      - switch.bedroom_ac
       - sensor.garage_temperature
   humidity:
     name: Indoor Humidity
@@ -244,7 +244,7 @@
     entities:
       - light.upstairs_light
       - light.bedroom_light
-      - switch.bedroom_lamp
+      - switch.bedroom_ac
       - climate.upstairs_nest
       - sensor.upstairs_thermostat_nest_humidity
   office:
