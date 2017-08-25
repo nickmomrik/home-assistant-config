@@ -26,9 +26,6 @@
     icon: mdi:download
   sensor.speedtest_upload:
     icon: mdi:upload
-  sensor.pihole_ads_blocked_today:
-    icon: mdi:counter
-    friendly_name: Pi-Hole
   sensor.downstairs_nest_protect_battery_health:
     icon: mdi:battery-80
     friendly_name: Downstairs Protect Battery
