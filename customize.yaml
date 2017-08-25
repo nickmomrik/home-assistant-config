@@ -254,3 +254,19 @@
     friendly_name: Feels Like Min
   sensor.dark_sky_precip_intensity_max:
     friendly_name: Precipitation Intensity Max
+  sensor.pihole_ads_blocked_today:
+    friendly_name: Ads Blocked
+  sensor.pihole_ads_percentage_blocked_today:
+    friendly_name: Ad Block %
+  sensor.pihole_dns_queries_cached:
+    friendly_name: DNS Cache
+  sensor.pihole_dns_queries_forwarded:
+    friendly_name: DNS Forwards
+  sensor.pihole_dns_queries_today:
+    friendly_name: DNS
+  sensor.pihole_dns_unique_clients:
+    friendly_name: DNS Unique Clients
+  sensor.pihole_dns_unique_domains:
+    friendly_name: DNS Unique Domains
+  sensor.pihole_domains_blocked:
+    friendly_name: Domains Blocked
