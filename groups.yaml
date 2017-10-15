@@ -279,7 +279,7 @@
       - light.garage_light
       - switch.garage_temp_monitor
       - sensor.garage_temperature
-      - input_slider.garage_temp_desired
+      - input_number.garage_temp_desired
       - sensor.garage_humidity
       - device_tracker.ford_fusion
   downstairs:

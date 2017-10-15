@@ -56,7 +56,7 @@ wink:
 ifttt:
   key: !secret ifttt_key
 
-input_slider:
+input_number:
   garage_temp_desired:
     name: Desired Temperature
     initial: 50
