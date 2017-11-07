@@ -5,7 +5,7 @@
     friendly_name: Front Door Lock
   device_tracker.ford_fusion:
     icon: mdi:car
-  device_tracker.nickphone7plus:
+  device_tracker.nickphonex:
     icon: mdi:cellphone-iphone
   device_tracker.nickprowp1:
     icon: mdi:laptop-mac

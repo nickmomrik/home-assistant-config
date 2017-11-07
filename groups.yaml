@@ -16,7 +16,7 @@
       - sensor.dark_sky_temperature
       - sensor.dark_sky_summary
       - device_tracker.ford_fusion
-      - device_tracker.nickphone7plus
+      - device_tracker.nickphonex
       - device_tracker.nickprowp1
       - device_tracker.nickmagicpro
       - sensor.ssl_cert_expiry
@@ -255,7 +255,7 @@
       - light.office_light
       - climate.office_nest
       - sensor.office_thermostat_nest_humidity
-      - device_tracker.nickphone7plus
+      - device_tracker.nickphonex
       - device_tracker.nickprowp1
       - device_tracker.nickmagicpro
   living:

@@ -22,7 +22,7 @@
     platform: state
     entity_id: updater.updater
   action:
-    service: notify.ios_nickphone7plus
+    service: notify.ios_nickphonex
     data_template:
       title: 'Update Available'
       message: 'Home Assistant {{ states.updater.updater.state }}'
@@ -50,7 +50,7 @@
     from: 'on'
     to: 'off'
   action:
-    service: notify.ios_nickphone7plus
+    service: notify.ios_nickphonex
     data_template:
       title: "Garage Monitor Turned OFF"
       message: "Temperature in the garage is {{ states.sensor.garage_temperature.state }}°F"
@@ -69,7 +69,7 @@
     entity_id: sensor.ssl_cert_expiry
     below: 21
   action:
-    service: notify.ios_nickphone7plus
+    service: notify.ios_nickphonex
     data:
       message: 'Warning - SSL certificate expires in 21 days and has not been automatically renewed'
 
@@ -126,7 +126,7 @@
       data_template:
         entity_id: "group.pi_{{ trigger.entity_id | replace( 'binary_sensor.pi_', '' ) | replace( '_on', '' ) }}_off"
         visible: True
-    - service: notify.ios_nickphone7plus
+    - service: notify.ios_nickphonex
       data_template:
         title: "Pi Offline"
         message: "{{ trigger.entity_id | replace( 'binary_sensor.pi_', '' ) | replace( '_on', '' ) }}"
@@ -145,7 +145,7 @@
       - sensor.pi_disk_use
     above: 90
   action:
-    - service: notify.ios_nickphone7plus
+    - service: notify.ios_nickphonex
       data_template:
         title: "Pi Disk Use > 90%"
         message: "{{ trigger.entity_id | replace( 'sensor.', '' ) | replace( '_disk_use', '' ) }}"
