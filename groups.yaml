@@ -93,6 +93,7 @@
       - climate.upstairs_nest
       - climate.basement_nest
       - switch.bedroom_ac
+      - switch.garage_temp_monitor
       - sensor.garage_temperature
       - input_number.garage_temp_desired
   humidity:
