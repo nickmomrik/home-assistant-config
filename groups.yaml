@@ -87,6 +87,7 @@
       - group.other_weather
   temps:
     name: Indoor Temperatures
+    control: hidden
     entities:
       - climate.living_room_nest
       - climate.office_nest
