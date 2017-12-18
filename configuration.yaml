@@ -58,7 +58,7 @@ ifttt:
 
 input_number:
   garage_temp_desired:
-    name: Desired Temp
+    name: Garage Target
     initial: 50
     min: 40
     max: 80
