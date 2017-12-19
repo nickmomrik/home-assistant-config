@@ -67,7 +67,7 @@
     icon: mdi:water-percent
   switch.garage_temp_monitor:
     icon: mdi:eye
-    friendly_name: Temp Monitor
+    friendly_name: Garage Temp Monitor
     assumed_state: false
   sensor.since_last_boot_templated:
     icon: mdi:timer
