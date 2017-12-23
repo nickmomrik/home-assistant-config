@@ -24,12 +24,12 @@
     name: Lights
     control: hidden
     entities:
-      - light.living_light
+      - light.living_room_light
       - switch.living_room_lamp
       - switch.front_porch
       - switch.front_lamp
       - light.entry_light
-      - light.dining_light
+      - light.dining_room_light
       - switch.kitchen_light
       - light.garage_light
       - light.hall_light
@@ -264,7 +264,7 @@
     name: Living Room
     control: hidden
     entities:
-      - light.living_light
+      - light.living_room_light
       - switch.living_room_lamp
       - climate.living_room_nest
       - sensor.living_room_thermostat_nest_humidity
@@ -294,7 +294,7 @@
       - light.entry_light
       - light.hall_light
       - switch.kitchen_light
-      - light.dining_light
+      - light.dining_room_light
       - switch.front_lamp
   rooms:
     name: Rooms

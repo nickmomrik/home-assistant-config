@@ -2,10 +2,9 @@
 
 ### Devices
 
-* Wink 2 Hub
 * MyQ Garage Door Opener
 * August Door Lock
-* Lutron Caseta switches and remotes
+* Lutron Caseta hub, switches, and remotes
 * Wemo plugs and switches
 * Nest Thermostats and Protects
 * Nest Cam and Dropcam

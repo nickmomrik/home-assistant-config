@@ -103,3 +103,9 @@ switch: !include switches.yaml
 
 shell_command:
   renew_ssl: ~/certbot/certbot-auto renew --quiet --no-self-upgrade --standalone --preferred-challenges http-01
+
+lutron_caseta:
+  host: !secret lutron_hub_ip
+  keyfile: caseta.key
+  certfile: caseta.crt
+  ca_certs: caseta-bridge.crt

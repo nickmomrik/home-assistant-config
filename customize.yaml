@@ -16,10 +16,6 @@
     friendly_name: Porch Light
   switch.kitchen_light:
     icon: mdi:lightbulb
-  light.living_light:
-    friendly_name: Living Room Light
-  light.dining_light:
-    friendly_name: Dining Room Light
   sensor.speedtest_ping:
     icon: mdi:speedometer
   sensor.speedtest_download:
@@ -179,9 +175,6 @@
   binary_sensor.upstairs_thermostat_nest_online:
     icon: mdi:nest-thermostat
     friendly_name: Upstairs Nest
-  binary_sensor.wink_hub_2_hub:
-    icon: mdi:router-wireless
-    friendly_name: Wink Hub
   binary_sensor.entryway_camera_motion_detected:
     icon: mdi:blur
     friendly_name: Entryway Motion
