@@ -1,8 +1,5 @@
-  cover.myq:
-    friendly_name: Garage Door
+  cover.garage_door:
     icon: mdi:garage
-  lock.front_door:
-    friendly_name: Front Door Lock
   device_tracker.ford_fusion:
     icon: mdi:car
   device_tracker.nickphonex:

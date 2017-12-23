@@ -40,8 +40,8 @@
     name: Doors
     control: hidden
     entities:
-      - cover.myq
-      - lock.front_door
+      - cover.garage_door
+      - lock.door
   dark_sky:
     name: Current Weather
     entities:
@@ -278,7 +278,7 @@
     name: Garage
     control: hidden
     entities:
-      - cover.myq
+      - cover.garage_door
       - light.garage_light
       - switch.garage_temp_monitor
       - sensor.garage_temperature
@@ -289,7 +289,7 @@
     name: Downstairs
     control: hidden
     entities:
-      - lock.front_door
+      - lock.door
       - switch.front_porch
       - light.entry_light
       - light.hall_light
@@ -343,7 +343,6 @@
       - binary_sensor.office_thermostat_nest_online
       - binary_sensor.upstairs_thermostat_nest_online
       - binary_sensor.basement_thermostat_nest_online
-      - binary_sensor.wink_hub_2_hub
   camera_detect:
     name: Camera Detect
     entities:

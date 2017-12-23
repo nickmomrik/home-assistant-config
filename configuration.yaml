@@ -66,12 +66,6 @@ input_number:
     mode: slider
     icon: mdi:target
 
-cover:
-  - platform: myq
-    username: !secret myq_email
-    password: !secret myq_password
-    type: chamberlain
-
 #apple_tv:
 # - host: !secret living_apple_tv_host
 #    name: Living Room Apple TV
