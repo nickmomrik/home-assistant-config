@@ -330,6 +330,7 @@
     entities:
       - sensor.nickphonex_battery_level
       - sensor.nickphonex_battery_state
+      - sensor.door_battery
       - sensor.downstairs_nest_protect_battery_health
       - sensor.upstairs_nest_protect_battery_health
       - sensor.basement_nest_protect_battery_health

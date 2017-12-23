@@ -292,3 +292,20 @@
     unit_of_measurement: days
     scan_interval: 10800
     command: "ssl-cert-check -b -c /etc/letsencrypt/live/nickmomrik.duckdns.org/cert.pem | awk '{ print $NF }'"
+
+  - platform: template
+    sensors:
+      door_battery:
+        friendly_name: Door Battery
+        unit_of_measurement: '%'
+        value_template: "{{ states.lock.door.attributes.battery_level|int }}"
+        icon_template: >-
+          {% set battery_level = states.lock.door.attributes.battery_level|default(0)|int %}
+            {% set battery_round = (battery_level / 10) |int * 10 %}
+            {% if battery_round >= 100 %}
+              mdi:battery
+            {% elif battery_round > 0 %}
+              mdi:battery-{{ battery_round }}
+            {% else %}
+              mdi:battery-alert
+            {% endif %}

@@ -149,3 +149,14 @@
       data_template:
         title: "Pi Disk Use > 90%"
         message: "{{ trigger.entity_id | replace( 'sensor.', '' ) | replace( '_disk_use', '' ) }}"
+
+- alias: 'door battery low'
+  trigger:
+     platform: numeric_state
+     entity_id: sensor.door_battery
+     below: 10
+  action:
+    - service: notify.ios_nickphonex
+      data_template:
+        title: "Door Battery is Low"
+        message: "Door battery is at {{ states.sensor.door_battery.state }}%"
