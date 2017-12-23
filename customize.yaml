@@ -4,6 +4,10 @@
     icon: mdi:car
   device_tracker.nickphonex:
     icon: mdi:cellphone-iphone
+  sensor.nickphonex_battery_level:
+    friendly_name: iPhone X Battery
+  sensor.nickphonex_battery_state:
+    friendly_name: iPhone X Power
   device_tracker.nickprowp1:
     icon: mdi:laptop-mac
   device_tracker.nickmagicpro:
