@@ -38,6 +38,11 @@
       - upload
     server_id: !secret speedtest_server_id
     minute: 31
+    hour:
+      - 1
+      - 7
+      - 13
+      - 19
 
   - platform: systemmonitor
     resources:
