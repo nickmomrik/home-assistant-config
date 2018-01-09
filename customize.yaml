@@ -261,3 +261,5 @@
     friendly_name: DNS Unique Domains
   sensor.pihole_domains_blocked:
     friendly_name: Domains Blocked
+  binary_sensor.furnace:
+    icon: mdi:radiator

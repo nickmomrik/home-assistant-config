@@ -89,6 +89,7 @@
     name: Indoor Temperatures
     control: hidden
     entities:
+      - binary_sensor.furnace
       - climate.living_room_nest
       - climate.office_nest
       - climate.upstairs_nest
@@ -272,6 +273,7 @@
     name: Basement
     control: hidden
     entities:
+      - binary_sensor.furnace
       - climate.basement_nest
       - sensor.basement_thermostat_nest_humidity
   garage:
