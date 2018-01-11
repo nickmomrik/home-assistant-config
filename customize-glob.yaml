@@ -28,3 +28,5 @@
     icon: mdi:lamp
   "switch.*_ac":
     icon: mdi:air-conditioner
+  "binary_sensor.*_heat":
+    icon: mdi:radiator

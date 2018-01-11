@@ -91,13 +91,13 @@
     entities:
       - binary_sensor.furnace
       - climate.living_room_nest
-      - sensor.living_room_thermostat_nest_hvac_state
+      - binary_sensor.living_room_heat
       - climate.office_nest
-      - sensor.office_thermostat_nest_hvac_state
+      - binary_sensor.office_heat
       - climate.upstairs_nest
-      - sensor.upstairs_thermostat_nest_hvac_state
+      - binary_sensor.upstairs_heat
       - climate.basement_nest
-      - sensor.basement_thermostat_nest_hvac_state
+      - binary_sensor.basement_heat
       - switch.bedroom_ac
       - sensor.garage_temperature
       - input_number.garage_temp_desired
@@ -254,7 +254,7 @@
       - light.bedroom_light
       - switch.bedroom_ac
       - climate.upstairs_nest
-      - sensor.upstairs_thermostat_nest_hvac_state
+      - binary_sensor.upstairs_heat
       - sensor.upstairs_thermostat_nest_humidity
   office:
     name: Office
@@ -262,7 +262,7 @@
     entities:
       - light.office_light
       - climate.office_nest
-      - sensor.office_thermostat_nest_hvac_state
+      - binary_sensor.office_heat
       - sensor.office_thermostat_nest_humidity
       - device_tracker.nickphonex
       - device_tracker.nickprowp1
@@ -274,7 +274,7 @@
       - light.living_room_light
       - switch.living_room_lamp
       - climate.living_room_nest
-      - sensor.living_room_thermostat_nest_hvac_state
+      - binary_sensor.living_room_heat
       - sensor.living_room_thermostat_nest_humidity
   basement:
     name: Basement
@@ -282,7 +282,7 @@
     entities:
       - binary_sensor.furnace
       - climate.basement_nest
-      - sensor.basement_thermostat_nest_hvac_state
+      - binary_sensor.basement_heat
       - sensor.basement_thermostat_nest_humidity
   garage:
     name: Garage
@@ -380,6 +380,11 @@
       - sensor.office_thermostat_nest_operation_mode
       - sensor.upstairs_thermostat_nest_operation_mode
       - sensor.basement_thermostat_nest_operation_mode
+      - sensor.living_room_thermostat_nest_hvac_state
+      - sensor.office_thermostat_nest_hvac_state
+      - sensor.upstairs_thermostat_nest_hvac_state
+      - sensor.basement_thermostat_nest_hvac_state
+
   nest_temps:
     name: Nest Temps
     entities:
