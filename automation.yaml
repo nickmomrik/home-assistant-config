@@ -160,3 +160,23 @@
       data_template:
         title: "Door Battery is Low"
         message: "Door battery is at {{ states.sensor.door_battery.state }}%"
+
+- alias: 'HA start'
+  trigger:
+    platform: homeassistant
+    event: start
+  action:
+    - service: notify.ios_nickphonex
+      data_template:
+        title: "Home Assistant Status"
+        message: "Started"
+
+- alias: 'HA start'
+  trigger:
+    platform: homeassistant
+    event: shutdown
+  action:
+    - service: notify.ios_nickphonex
+      data_template:
+        title: "Home Assistant Status"
+        message: "Shutdown"
