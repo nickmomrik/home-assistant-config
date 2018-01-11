@@ -91,13 +91,17 @@
     entities:
       - binary_sensor.furnace
       - climate.living_room_nest
+      - sensor.living_room_thermostat_nest_hvac_state
       - climate.office_nest
+      - sensor.office_thermostat_nest_hvac_state
       - climate.upstairs_nest
+      - sensor.upstairs_thermostat_nest_hvac_state
       - climate.basement_nest
+      - sensor.basement_thermostat_nest_hvac_state
       - switch.bedroom_ac
-      - switch.garage_temp_monitor
       - sensor.garage_temperature
       - input_number.garage_temp_desired
+      - switch.garage_temp_monitor
   humidity:
     name: Indoor Humidity
     entities:
@@ -250,6 +254,7 @@
       - light.bedroom_light
       - switch.bedroom_ac
       - climate.upstairs_nest
+      - sensor.upstairs_thermostat_nest_hvac_state
       - sensor.upstairs_thermostat_nest_humidity
   office:
     name: Office
@@ -257,6 +262,7 @@
     entities:
       - light.office_light
       - climate.office_nest
+      - sensor.office_thermostat_nest_hvac_state
       - sensor.office_thermostat_nest_humidity
       - device_tracker.nickphonex
       - device_tracker.nickprowp1
@@ -268,6 +274,7 @@
       - light.living_room_light
       - switch.living_room_lamp
       - climate.living_room_nest
+      - sensor.living_room_thermostat_nest_hvac_state
       - sensor.living_room_thermostat_nest_humidity
   basement:
     name: Basement
@@ -275,6 +282,7 @@
     entities:
       - binary_sensor.furnace
       - climate.basement_nest
+      - sensor.basement_thermostat_nest_hvac_state
       - sensor.basement_thermostat_nest_humidity
   garage:
     name: Garage
@@ -282,9 +290,9 @@
     entities:
       - cover.garage_door
       - light.garage_light
-      - switch.garage_temp_monitor
       - sensor.garage_temperature
       - input_number.garage_temp_desired
+      - switch.garage_temp_monitor
       - sensor.garage_humidity
       - device_tracker.ford_fusion
   downstairs:
@@ -368,10 +376,6 @@
       - binary_sensor.office_thermostat_nest_is_locked
       - binary_sensor.upstairs_thermostat_nest_is_locked
       - binary_sensor.basement_thermostat_nest_is_locked
-      - sensor.living_room_thermostat_nest_hvac_state
-      - sensor.office_thermostat_nest_hvac_state
-      - sensor.upstairs_thermostat_nest_hvac_state
-      - sensor.basement_thermostat_nest_hvac_state
       - sensor.living_room_thermostat_nest_operation_mode
       - sensor.office_thermostat_nest_operation_mode
       - sensor.upstairs_thermostat_nest_operation_mode
