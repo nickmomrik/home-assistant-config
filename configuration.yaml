@@ -71,7 +71,6 @@ sun:
 alexa:
 ios:
 emulated_hue:
-  host_ip: !secret ha_ip
 
 mqtt:
   broker: core-mosquitto
