@@ -8,10 +8,6 @@
     friendly_name: iPhone X Battery
   sensor.nickphonex_battery_state:
     friendly_name: iPhone X Power
-  device_tracker.nickprowp1:
-    icon: mdi:laptop-mac
-  device_tracker.nickmagicpro:
-    icon: mdi:laptop-mac
   switch.front_porch:
     icon: mdi:lightbulb
     friendly_name: Porch Light

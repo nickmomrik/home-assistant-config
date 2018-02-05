@@ -16,6 +16,7 @@
       - sensor.dark_sky_temperature
       - sensor.dark_sky_summary
       - device_tracker.ford_fusion
+      - device_tracker.nickphonex
   lights:
     name: Lights
     control: hidden
@@ -256,6 +257,7 @@
     name: Office
     control: hidden
     entities:
+      - device_tracker.nickphonex
       - light.office_light
       - climate.office_nest
       - binary_sensor.office_heat
