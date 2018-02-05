@@ -19,7 +19,6 @@
       - device_tracker.nickphonex
       - device_tracker.nickprowp1
       - device_tracker.nickmagicpro
-      - sensor.ssl_cert_expiry
   lights:
     name: Lights
     control: hidden
@@ -267,6 +266,7 @@
       - device_tracker.nickphonex
       - device_tracker.nickprowp1
       - device_tracker.nickmagicpro
+      - media_player.office
   living:
     name: Living Room
     control: hidden
@@ -276,6 +276,7 @@
       - climate.living_room_nest
       - binary_sensor.living_room_heat
       - sensor.living_room_thermostat_nest_humidity
+      - media_player.living_room
   basement:
     name: Basement
     control: hidden
@@ -409,8 +410,8 @@
     icon: mdi:television-guide
     entities:
       - input_select.remote
-#      - media_player.living_room_apple_tv
-#      - media_player.office_apple_tv
+      - media_player.living_room
+      - media_player.office
   sensors:
     name: Sensors
     view: yes

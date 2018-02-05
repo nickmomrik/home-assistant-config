@@ -20,14 +20,17 @@ recorder:
   purge_keep_days: 30
 history:
 logbook:
+map:
+tts:
+    - platform: google
 
 wemo:
   static:
-    - 192.168.2.107
-    - 192.168.2.209
-    - 192.168.2.202
-    - 192.168.2.131
-    - 192.168.2.204
+    - !secret wemo1_ip
+    - !secret wemo2_ip
+    - !secret wemo3_ip
+    - !secret wemo4_ip
+    - !secret wemo5_ip
 
 nest:
   client_id: !secret nest_client_id
@@ -37,19 +40,12 @@ device_tracker:
   - platform: automatic
     client_id: !secret automatic_client_id
     secret: !secret automatic_secret
-    track_new_devices: no
-  - platform: asuswrt
-    host: !secret router_ip
-    username: !secret router_username
-    password: !secret router_password
-    protocol: telnet
-    consider_home: 300
-    interval_seconds: 30
+    track_new_devices: yes
 
 remote:
   - platform: harmony
     name: Media Center
-    host: 192.168.2.207
+    host: !secret harmony_ip
 
 wink:
 
@@ -68,6 +64,7 @@ input_number:
 
 frontend:
 updater:
+discovery:
 conversation:
 config:
 sun:
@@ -77,21 +74,29 @@ emulated_hue:
   host_ip: !secret ha_ip
 
 mqtt:
-  broker: !secret ha_ip
+  broker: core-mosquitto
 
 sensor: !include sensors.yaml
 binary_sensor: !include binary_sensors.yaml
 input_select: !include input_select.yaml
 script: !include scripts.yaml
-automation: !include automation.yaml
+automation: !include automations.yaml
 group: !include groups.yaml
 switch: !include switches.yaml
-
-shell_command:
-  renew_ssl: ~/certbot/certbot-auto renew --quiet --no-self-upgrade --standalone --preferred-challenges http-01
 
 lutron_caseta:
   host: !secret lutron_hub_ip
   keyfile: caseta.key
   certfile: caseta.crt
   ca_certs: caseta-bridge.crt
+
+panel_iframe:
+  pihole:
+    title: Pi-hole
+    icon: mdi:block-helper
+    url: !secret pi_hole_url
+
+light:
+  - platform: decora_wifi
+    username: !secret leviton_username
+    password: !secret leviton_password

@@ -29,7 +29,6 @@
       - precip_intensity_max
 
   - platform: pi_hole
-    host: !secret pi_hole_host
 
   - platform: speedtest
     monitored_conditions:
@@ -40,9 +39,13 @@
     minute: 31
     hour:
       - 1
+      - 4
       - 7
+      - 10
       - 13
+      - 16
       - 19
+      - 22
 
   - platform: systemmonitor
     resources:
@@ -278,12 +281,6 @@
     display_options:
       - 'date'
       - 'time'
-
-  - platform: command_line
-    name: SSL cert expiry
-    unit_of_measurement: days
-    scan_interval: 10800
-    command: "ssl-cert-check -b -c /etc/letsencrypt/live/nickmomrik.duckdns.org/cert.pem | awk '{ print $NF }'"
 
   - platform: template
     sensors:

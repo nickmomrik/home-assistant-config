@@ -55,24 +55,6 @@
       title: "Garage Monitor Turned OFF"
       message: "Temperature in the garage is {{ states.sensor.garage_temperature.state }}°F"
 
-- alias: 'Auto Renew SSL Cert'
-  trigger:
-    platform: numeric_state
-    entity_id: sensor.ssl_cert_expiry
-    below: 29
-  action:
-    service: shell_command.renew_ssl
-
-- alias: 'SSL expiry notification'
-  trigger:
-    platform: numeric_state
-    entity_id: sensor.ssl_cert_expiry
-    below: 21
-  action:
-    service: notify.ios_nickphonex
-    data:
-      message: 'Warning - SSL certificate expires in 21 days and has not been automatically renewed'
-
 - alias: 'Home Assistant Start'
   trigger:
     platform: homeassistant

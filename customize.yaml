@@ -263,3 +263,9 @@
     friendly_name: Domains Blocked
   binary_sensor.furnace:
     icon: mdi:radiator
+  media_player.office:
+    friendly_name: Office Apple TV
+    icon: mdi:television-classic
+  media_player.living_room:
+    friendly_name: Living Room Apple TV
+    icon: mdi:television-classic

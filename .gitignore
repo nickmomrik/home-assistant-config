@@ -8,3 +8,4 @@ known_devices.yaml
 nest.conf
 secrets.yaml
 .remote-sync.json
+caseta*
