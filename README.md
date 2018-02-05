@@ -5,9 +5,11 @@
 * MyQ Garage Door Opener
 * August Door Lock
 * Lutron Caseta hub, switches, and remotes
+* Leviton switch
 * Wemo plugs and switches
 * Nest Thermostats and Protects
-* Nest Cam and Dropcam
+* Nest Cam
+* Dropcam
 * Amazon Alexa Echo
 * Automatic Pro
 * Harmony Hub & Remote
