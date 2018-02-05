@@ -90,12 +90,6 @@ lutron_caseta:
   certfile: caseta.crt
   ca_certs: caseta-bridge.crt
 
-panel_iframe:
-  pihole:
-    title: Pi-hole
-    icon: mdi:block-helper
-    url: !secret pi_hole_url
-
 light:
   - platform: decora_wifi
     username: !secret leviton_username
