@@ -8,7 +8,7 @@
     friendly_name: iPhone X Battery
   sensor.nickphonex_battery_state:
     friendly_name: iPhone X Power
-  switch.front_porch:
+  switch.porch_light:
     icon: mdi:lightbulb
     friendly_name: Porch Light
   switch.kitchen_light:

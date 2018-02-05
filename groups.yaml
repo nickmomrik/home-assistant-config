@@ -23,8 +23,8 @@
     entities:
       - light.living_room_light
       - switch.living_room_lamp
-      - switch.front_porch
-      - switch.front_lamp
+      - switch.porch_light
+      - switch.den_lamp
       - light.entry_light
       - light.dining_room_light
       - switch.kitchen_light
@@ -297,12 +297,12 @@
     control: hidden
     entities:
       - lock.door
-      - switch.front_porch
+      - switch.porch_light
       - light.entry_light
       - light.hall_light
       - switch.kitchen_light
       - light.dining_room_light
-      - switch.front_lamp
+      - switch.den_lamp
   rooms:
     name: Rooms
     view: yes
