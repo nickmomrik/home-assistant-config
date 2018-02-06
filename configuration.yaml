@@ -10,8 +10,8 @@ homeassistant:
 
 http:
   api_password: !secret http_password
-  ssl_certificate: !secret ssl_certificate
-  ssl_key: !secret ssl_key
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
   base_url: !secret base_url
 
 recorder:
@@ -41,6 +41,7 @@ device_tracker:
     client_id: !secret automatic_client_id
     secret: !secret automatic_secret
     track_new_devices: yes
+    #current_location: true
 
 remote:
   - platform: harmony
@@ -79,7 +80,7 @@ sensor: !include sensors.yaml
 binary_sensor: !include binary_sensors.yaml
 input_select: !include input_select.yaml
 script: !include scripts.yaml
-automation: !include automations.yaml
+automation: !include automation.yaml
 group: !include groups.yaml
 switch: !include switches.yaml
 

@@ -102,7 +102,7 @@
   action:
     - service: group.set_visibility
       data_template:
-        entity_id: "group.pi_{{ trigger.entity_id | replace( 'binary_sensor.pi_', '' ) | replace( '_on', '' ) }}_on"
+        entity_id: "group.pi_{{ trigger.entity_id | replace( 'binary_sensor.pi_', '' ) }}"
         visible: False
     - service: group.set_visibility
       data_template:
