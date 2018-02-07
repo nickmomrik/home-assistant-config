@@ -32,5 +32,3 @@
       command_on: "echo 'Reboot pi'"
     pi_shutdown:
       command_on: "echo 'Shutdown pi'"
-    garage_temp_monitor:
-      command_on: "echo 'Garage temp monitor'"

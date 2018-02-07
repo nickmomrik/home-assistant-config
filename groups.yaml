@@ -97,8 +97,8 @@
       - binary_sensor.basement_heat
       - switch.bedroom_ac
       - sensor.garage_temperature
+      - binary_sensor.garage_heat
       - input_number.garage_temp_desired
-      - switch.garage_temp_monitor
   humidity:
     name: Indoor Humidity
     entities:
@@ -288,8 +288,8 @@
       - cover.garage_door
       - light.garage_light
       - sensor.garage_temperature
+      - binary_sensor.garage_heat
       - input_number.garage_temp_desired
-      - switch.garage_temp_monitor
       - sensor.garage_humidity
       - device_tracker.ford_fusion
   downstairs:

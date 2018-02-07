@@ -58,10 +58,8 @@
     icon: mdi:thermometer
   sensor.garage_humidity:
     icon: mdi:water-percent
-  switch.garage_temp_monitor:
-    icon: mdi:eye
-    friendly_name: Garage Temp Monitor
-    assumed_state: false
+  binary_sensor.garage_heat:
+    icon: mdi:radiator
   sensor.since_last_boot_templated:
     icon: mdi:timer
     friendly_name: Uptime

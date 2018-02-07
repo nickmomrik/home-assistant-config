@@ -29,30 +29,20 @@
 
 - alias: 'Garage temp reached desired temp'
   trigger:
-    platform: mqtt
-    topic: 'garage/pi/temperature'
+    platform: state
+    entity_id: sensor.garage_temperature
   condition:
     condition: and
     conditions:
       - condition: state
-        entity_id: switch.garage_temp_monitor
+        entity_id: binary_sensor.garage_heat
         state: 'on'
       - condition: template
         value_template: '{{ states.sensor.garage_temperature.state >= states.input_number.garage_temp_desired.state }}'
   action:
-    - service: switch.turn_off
-      entity_id: switch.garage_temp_monitor
-
-- alias: 'Notify garage temp monitor turned off'
-  trigger:
-    platform: state
-    entity_id: switch.garage_temp_monitor
-    from: 'on'
-    to: 'off'
-  action:
     service: notify.ios_nickphonex
     data_template:
-      title: "Garage Monitor Turned OFF"
+      title: "Garage Target Reached"
       message: "Temperature in the garage is {{ states.sensor.garage_temperature.state }}°F"
 
 - alias: 'Home Assistant Start'

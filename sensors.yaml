@@ -72,12 +72,12 @@
     value_template: '{{ value | multiply(0.001) | round | int }}'
 
   - platform: mqtt
-    state_topic: 'garage/pi/temperature'
+    state_topic: 'garage/temperature'
     name: 'Garage Temperature'
     unit_of_measurement: '°F'
 
   - platform: mqtt
-    state_topic: 'garage/pi/humidity'
+    state_topic: 'garage/humidity'
     name: 'Garage Humidity'
     unit_of_measurement: '%'
 
