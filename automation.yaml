@@ -152,3 +152,19 @@
       data_template:
         title: "Home Assistant Status"
         message: "Shutdown"
+
+- alias: 'Theme Change'
+  trigger:
+    - platform: homeassistant
+      event: start
+    - platform: state
+      entity_id: sun.sun
+  action:
+    - service_template: frontend.set_theme
+      data_template:
+        name: >
+          {% if states.sun.sun.state == "above_horizon" %}
+            default
+          {% else %}
+            dark_cyan
+          {% endif %}
