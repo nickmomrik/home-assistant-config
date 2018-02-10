@@ -152,7 +152,7 @@
         title: "Home Assistant Status"
         message: "Started"
 
-- alias: 'HA start'
+- alias: 'HA shutdown'
   trigger:
     platform: homeassistant
     event: shutdown
