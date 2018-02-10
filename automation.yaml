@@ -162,7 +162,7 @@
         title: "Home Assistant Status"
         message: "Shutdown"
 
-- alias: 'HA Start Theme Change'
+- alias: 'Theme Change - HA Start'
   trigger:
     - platform: homeassistant
       event: start
@@ -176,7 +176,7 @@
             dark_cyan
           {% endif %}
 
-- alias: 'Morning Theme Change'
+- alias: 'Theme Change - Morning'
   trigger:
     - platform: state
       entity_id: sun.sun
@@ -187,7 +187,7 @@
       data:
         name: default
 
-- alias: 'Night Theme Change'
+- alias: 'Theme Change - Night'
   trigger:
     - platform: state
       entity_id: sun.sun
@@ -196,4 +196,4 @@
   action:
     - service_template: frontend.set_theme
       data:
-        name: dark_cyan
+        name: midnight
