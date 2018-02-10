@@ -45,7 +45,7 @@
       title: "Garage Target Reached"
       message: "Temperature in the garage is {{ states.sensor.garage_temperature.state }}°F"
 
-- alias: 'Home Assistant Start'
+- alias: 'HA Start'
   trigger:
     platform: homeassistant
     event: start
@@ -61,6 +61,28 @@
         - group.pi_pi_on
       data:
         visible: False
+    - service: notify.ios_nickphonex
+      data_template:
+        title: "Home Assistant Status"
+        message: "Started"
+    - service_template: frontend.set_theme
+      data_template:
+        name: >
+          {% if states.sun.sun.state == "above_horizon" %}
+            default
+          {% else %}
+            dark_cyan
+          {% endif %}
+
+- alias: 'HA Shutdown'
+  trigger:
+    platform: homeassistant
+    event: shutdown
+  action:
+    - service: notify.ios_nickphonex
+      data_template:
+        title: "Home Assistant Status"
+        message: "Shutdown"
 
 - alias: 'pi is on'
   trigger:
@@ -141,40 +163,6 @@
       data_template:
         title: "Door Battery is Low"
         message: "Door battery is at {{ states.sensor.door_battery.state }}%"
-
-- alias: 'HA start'
-  trigger:
-    platform: homeassistant
-    event: start
-  action:
-    - service: notify.ios_nickphonex
-      data_template:
-        title: "Home Assistant Status"
-        message: "Started"
-
-- alias: 'HA shutdown'
-  trigger:
-    platform: homeassistant
-    event: shutdown
-  action:
-    - service: notify.ios_nickphonex
-      data_template:
-        title: "Home Assistant Status"
-        message: "Shutdown"
-
-- alias: 'Theme Change - HA Start'
-  trigger:
-    - platform: homeassistant
-      event: start
-  action:
-    - service_template: frontend.set_theme
-      data_template:
-        name: >
-          {% if states.sun.sun.state == "above_horizon" %}
-            default
-          {% else %}
-            dark_cyan
-          {% endif %}
 
 - alias: 'Theme Change - Morning'
   trigger:
