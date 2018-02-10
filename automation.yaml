@@ -64,16 +64,25 @@
 
 - alias: 'pi is on'
   trigger:
-    platform: mqtt
-    topic: pis/+/last-seen
+    platform: state
+    entity_id:
+      - binary_sensor.pi_apple_on
+      - binary_sensor.pi_boston_cream_on
+      - binary_sensor.pi_cherry_on
+      - binary_sensor.pi_derby_on
+      - binary_sensor.pi_elderberry_on
+      - binary_sensor.pi_grasshopper_on
+      - binary_sensor.pi_pi_on
+    from: 'off'
+    to: 'on'
   action:
     - service: group.set_visibility
       data_template:
-        entity_id: "group.pi_{{ trigger.topic.split('/')[1] | replace( '-', '_' ) }}_on"
+        entity_id: "group.pi_{{ trigger.entity_id | replace( 'binary_sensor.pi_', '' ) }}"
         visible: True
     - service: group.set_visibility
       data_template:
-        entity_id: "group.pi_{{ trigger.topic.split('/')[1]  | replace( '-', '_' ) }}_off"
+        entity_id: "group.pi_{{ trigger.entity_id | replace( 'binary_sensor.pi_', '' ) | replace( '_on', '' ) }}_off"
         visible: False
 
 - alias: 'pi not seen'
