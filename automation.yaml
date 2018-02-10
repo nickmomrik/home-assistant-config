@@ -71,7 +71,7 @@
           {% if states.sun.sun.state == "above_horizon" %}
             default
           {% else %}
-            dark_cyan
+            midnight
           {% endif %}
 
 - alias: 'HA Shutdown'
