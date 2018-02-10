@@ -68,10 +68,10 @@
     - service_template: frontend.set_theme
       data_template:
         name: >
-          {% if states.sun.sun.state == "above_horizon" %}
-            default
-          {% else %}
+          {% if states.sun.sun.state == "below_horizon" %}
             midnight
+          {% else %}
+            default
           {% endif %}
 
 - alias: 'HA Shutdown'
