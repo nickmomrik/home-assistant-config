@@ -250,6 +250,34 @@
     name: 'grasshopper Last Seen'
 
   - platform: mqtt
+    state_topic: 'pis/honey/cpu-temp'
+    name: 'honey CPU Temperature'
+    unit_of_measurement: '°F'
+
+  - platform: mqtt
+    state_topic: 'pis/honey/cpu-use'
+    name: 'honey CPU Use'
+    unit_of_measurement: '%'
+
+  - platform: mqtt
+    state_topic: 'pis/honey/ram-use'
+    name: 'honey RAM Use'
+    unit_of_measurement: '%'
+
+  - platform: mqtt
+    state_topic: 'pis/honey/disk-use'
+    name: 'honey DISK Use'
+    unit_of_measurement: '%'
+
+  - platform: mqtt
+    state_topic: 'pis/honey/uptime'
+    name: 'honey Uptime'
+
+  - platform: mqtt
+    state_topic: 'pis/honey/last-seen'
+    name: 'honey Last Seen'
+
+  - platform: mqtt
     state_topic: 'pis/pi/cpu-temp'
     name: 'pi CPU Temperature'
     unit_of_measurement: '°F'

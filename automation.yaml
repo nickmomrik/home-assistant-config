@@ -58,6 +58,7 @@
         - group.pi_derby_on
         - group.pi_elderberry_on
         - group.pi_grasshopper_on
+        - group.pi_honey_on
         - group.pi_pi_on
       data:
         visible: False
@@ -94,6 +95,7 @@
       - binary_sensor.pi_derby_on
       - binary_sensor.pi_elderberry_on
       - binary_sensor.pi_grasshopper_on
+      - binary_sensor.pi_honey_on
       - binary_sensor.pi_pi_on
     from: 'off'
     to: 'on'
@@ -117,6 +119,7 @@
       - binary_sensor.pi_derby_on
       - binary_sensor.pi_elderberry_on
       - binary_sensor.pi_grasshopper_on
+      - binary_sensor.pi_honey_on
       - binary_sensor.pi_pi_on
     from: 'on'
     to: 'off'
@@ -145,6 +148,7 @@
       - sensor.elderberry_disk_use
       - sensor.flapper_disk_use_
       - sensor.grasshopper_disk_use
+      - sensor.honey_disk_use
       - sensor.pi_disk_use
     above: 90
   action:

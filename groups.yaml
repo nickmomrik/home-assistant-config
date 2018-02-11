@@ -124,6 +124,8 @@
       - group.pi_flapper
       - group.pi_grasshopper_on
       - group.pi_grasshopper_off
+      - group.pi_honey_on
+      - group.pi_honey_off
       - group.pi_pi_on
       - group.pi_pi_off
   pi_flapper:
@@ -227,6 +229,21 @@
     name: grasshopper
     entities:
       - sensor.grasshopper_last_seen
+  pi_honey_on:
+    name: honey
+    control: hidden
+    entities:
+      - sensor.honey_uptime
+      - switch.honey_reboot
+      - switch.honey_shutdown
+      - sensor.honey_cpu_temperature
+      - sensor.honey_cpu_use
+      - sensor.honey_ram_use
+      - sensor.honey_disk_use
+  pi_honey_off:
+    name: honey
+    entities:
+      - sensor.honey_last_seen
   pi_pi_on:
     name: Pi Setup Image
     control: hidden

@@ -48,6 +48,14 @@
           {%- else -%}
           False
           {%- endif %}
+      pi_honey_on:
+        value_template:  >-
+          {%- if states( 'sensor.honey_last_seen' ) != 'unknown'
+            and ( as_timestamp( now() ) - as_timestamp( states( 'sensor.honey_last_seen' ) ) ) <= 240 -%}
+          True
+          {%- else -%}
+          False
+          {%- endif %}
       pi_pi_on:
         value_template:  >-
           {%- if states( 'sensor.pi_last_seen' ) != 'unknown'

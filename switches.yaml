@@ -28,6 +28,10 @@
       command_on: "echo 'Reboot grasshopper'"
     grasshopper_shutdown:
       command_on: "echo 'Shutdown grasshopper'"
+    honey_reboot:
+      command_on: "echo 'Reboot honey'"
+    honey_shutdown:
+      command_on: "echo 'Shutdown honey'"
     pi_reboot:
       command_on: "echo 'Reboot pi'"
     pi_shutdown:
