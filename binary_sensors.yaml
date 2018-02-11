@@ -35,7 +35,7 @@
       pi_elderberry_on:
         value_template:  >-
           {%- if states( 'sensor.elderberry_last_seen' ) != 'unknown'
-            and ( as_timestamp( now() ) - as_timestamp( states( 'sensor.elderberry_last_seen.state' ) ) ) <= 240 -%}
+            and ( as_timestamp( now() ) - as_timestamp( states( 'sensor.elderberry_last_seen' ) ) ) <= 240 -%}
           True
           {%- else -%}
           False
