@@ -50,6 +50,8 @@
       - type: since_last_boot
       - type: disk_use_percent
         arg: /
+      - type: ipv4_address
+        arg: eth0
 
   - platform: template
     sensors:
@@ -106,6 +108,10 @@
     name: 'apple Last Seen'
 
   - platform: mqtt
+    state_topic: 'pis/apple/ipv4-address'
+    name: 'apple IPv4 Address'
+
+  - platform: mqtt
     state_topic: 'pis/boston-cream/cpu-temp'
     name: 'boston cream CPU Temperature'
     unit_of_measurement: '°F'
@@ -132,6 +138,10 @@
   - platform: mqtt
     state_topic: 'pis/boston-cream/last-seen'
     name: 'boston cream Last Seen'
+
+  - platform: mqtt
+    state_topic: 'pis/boston-cream/ipv4-address'
+    name: 'boston creamIPv4 Address'
 
   - platform: mqtt
     state_topic: 'pis/cherry/cpu-temp'
@@ -162,6 +172,10 @@
     name: 'cherry Last Seen'
 
   - platform: mqtt
+    state_topic: 'pis/cherry/ipv4-address'
+    name: 'cherryIPv4 Address'
+
+  - platform: mqtt
     state_topic: 'pis/derby/cpu-temp'
     name: 'derby CPU Temperature'
     unit_of_measurement: '°F'
@@ -188,6 +202,10 @@
   - platform: mqtt
     state_topic: 'pis/derby/last-seen'
     name: 'derby Last Seen'
+
+  - platform: mqtt
+    state_topic: 'pis/derby/ipv4-address'
+    name: 'derbyIPv4 Address'
 
   - platform: mqtt
     state_topic: 'pis/elderberry/cpu-temp'
@@ -218,6 +236,10 @@
     name: 'elderberry Last Seen'
 
   - platform: mqtt
+    state_topic: 'pis/elderberry/ipv4-address'
+    name: 'elderberryIPv4 Address'
+
+  - platform: mqtt
     state_topic: 'pis/grasshopper/cpu-temp'
     name: 'grasshopper CPU Temperature'
     unit_of_measurement: '°F'
@@ -244,6 +266,10 @@
   - platform: mqtt
     state_topic: 'pis/grasshopper/last-seen'
     name: 'grasshopper Last Seen'
+
+  - platform: mqtt
+    state_topic: 'pis/grasshopper/ipv4-address'
+    name: 'grasshopperIPv4 Address'
 
   - platform: mqtt
     state_topic: 'pis/honey/cpu-temp'
@@ -274,6 +300,10 @@
     name: 'honey Last Seen'
 
   - platform: mqtt
+    state_topic: 'pis/honey/ipv4-address'
+    name: 'honeyIPv4 Address'
+
+  - platform: mqtt
     state_topic: 'pis/pi/cpu-temp'
     name: 'pi CPU Temperature'
     unit_of_measurement: '°F'
@@ -300,6 +330,10 @@
   - platform: mqtt
     state_topic: 'pis/pi/last-seen'
     name: 'pi Last Seen'
+
+  - platform: mqtt
+    state_topic: 'pis/pi/ipv4-address'
+    name: 'piIPv4 Address'
 
   - platform: time_date
     display_options:

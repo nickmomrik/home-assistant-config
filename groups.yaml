@@ -132,6 +132,7 @@
     name: flapper
     control: hidden
     entities:
+      - sensor.ipv4_address_eth0
       - sensor.since_last_boot_templated
       - switch.flapper_reboot
       - switch.flapper_shutdown
@@ -143,6 +144,7 @@
     name: apple
     control: hidden
     entities:
+      - sensor.apple_ipv4_address
       - sensor.apple_uptime
       - switch.apple_reboot
       - switch.apple_shutdown
@@ -158,6 +160,7 @@
     name: boston cream
     control: hidden
     entities:
+      - sensor.boston_cream_ipv4_address
       - sensor.boston_cream_uptime
       - switch.boston_cream_reboot
       - switch.boston_cream_shutdown
@@ -173,6 +176,7 @@
     name: cherry
     control: hidden
     entities:
+      - sensor.cherry_ipv4_address
       - sensor.cherry_uptime
       - switch.cherry_reboot
       - switch.cherry_shutdown
@@ -188,6 +192,7 @@
     name: derby
     control: hidden
     entities:
+      - sensor.derby_ipv4_address
       - sensor.derby_uptime
       - switch.derby_reboot
       - switch.derby_shutdown
@@ -203,6 +208,7 @@
     name: elderberry
     control: hidden
     entities:
+      - sensor.elderberry_ipv4_address
       - sensor.elderberry_uptime
       - switch.elderberry_reboot
       - switch.elderberry_shutdown
@@ -218,6 +224,7 @@
     name: grasshopper
     control: hidden
     entities:
+      - sensor.grasshopper_ipv4_address
       - sensor.grasshopper_uptime
       - switch.grasshopper_reboot
       - switch.grasshopper_shutdown
@@ -233,6 +240,7 @@
     name: honey
     control: hidden
     entities:
+      - sensor.honey_ipv4_address
       - sensor.honey_uptime
       - switch.honey_reboot
       - switch.honey_shutdown
@@ -248,6 +256,7 @@
     name: Pi Setup Image
     control: hidden
     entities:
+      - sensor.pi_ipv4_address
       - sensor.pi_uptime
       - switch.pi_reboot
       - switch.pi_shutdown

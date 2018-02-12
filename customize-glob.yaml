@@ -30,6 +30,9 @@
     icon: mdi:close-network
     friendly_name: Shutdown
     assumed_state: false
+  "sensor.*ipv4_address*":
+    icon: mdi:server-network
+    friendly_name: IP
   "switch.*_lamp":
     icon: mdi:lamp
   "switch.*_ac":
