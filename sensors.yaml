@@ -141,7 +141,7 @@
 
   - platform: mqtt
     state_topic: 'pis/boston-cream/ipv4-address'
-    name: 'boston creamIPv4 Address'
+    name: 'boston cream IPv4 Address'
 
   - platform: mqtt
     state_topic: 'pis/cherry/cpu-temp'
@@ -173,7 +173,7 @@
 
   - platform: mqtt
     state_topic: 'pis/cherry/ipv4-address'
-    name: 'cherryIPv4 Address'
+    name: 'cherry IPv4 Address'
 
   - platform: mqtt
     state_topic: 'pis/derby/cpu-temp'
@@ -205,7 +205,7 @@
 
   - platform: mqtt
     state_topic: 'pis/derby/ipv4-address'
-    name: 'derbyIPv4 Address'
+    name: 'derby IPv4 Address'
 
   - platform: mqtt
     state_topic: 'pis/elderberry/cpu-temp'
@@ -237,7 +237,7 @@
 
   - platform: mqtt
     state_topic: 'pis/elderberry/ipv4-address'
-    name: 'elderberryIPv4 Address'
+    name: 'elderberry IPv4 Address'
 
   - platform: mqtt
     state_topic: 'pis/grasshopper/cpu-temp'
@@ -269,7 +269,7 @@
 
   - platform: mqtt
     state_topic: 'pis/grasshopper/ipv4-address'
-    name: 'grasshopperIPv4 Address'
+    name: 'grasshopper IPv4 Address'
 
   - platform: mqtt
     state_topic: 'pis/honey/cpu-temp'
@@ -301,7 +301,7 @@
 
   - platform: mqtt
     state_topic: 'pis/honey/ipv4-address'
-    name: 'honeyIPv4 Address'
+    name: 'honey IPv4 Address'
 
   - platform: mqtt
     state_topic: 'pis/pi/cpu-temp'
@@ -333,7 +333,7 @@
 
   - platform: mqtt
     state_topic: 'pis/pi/ipv4-address'
-    name: 'piIPv4 Address'
+    name: 'pi IPv4 Address'
 
   - platform: time_date
     display_options:
