@@ -4,7 +4,13 @@
   "sensor.*cpu_use*":
     icon: mdi:raspberrypi
     friendly_name: CPU
+  "sensor.processor_use*":
+    icon: mdi:raspberrypi
+    friendly_name: CPU
   "sensor.*ram_use*":
+    icon: mdi:chip
+    friendly_name: RAM
+  "sensor.memory_use*":
     icon: mdi:chip
     friendly_name: RAM
   "sensor.*disk_use*":

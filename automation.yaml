@@ -146,7 +146,7 @@
       - sensor.cherry_disk_use
       - sensor.derby_disk_use
       - sensor.elderberry_disk_use
-      - sensor.flapper_disk_use_
+      - sensor.disk_use_percent_
       - sensor.grasshopper_disk_use
       - sensor.honey_disk_use
       - sensor.pi_disk_use

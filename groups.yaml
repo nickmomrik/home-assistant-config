@@ -136,9 +136,9 @@
       - switch.flapper_reboot
       - switch.flapper_shutdown
       - sensor.cpu_temperature
-      - sensor.cpu_used
-      - sensor.ram_used
-      - sensor.disk_used_
+      - sensor.processor_use
+      - sensor.memory_use_percent
+      - sensor.disk_use_percent_
   pi_apple_on:
     name: apple
     control: hidden
