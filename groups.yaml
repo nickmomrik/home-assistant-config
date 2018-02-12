@@ -3,9 +3,9 @@
     icon: mdi:home
     entities:
       - group.status
-      - group.doors
-      - group.temps
       - group.lights
+      - group.temps
+      - group.doors
   status:
     name: Status
     entities:
