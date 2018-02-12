@@ -112,21 +112,21 @@
     icon: mdi:raspberrypi
     entities:
       - group.pi_apple_on
-      - group.pi_apple_off
       - group.pi_boston_cream_on
-      - group.pi_boston_cream_off
       - group.pi_cherry_on
-      - group.pi_cherry_off
       - group.pi_derby_on
-      - group.pi_derby_off
       - group.pi_elderberry_on
-      - group.pi_elderberry_off
       - group.pi_flapper
       - group.pi_grasshopper_on
-      - group.pi_grasshopper_off
       - group.pi_honey_on
-      - group.pi_honey_off
       - group.pi_pi_on
+      - group.pi_apple_off
+      - group.pi_boston_cream_off
+      - group.pi_cherry_off
+      - group.pi_derby_off
+      - group.pi_elderberry_off
+      - group.pi_grasshopper_off
+      - group.pi_honey_off
       - group.pi_pi_off
   pi_flapper:
     name: flapper
