@@ -424,15 +424,14 @@
     view: yes
     icon: mdi:ruler
     entities:
+      - group.nest_status
+      - group.battery
       - group.speedtest
+      - group.pi_hole
       - group.co
       - group.smoke
-      - group.battery
       - group.online
       - group.camera_detect
-      - group.nest_status
-      - group.nest_temps
-      - group.pi_hole
   pi_hole:
     name: Pi-Hole
     entities:
