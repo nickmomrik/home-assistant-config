@@ -404,18 +404,6 @@
       - sensor.office_thermostat_nest_hvac_state
       - sensor.upstairs_thermostat_nest_hvac_state
       - sensor.basement_thermostat_nest_hvac_state
-
-  nest_temps:
-    name: Nest Temps
-    entities:
-      - sensor.living_room_thermostat_nest_target
-      - sensor.office_thermostat_nest_target
-      - sensor.upstairs_thermostat_nest_target
-      - sensor.basement_thermostat_nest_target
-      - sensor.living_room_thermostat_nest_temperature
-      - sensor.office_thermostat_nest_temperature
-      - sensor.upstairs_thermostat_nest_temperature
-      - sensor.basement_thermostat_nest_temperature
   cameras:
     view: yes
     name: Cameras

@@ -76,30 +76,6 @@
   sensor.basement_thermostat_nest_humidity:
     icon: mdi:water-percent
     friendly_name: Basement Humidity
-  sensor.basement_thermostat_nest_target:
-    icon: mdi:target
-    friendly_name: Basement Target
-  sensor.living_room_thermostat_nest_target:
-    icon: mdi:target
-    friendly_name: Living Room Target
-  sensor.office_thermostat_nest_target:
-    icon: mdi:target
-    friendly_name: Office Target
-  sensor.upstairs_thermostat_nest_target:
-    icon: mdi:target
-    friendly_name: Upstairs Target
-  sensor.basement_thermostat_nest_temperature:
-    icon: mdi:thermometer
-    friendly_name: Basement Temp
-  sensor.living_room_thermostat_nest_temperature:
-    icon: mdi:thermometer
-    friendly_name: Living Room Temp
-  sensor.office_thermostat_nest_temperature:
-    icon: mdi:thermometer
-    friendly_name: Office Temp
-  sensor.upstairs_thermostat_nest_temperature:
-    icon: mdi:thermometer
-    friendly_name: Upstairs Temp
   binary_sensor.basement_thermostat_nest_has_leaf:
     icon: mdi:leaf
     friendly_name: Basement Leaf
