@@ -362,15 +362,6 @@
       - sensor.downstairs_nest_protect_battery_health
       - sensor.upstairs_nest_protect_battery_health
       - sensor.basement_nest_protect_battery_health
-  camera_detect:
-    name: Camera Detect
-    entities:
-      - binary_sensor.entryway_camera_motion_detected
-      - binary_sensor.garage_camera_motion_detected
-      - binary_sensor.entryway_camera_person_detected
-      - binary_sensor.garage_camera_person_detected
-      - binary_sensor.entryway_camera_sound_detected
-      - binary_sensor.garage_camera_sound_detected
   nest_status:
     name: Nest Status
     entities:
@@ -412,7 +403,6 @@
       - group.pi_hole
       - group.co
       - group.smoke
-      - group.camera_detect
   pi_hole:
     name: Pi-Hole
     entities:
