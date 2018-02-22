@@ -308,13 +308,13 @@
     name: Garage
     control: hidden
     entities:
+      - device_tracker.ford_fusion
       - cover.garage_door
       - light.garage_light
       - sensor.garage_temperature
       - binary_sensor.garage_heat
       - input_number.garage_temp_desired
       - sensor.garage_humidity
-      - device_tracker.ford_fusion
   downstairs:
     name: Downstairs
     control: hidden
