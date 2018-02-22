@@ -13,6 +13,11 @@ http:
   ssl_certificate: /ssl/fullchain.pem
   ssl_key: /ssl/privkey.pem
   base_url: !secret base_url
+  trusted_networks:
+    - 127.0.0.1
+    - 192.168.0.0/24
+  ip_ban_enabled: True
+  login_attempts_threshold: 5
 
 recorder:
   db_url: !secret recorder_db_url
