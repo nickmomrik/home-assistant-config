@@ -364,18 +364,6 @@
       - sensor.downstairs_nest_protect_battery_health
       - sensor.upstairs_nest_protect_battery_health
       - sensor.basement_nest_protect_battery_health
-  online:
-    name: Online
-    entities:
-      - binary_sensor.entryway_camera_online
-      - binary_sensor.garage_camera_online
-      - binary_sensor.downstairs_nest_protect_online
-      - binary_sensor.upstairs_nest_protect_online
-      - binary_sensor.basement_nest_protect_online
-      - binary_sensor.living_room_thermostat_nest_online
-      - binary_sensor.office_thermostat_nest_online
-      - binary_sensor.upstairs_thermostat_nest_online
-      - binary_sensor.basement_thermostat_nest_online
   camera_detect:
     name: Camera Detect
     entities:
@@ -430,7 +418,6 @@
       - group.pi_hole
       - group.co
       - group.smoke
-      - group.online
       - group.camera_detect
   pi_hole:
     name: Pi-Hole
