@@ -313,8 +313,8 @@
       - binary_sensor.garage_heat
       - input_number.garage_temp_desired
       - sensor.garage_humidity
-  downstairs:
-    name: Downstairs
+  main_floor:
+    name: Main Floor
     control: hidden
     entities:
       - lock.door
@@ -329,7 +329,7 @@
     view: yes
     icon: mdi:office
     entities:
-      - group.downstairs
+      - group.main_floor
       - group.living
       - group.office
       - group.garage
