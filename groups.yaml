@@ -68,9 +68,7 @@
       - sensor.dark_sky_precip_intensity_max
       - sensor.dark_sky_cloud_cover
       - sensor.dark_sky_dew_point
-      - sensor.dark_sky_pressure
       - sensor.dark_sky_visibility
-      - sensor.dark_sky_ozone
   climate:
     name: Climate
     view: yes
