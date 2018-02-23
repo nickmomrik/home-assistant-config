@@ -93,8 +93,8 @@
       - switch.bedroom_ac
       - binary_sensor.basement_heat
       - climate.basement_nest
-      - sensor.garage_temperature
       - binary_sensor.garage_heat
+      - sensor.garage_temperature
       - input_number.garage_temp_desired
   humidity:
     name: Indoor Humidity
@@ -309,8 +309,8 @@
       - device_tracker.ford_fusion
       - cover.garage_door
       - light.garage_light
-      - sensor.garage_temperature
       - binary_sensor.garage_heat
+      - sensor.garage_temperature
       - input_number.garage_temp_desired
       - sensor.garage_humidity
   main_floor:
