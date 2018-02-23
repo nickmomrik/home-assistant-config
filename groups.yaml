@@ -84,15 +84,15 @@
     control: hidden
     entities:
       - binary_sensor.furnace
-      - climate.living_room_nest
       - binary_sensor.living_room_heat
-      - climate.office_nest
+      - climate.living_room_nest
       - binary_sensor.office_heat
-      - climate.upstairs_nest
+      - climate.office_nest
       - binary_sensor.upstairs_heat
-      - climate.basement_nest
-      - binary_sensor.basement_heat
+      - climate.upstairs_nest
       - switch.bedroom_ac
+      - binary_sensor.basement_heat
+      - climate.basement_nest
       - sensor.garage_temperature
       - binary_sensor.garage_heat
       - input_number.garage_temp_desired
@@ -273,8 +273,8 @@
       - light.upstairs_light
       - light.bedroom_light
       - switch.bedroom_ac
-      - climate.upstairs_nest
       - binary_sensor.upstairs_heat
+      - climate.upstairs_nest
       - sensor.upstairs_thermostat_nest_humidity
   office:
     name: Office
@@ -282,8 +282,8 @@
     entities:
       - device_tracker.nickphonex
       - light.office_light
-      - climate.office_nest
       - binary_sensor.office_heat
+      - climate.office_nest
       - sensor.office_thermostat_nest_humidity
   living:
     name: Living Room
@@ -291,16 +291,16 @@
     entities:
       - light.living_room_light
       - switch.living_room_lamp
-      - climate.living_room_nest
       - binary_sensor.living_room_heat
+      - climate.living_room_nest
       - sensor.living_room_thermostat_nest_humidity
   basement:
     name: Basement
     control: hidden
     entities:
       - binary_sensor.furnace
-      - climate.basement_nest
       - binary_sensor.basement_heat
+      - climate.basement_nest
       - sensor.basement_thermostat_nest_humidity
   garage:
     name: Garage
