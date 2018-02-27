@@ -9,8 +9,4 @@ input_select_harmony:
               -1
           {% elif is_state("input_select.remote", "Watch Apple TV") %}
               12240960
-          {% elif is_state("input_select.remote", "Play Xbox One") %}
-              16291848
-          {% elif is_state("input_select.remote", "Watch TV") %}
-              12240462
           {% endif %}
