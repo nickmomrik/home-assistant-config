@@ -100,3 +100,8 @@ light:
   - platform: decora_wifi
     username: !secret leviton_username
     password: !secret leviton_password
+
+august:
+  login_method: email
+  username: !secret august_login
+  password: !secret august_password
