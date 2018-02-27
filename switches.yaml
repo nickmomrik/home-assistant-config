@@ -1,38 +1,48 @@
-  platform: command_line
-  switches:
-    apple_reboot:
-      command_on: "echo 'Reboot apple'"
-    apple_shutdown:
-      command_on: "echo 'Shutdown apple'"
-    boston_cream_reboot:
-      command_on: "echo 'Reboot boston_cream'"
-    boston_cream_shutdown:
-      command_on: "echo 'Shutdown boston_cream'"
-    cherry_reboot:
-      command_on: "echo 'Reboot cherry'"
-    cherry_shutdown:
-      command_on: "echo 'Shutdown cherry'"
-    derby_reboot:
-      command_on: "echo 'Reboot derby'"
-    derby_shutdown:
-      command_on: "echo 'Shutdown derby'"
-    elderberry_reboot:
-      command_on: "echo 'Reboot elderberry'"
-    elderberry_shutdown:
-      command_on: "echo 'Shutdown elderberry'"
-    flapper_reboot:
-      command_on: "sudo shutdown -r now"
-    flapper_shutdown:
-      command_on: "sudo shutdown -h now"
-    grasshopper_reboot:
-      command_on: "echo 'Reboot grasshopper'"
-    grasshopper_shutdown:
-      command_on: "echo 'Shutdown grasshopper'"
-    honey_reboot:
-      command_on: "echo 'Reboot honey'"
-    honey_shutdown:
-      command_on: "echo 'Shutdown honey'"
-    pi_reboot:
-      command_on: "echo 'Reboot pi'"
-    pi_shutdown:
-      command_on: "echo 'Shutdown pi'"
+  - platform: command_line
+    switches:
+      apple_reboot:
+        command_on: "echo 'Reboot apple'"
+      apple_shutdown:
+        command_on: "echo 'Shutdown apple'"
+      boston_cream_reboot:
+        command_on: "echo 'Reboot boston_cream'"
+      boston_cream_shutdown:
+        command_on: "echo 'Shutdown boston_cream'"
+      cherry_reboot:
+        command_on: "echo 'Reboot cherry'"
+      cherry_shutdown:
+        command_on: "echo 'Shutdown cherry'"
+      derby_reboot:
+        command_on: "echo 'Reboot derby'"
+      derby_shutdown:
+        command_on: "echo 'Shutdown derby'"
+      elderberry_reboot:
+        command_on: "echo 'Reboot elderberry'"
+      elderberry_shutdown:
+        command_on: "echo 'Shutdown elderberry'"
+      flapper_reboot:
+        command_on: "sudo shutdown -r now"
+      flapper_shutdown:
+        command_on: "sudo shutdown -h now"
+      grasshopper_reboot:
+        command_on: "echo 'Reboot grasshopper'"
+      grasshopper_shutdown:
+        command_on: "echo 'Shutdown grasshopper'"
+      honey_reboot:
+        command_on: "echo 'Reboot honey'"
+      honey_shutdown:
+        command_on: "echo 'Shutdown honey'"
+      pi_reboot:
+        command_on: "echo 'Reboot pi'"
+      pi_shutdown:
+        command_on: "echo 'Shutdown pi'"
+  - platform: template
+    switches:
+      tv:
+        value_template: "{% if is_state('remote.tv', 'on') %}on{% else %}off{% endif %}"
+        turn_on:
+          service: remote.turn_on
+          entity_id: remote.tv
+        turn_off:
+          service: remote.turn_off
+          entity_id: remote.tv

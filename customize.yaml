@@ -244,3 +244,6 @@
   media_player.living_room:
     friendly_name: Living Room Apple TV
     icon: mdi:television-classic
+  switch.tv:
+    friendly_name: TV
+    icon: mdi:television-classic

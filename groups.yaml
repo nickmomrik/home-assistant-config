@@ -289,6 +289,7 @@
     name: Living Room
     control: hidden
     entities:
+      - switch.tv
       - light.living_room_light
       - switch.living_room_lamp
       - binary_sensor.living_room_heat
@@ -377,21 +378,16 @@
       - sensor.office_thermostat_nest_hvac_state
       - sensor.upstairs_thermostat_nest_hvac_state
       - sensor.basement_thermostat_nest_hvac_state
-  cameras:
-    view: yes
-    name: Cameras
-    icon: mdi:webcam
-    entities:
-      - camera.entryway
-      - camera.garage
   media_center:
     view: yes
-    name: Media Center
+    name: Multimedia
     icon: mdi:television-guide
     entities:
-      - input_select.remote
+      - switch.tv
       - media_player.living_room
       - media_player.office
+      - camera.entryway
+      - camera.garage
   sensors:
     name: Sensors
     view: yes

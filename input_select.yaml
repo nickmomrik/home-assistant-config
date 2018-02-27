@@ -1,7 +1,0 @@
-  remote:
-    name: Harmony Remote
-    options:
-      - PowerOff
-      - Watch Apple TV
-    initial: PowerOff
-    icon: mdi:remote

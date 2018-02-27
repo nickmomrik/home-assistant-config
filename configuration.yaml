@@ -50,8 +50,9 @@ device_tracker:
 
 remote:
   - platform: harmony
-    name: Media Center
+    name: TV
     host: !secret harmony_ip
+    activity: TV
 
 wink:
 
@@ -84,8 +85,6 @@ mqtt:
 
 sensor: !include sensors.yaml
 binary_sensor: !include binary_sensors.yaml
-input_select: !include input_select.yaml
-script: !include scripts.yaml
 automation: !include automation.yaml
 group: !include groups.yaml
 switch: !include switches.yaml
