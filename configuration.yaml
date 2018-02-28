@@ -46,7 +46,7 @@ device_tracker:
     client_id: !secret automatic_client_id
     secret: !secret automatic_secret
     track_new_devices: yes
-    #current_location: true
+    current_location: true
 
 remote:
   - platform: harmony
