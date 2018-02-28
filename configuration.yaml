@@ -73,9 +73,6 @@ remote:
     host: !secret harmony_ip
     activity: TV
 
-ifttt:
-  key: !secret ifttt_key
-
 input_number:
   garage_temp_desired:
     name: Garage Target
