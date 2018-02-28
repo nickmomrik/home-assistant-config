@@ -45,9 +45,6 @@ recorder:
   purge_interval: 5
   purge_keep_days: 30
 
-tts:
-  - platform: google
-
 wemo:
   static:
     - !secret wemo1_ip
