@@ -1,6 +1,6 @@
-[Home Assistant](https://home-assistant.io/) Configuration
+## My [Home Assistant](https://home-assistant.io/) Configuration
 
-### Devices
+Except for my secrets file of course! Here is a list of the devices I use:
 
 * MyQ Garage Door Opener
 * August Door Lock
