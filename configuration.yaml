@@ -45,17 +45,8 @@ recorder:
   purge_interval: 5
   purge_keep_days: 30
 
-wemo:
-  static:
-    - !secret wemo1_ip
-    - !secret wemo2_ip
-    - !secret wemo3_ip
-    - !secret wemo4_ip
-    - !secret wemo5_ip
-
-nest:
-  client_id: !secret nest_client_id
-  client_secret: !secret nest_client_secret
+mqtt:
+  broker: core-mosquitto
 
 device_tracker:
   - platform: automatic
@@ -70,19 +61,6 @@ remote:
     host: !secret harmony_ip
     activity: TV
 
-input_number:
-  garage_temp_desired:
-    name: Garage Target
-    initial: 64
-    min: 40
-    max: 80
-    step: 1
-    mode: slider
-    icon: mdi:target
-
-mqtt:
-  broker: core-mosquitto
-
 lutron_caseta:
   host: !secret lutron_hub_ip
   keyfile: caseta.key
@@ -94,7 +72,29 @@ light:
     username: !secret leviton_username
     password: !secret leviton_password
 
+wemo:
+  static:
+    - !secret wemo1_ip
+    - !secret wemo2_ip
+    - !secret wemo3_ip
+    - !secret wemo4_ip
+    - !secret wemo5_ip
+
+nest:
+  client_id: !secret nest_client_id
+  client_secret: !secret nest_client_secret
+
 august:
   login_method: email
   username: !secret august_login
   password: !secret august_password
+
+input_number:
+  garage_temp_desired:
+    name: Garage Target
+    initial: 64
+    min: 40
+    max: 80
+    step: 1
+    mode: slider
+    icon: mdi:target
