@@ -27,7 +27,7 @@
       - apparent_temperature_max
       - apparent_temperature_min
       - precip_intensity_max
-s
+
   - platform: speedtest
     monitored_conditions:
       - ping
