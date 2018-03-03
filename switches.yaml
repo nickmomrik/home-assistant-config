@@ -1,41 +1,9 @@
   - platform: command_line
     switches:
-      apple_reboot:
-        command_on: "echo 'Reboot apple'"
-      apple_shutdown:
-        command_on: "echo 'Shutdown apple'"
-      boston_cream_reboot:
-        command_on: "echo 'Reboot boston_cream'"
-      boston_cream_shutdown:
-        command_on: "echo 'Shutdown boston_cream'"
-      cherry_reboot:
-        command_on: "echo 'Reboot cherry'"
-      cherry_shutdown:
-        command_on: "echo 'Shutdown cherry'"
-      derby_reboot:
-        command_on: "echo 'Reboot derby'"
-      derby_shutdown:
-        command_on: "echo 'Shutdown derby'"
-      elderberry_reboot:
-        command_on: "echo 'Reboot elderberry'"
-      elderberry_shutdown:
-        command_on: "echo 'Shutdown elderberry'"
       flapper_reboot:
         command_on: "sudo shutdown -r now"
       flapper_shutdown:
         command_on: "sudo shutdown -h now"
-      grasshopper_reboot:
-        command_on: "echo 'Reboot grasshopper'"
-      grasshopper_shutdown:
-        command_on: "echo 'Shutdown grasshopper'"
-      honey_reboot:
-        command_on: "echo 'Reboot honey'"
-      honey_shutdown:
-        command_on: "echo 'Shutdown honey'"
-      pi_reboot:
-        command_on: "echo 'Reboot pi'"
-      pi_shutdown:
-        command_on: "echo 'Shutdown pi'"
   - platform: template
     switches:
       tv:
@@ -46,3 +14,101 @@
         turn_off:
           service: remote.turn_off
           entity_id: remote.tv
+  - platform: mqtt
+    name: "Apple Reboot"
+    state_topic: "pis/apple/reboot"
+    command_topic: "pis/apple/reboot/set"
+    qos: 1
+    optimistic: false
+    retain: false
+  - platform: mqtt
+    name: "Apple Shutdown"
+    state_topic: "pis/apple/shutdown"
+    command_topic: "pis/apple/shutdown/set"
+    qos: 1
+    optimistic: false
+    retain: false
+  - platform: mqtt
+    name: "Boston Cream Reboot"
+    state_topic: "pis/boston-cream/reboot"
+    command_topic: "pis/boston-cream/reboot/set"
+    qos: 1
+    optimistic: false
+    retain: false
+  - platform: mqtt
+    name: "Boston Cream Shutdown"
+    state_topic: "pis/boston-cream/shutdown"
+    command_topic: "pis/boston-cream/shutdown/set"
+    qos: 1
+    optimistic: false
+    retain: false
+  - platform: mqtt
+    name: "Cherry Reboot"
+    state_topic: "pis/cherry/reboot"
+    command_topic: "pis/cherry/reboot/set"
+    qos: 1
+    optimistic: false
+    retain: false
+  - platform: mqtt
+    name: "Cherry Shutdown"
+    state_topic: "pis/cherry/shutdown"
+    command_topic: "pis/cherry/shutdown/set"
+    qos: 1
+    optimistic: false
+    retain: false
+  - platform: mqtt
+    name: "Derby Reboot"
+    state_topic: "pis/derby/reboot"
+    command_topic: "pis/derby/reboot/set"
+    qos: 1
+    optimistic: false
+    retain: false
+  - platform: mqtt
+    name: "Derby Shutdown"
+    state_topic: "pis/derby/shutdown"
+    command_topic: "pis/derby/shutdown/set"
+    qos: 1
+    optimistic: false
+    retain: false
+  - platform: mqtt
+    name: "Elderberry Reboot"
+    state_topic: "pis/elderberry/reboot"
+    command_topic: "pis/elderberry/reboot/set"
+    qos: 1
+    optimistic: false
+    retain: false
+  - platform: mqtt
+    name: "Elderberry Shutdown"
+    state_topic: "pis/elderberry/shutdown"
+    command_topic: "pis/elderberry/shutdown/set"
+    qos: 1
+    optimistic: false
+    retain: false
+  - platform: mqtt
+    name: "Grasshopper Reboot"
+    state_topic: "pis/grasshopper/reboot"
+    command_topic: "pis/grasshopper/reboot/set"
+    qos: 1
+    optimistic: false
+    retain: false
+  - platform: mqtt
+    name: "Grasshopper Shutdown"
+    state_topic: "pis/grasshopper/shutdown"
+    command_topic: "pis/grasshopper/shutdown/set"
+    qos: 1
+    optimistic: false
+    retain: false
+  - platform: mqtt
+    name: "Honey Reboot"
+    state_topic: "pis/honey/reboot"
+    command_topic: "pis/honey/reboot/set"
+    qos: 1
+    optimistic: false
+    retain: false
+  - platform: mqtt
+    name: "Honey Shutdown"
+    state_topic: "pis/honey/shutdown"
+    command_topic: "pis/honey/shutdown/set"
+    qos: 1
+    optimistic: false
+    retain: false

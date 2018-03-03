@@ -95,7 +95,7 @@
       - climate.basement_nest
       - binary_sensor.garage_heat
       - sensor.garage_temperature
-      - input_number.garage_temp_desired
+      - input_number.garage_target
   humidity:
     name: Indoor Humidity
     entities:
@@ -312,7 +312,7 @@
       - light.garage_light
       - binary_sensor.garage_heat
       - sensor.garage_temperature
-      - input_number.garage_temp_desired
+      - input_number.garage_target
       - sensor.garage_humidity
   main_floor:
     name: Main Floor

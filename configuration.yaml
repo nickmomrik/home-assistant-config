@@ -48,6 +48,14 @@ recorder:
 mqtt:
   broker: core-mosquitto
 
+mqtt_statestream:
+  base_topic: ha
+  include:
+    entities:
+      - input_number.garage_target
+      - sensor.dark_sky_temperature
+      - sensor.dark_sky_humidity
+
 device_tracker:
   - platform: automatic
     client_id: !secret automatic_client_id
@@ -90,7 +98,7 @@ august:
   password: !secret august_password
 
 input_number:
-  garage_temp_desired:
+  garage_target:
     name: Garage Target
     initial: 64
     min: 40

@@ -3,7 +3,7 @@
       pi_apple_on:
         value_template: >-
           {%- if states( 'sensor.apple_last_seen' ) != 'unknown'
-            and ( as_timestamp( now() ) - as_timestamp( states( 'sensor.apple_last_seen' ) ) ) <= 240 -%}
+            and ( as_timestamp( now() ) - as_timestamp( states( 'sensor.apple_last_seen' ) ) ) <= 180 -%}
           True
           {%- else -%}
           False

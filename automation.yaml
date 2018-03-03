@@ -19,7 +19,7 @@
         entity_id: binary_sensor.garage_heat
         state: 'on'
       - condition: template
-        value_template: '{{ states.sensor.garage_temperature.state >= states.input_number.garage_temp_desired.state }}'
+        value_template: '{{ states.sensor.garage_temperature.state >= states.input_number.garage_target.state }}'
   action:
     service: notify.ios_nickphonex
     data_template:
