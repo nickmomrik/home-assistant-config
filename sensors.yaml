@@ -1,6 +1,7 @@
   - platform: darksky
     api_key: !secret darksky_api_key
-    update_inverval: '00:30'
+    update_inverval:
+      minutes: 30
     monitored_conditions:
       - summary
       - precip_type
