@@ -11,7 +11,7 @@
       pi_boston_cream_on:
         value_template:  >-
           {%- if states( 'sensor.boston_cream_last_seen' ) != 'unknown'
-            and ( as_timestamp( now() ) - as_timestamp( states( 'sensor.boston_cream_last_seen' ) ) ) <= 240 -%}
+            and ( as_timestamp( now() ) - as_timestamp( states( 'sensor.boston_cream_last_seen' ) ) ) <= 180 -%}
           True
           {%- else -%}
           False
@@ -19,7 +19,7 @@
       pi_cherry_on:
         value_template:  >-
           {%- if states( 'sensor.cherry_last_seen' ) != 'unknown'
-            and ( as_timestamp( now() ) - as_timestamp( states( 'sensor.cherry_last_seen' ) ) ) <= 240 -%}
+            and ( as_timestamp( now() ) - as_timestamp( states( 'sensor.cherry_last_seen' ) ) ) <= 180 -%}
           True
           {%- else -%}
           False
@@ -27,7 +27,7 @@
       pi_derby_on:
         value_template:  >-
           {%- if states( 'sensor.derby_last_seen' ) != 'unknown'
-            and ( as_timestamp( now() ) - as_timestamp( states( 'sensor.derby_last_seen' ) ) ) <= 240 -%}
+            and ( as_timestamp( now() ) - as_timestamp( states( 'sensor.derby_last_seen' ) ) ) <= 180 -%}
           True
           {%- else -%}
           False
@@ -35,7 +35,7 @@
       pi_elderberry_on:
         value_template:  >-
           {%- if states( 'sensor.elderberry_last_seen' ) != 'unknown'
-            and ( as_timestamp( now() ) - as_timestamp( states( 'sensor.elderberry_last_seen' ) ) ) <= 240 -%}
+            and ( as_timestamp( now() ) - as_timestamp( states( 'sensor.elderberry_last_seen' ) ) ) <= 180 -%}
           True
           {%- else -%}
           False
@@ -43,7 +43,7 @@
       pi_grasshopper_on:
         value_template:  >-
           {%- if states( 'sensor.grasshopper_last_seen' ) != 'unknown'
-            and ( as_timestamp( now() ) - as_timestamp( states( 'sensor.grasshopper_last_seen' ) ) ) <= 240 -%}
+            and ( as_timestamp( now() ) - as_timestamp( states( 'sensor.grasshopper_last_seen' ) ) ) <= 180 -%}
           True
           {%- else -%}
           False
@@ -51,7 +51,7 @@
       pi_honey_on:
         value_template:  >-
           {%- if states( 'sensor.honey_last_seen' ) != 'unknown'
-            and ( as_timestamp( now() ) - as_timestamp( states( 'sensor.honey_last_seen' ) ) ) <= 240 -%}
+            and ( as_timestamp( now() ) - as_timestamp( states( 'sensor.honey_last_seen' ) ) ) <= 180 -%}
           True
           {%- else -%}
           False
@@ -59,7 +59,7 @@
       pi_pi_on:
         value_template:  >-
           {%- if states( 'sensor.pi_last_seen' ) != 'unknown'
-            and ( as_timestamp( now() ) - as_timestamp( states( 'sensor.pi_last_seen' ) ) ) <= 240 -%}
+            and ( as_timestamp( now() ) - as_timestamp( states( 'sensor.pi_last_seen' ) ) ) <= 180 -%}
           True
           {%- else -%}
           False
