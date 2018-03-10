@@ -20,7 +20,7 @@
     name: Lights
     control: hidden
     entities:
-      - light.living_room_light
+      - light.living_room_ceiling
       - switch.living_room_lamp
       - switch.porch_light
       - switch.den_lamp
@@ -290,7 +290,7 @@
     control: hidden
     entities:
       - switch.tv
-      - light.living_room_light
+      - light.living_room_ceiling
       - switch.living_room_lamp
       - binary_sensor.living_room_heat
       - climate.living_room_nest
