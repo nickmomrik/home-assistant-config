@@ -106,3 +106,6 @@ input_number:
     step: 1
     mode: slider
     icon: mdi:target
+
+homekit:
+  pincode: !secret homekit_pincode
