@@ -92,3 +92,4 @@
     state_topic: "garage/heat"
     payload_on: "on"
     payload_off: "off"
+    qos: 2
