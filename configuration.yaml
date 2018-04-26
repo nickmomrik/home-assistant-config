@@ -100,9 +100,9 @@ august:
 input_number:
   garage_target:
     name: Garage Target
-    initial: 64
-    min: 40
-    max: 80
+    initial: 65
+    min: 55
+    max: 75
     step: 1
     mode: slider
     icon: mdi:target
