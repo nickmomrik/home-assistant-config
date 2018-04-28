@@ -16,8 +16,21 @@
     icon: mdi:lightbulb
   light.dining_room_dining_room_light:
     icon: mdi:ceiling-light
+    friendly_name: Dining Room Light
   light.bedroom_light:
     icon: mdi:ceiling-light
+  light.living_room_living_room_ceiling:
+    friendly_name: Living Room Ceiling
+  light.front_foyer_entry_light:
+    friendly_name: Entry Light
+  light.garage_garage_light:
+    friendly_name: Garage Light
+  light.downstairs_hallway_hall_light:
+    friendly_name: Hall Light
+  light.office_office_light:
+    friendly_name: Office Light
+  light.upstairs_hallway_upstairs_light:
+    friendly_name: Upstairs Light
   sensor.speedtest_ping:
     icon: mdi:speedometer
   sensor.speedtest_download:
