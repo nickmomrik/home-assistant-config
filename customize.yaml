@@ -14,7 +14,7 @@
     friendly_name: Porch Light
   switch.kitchen_light:
     icon: mdi:lightbulb
-  light.dining_room_light:
+  light.dining_room_dining_room_light:
     icon: mdi:ceiling-light
   light.bedroom_light:
     icon: mdi:ceiling-light

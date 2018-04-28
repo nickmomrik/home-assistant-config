@@ -20,17 +20,17 @@
     name: Lights
     control: hidden
     entities:
-      - light.living_room_ceiling
+      - light.living_room_living_room_ceiling
       - switch.living_room_lamp
       - switch.porch_light
       - switch.den_lamp
-      - light.entry_light
-      - light.dining_room_light
+      - light.front_foyer_entry_light
+      - light.dining_room_dining_room_light
       - switch.kitchen_light
-      - light.garage_light
-      - light.hall_light
-      - light.office_light
-      - light.upstairs_light
+      - light.garage_garage_light
+      - light.downstairs_hallway_hall_light
+      - light.office_office_light
+      - light.upstairs_hallway_upstairs_light
       - light.bedroom_light
   doors:
     name: Doors
@@ -270,7 +270,7 @@
     name: Upstairs
     control: hidden
     entities:
-      - light.upstairs_light
+      - light.upstairs_hallway_upstairs_light
       - light.bedroom_light
       - switch.bedroom_ac
       - binary_sensor.upstairs_heat
@@ -281,7 +281,7 @@
     control: hidden
     entities:
       - device_tracker.nickphonex
-      - light.office_light
+      - light.office_office_light
       - binary_sensor.office_heat
       - climate.office_nest
       - sensor.office_thermostat_nest_humidity
@@ -290,7 +290,7 @@
     control: hidden
     entities:
       - switch.tv
-      - light.living_room_ceiling
+      - light.living_room_living_room_ceiling
       - switch.living_room_lamp
       - binary_sensor.living_room_heat
       - climate.living_room_nest
@@ -309,7 +309,7 @@
     entities:
       - device_tracker.ford_fusion
       - cover.garage_door
-      - light.garage_light
+      - light.garage_garage_light
       - binary_sensor.garage_heat
       - sensor.garage_temperature
       - input_number.garage_target
@@ -320,10 +320,10 @@
     entities:
       - lock.door
       - switch.porch_light
-      - light.entry_light
-      - light.hall_light
+      - light.front_foyer_entry_light
+      - light.downstairs_hallway_hall_light
       - switch.kitchen_light
-      - light.dining_room_light
+      - light.dining_room_dining_room_light
       - switch.den_lamp
   rooms:
     name: Rooms
