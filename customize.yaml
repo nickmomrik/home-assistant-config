@@ -131,25 +131,25 @@
     icon: mdi:camera
     friendly_name: Garage Camera
   binary_sensor.basement_nest_protect_online:
-    icon: mdi:nest-protect
+    icon: mdi:smoke-detector
     friendly_name: Basement Protect
   binary_sensor.downstairs_nest_protect_online:
-    icon: mdi:nest-protect
+    icon: mdi:smoke-detector
     friendly_name: Downstairs Protect
   binary_sensor.upstairs_nest_protect_online:
-    icon: mdi:nest-protect
+    icon: mdi:smoke-detector
     friendly_name: Upstairs Protect
   binary_sensor.basement_thermostat_nest_online:
-    icon: mdi:nest-thermostat
+    icon: mdi:thermostat
     friendly_name: Basement Nest
   binary_sensor.living_room_thermostat_nest_online:
-    icon: mdi:nest-thermostat
+    icon: mdi:thermostat
     friendly_name: Living Room Nest
   binary_sensor.office_thermostat_nest_online:
-    icon: mdi:nest-thermostat
+    icon: mdi:thermostat
     friendly_name: Office Nest
   binary_sensor.upstairs_thermostat_nest_online:
-    icon: mdi:nest-thermostat
+    icon: mdi:thermostat
     friendly_name: Upstairs Nest
   binary_sensor.entryway_camera_motion_detected:
     icon: mdi:blur
