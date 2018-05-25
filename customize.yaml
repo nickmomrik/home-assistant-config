@@ -1,7 +1,5 @@
   cover.garage_door:
     icon: mdi:garage
-  device_tracker.ford_fusion:
-    icon: mdi:car
   device_tracker.nickphonex:
     icon: mdi:cellphone-iphone
     friendly_name: iPhone X

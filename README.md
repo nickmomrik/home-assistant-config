@@ -11,7 +11,6 @@ Except for my secrets file of course! Here is a list of the devices I use:
 * Nest Cam
 * Dropcam
 * Amazon Alexa Echo
-* Automatic Pro
 * Harmony Hub & Remote
 * Raspberry Pi Zero running [home-assistant-temperature-monitor](https://github.com/nickmomrik/home-assistant-temperature-monitor)
 * Various Raspberry Pis running [home-assistant-pi](https://github.com/nickmomrik/home-assistant-pi)

@@ -14,7 +14,6 @@
       - sun.sun
       - sensor.dark_sky_temperature
       - sensor.dark_sky_summary
-      - device_tracker.ford_fusion
       - device_tracker.nickphonex
   lights:
     name: Lights
@@ -307,7 +306,6 @@
     name: Garage
     control: hidden
     entities:
-      - device_tracker.ford_fusion
       - cover.garage_door
       - light.garage_garage_light
       - binary_sensor.garage_heat
