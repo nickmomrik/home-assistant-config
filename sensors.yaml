@@ -11,8 +11,8 @@
       - apparent_temperature
       - wind_speed
       - humidity
-      - temperature_max
-      - temperature_min
+      - temperature_high
+      - temperature_low
       - icon
       - nearest_storm_distance
       - nearest_storm_bearing
@@ -25,8 +25,8 @@
       - minutely_summary
       - hourly_summary
       - daily_summary
-      - apparent_temperature_max
-      - apparent_temperature_min
+      - apparent_temperature_high
+      - apparent_temperature_low
       - precip_intensity_max
 
   - platform: speedtest

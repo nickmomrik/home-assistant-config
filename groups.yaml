@@ -60,10 +60,10 @@
   other_weather:
     name: Other Weather
     entities:
-      - sensor.dark_sky_daily_high_temperature
-      - sensor.dark_sky_daily_low_temperature
-      - sensor.dark_sky_apparent_temperature_max
-      - sensor.dark_sky_apparent_temperature_min
+      - sensor.dark_sky_temperature_high
+      - sensor.dark_sky_temperature_low
+      - sensor.dark_sky_apparent_temperature_high
+      - sensor.dark_sky_apparent_temperature_low
       - sensor.dark_sky_precip_intensity_max
       - sensor.dark_sky_cloud_cover
       - sensor.dark_sky_dew_point
