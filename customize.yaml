@@ -197,9 +197,9 @@
     friendly_name: Precipitation Intensity
   sensor.dark_sky_precip_probability:
     friendly_name: Precipitation Chance
-  sensor.dark_sky_temperature_high:
+  sensor.dark_sky_daytime_temperature_high:
     friendly_name: High Temperature
-  sensor.dark_sky_temperature_low:
+  sensor.dark_sky_overnight_temperature_low:
     friendly_name: Low Temperature
   sensor.dark_sky_icon:
     friendly_name: Icon
@@ -225,9 +225,9 @@
     friendly_name: Hour Summary
   sensor.dark_sky_daily_summary:
     friendly_name: Day Summary
-  sensor.dark_sky_apparent_temperature_high:
+  sensor.dark_sky_daytime_apparent_temperature_high:
     friendly_name: Feels Like High
-  sensor.dark_sky_apparent_temperature_low:
+  sensor.dark_sky_overnight_apparent_temperature_low:
     friendly_name: Feels Like Low
   sensor.dark_sky_precip_intensity_max:
     friendly_name: Precipitation Intensity Max
