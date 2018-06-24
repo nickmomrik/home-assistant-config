@@ -38,7 +38,6 @@ sun:
 alexa:
 ios:
 emulated_hue:
-wink:
 
 recorder:
   db_url: !secret recorder_db_url
@@ -102,3 +101,9 @@ input_number:
 
 homekit:
   pincode: !secret homekit_pincode
+
+cover:
+  - platform: myq
+    username: !secret myq_email
+    password: !secret myq_password
+    type: chamberlain
